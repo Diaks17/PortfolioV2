@@ -191,6 +191,7 @@ header {
 /* NAVIGATION */
 .navbar {
     position: static;
+    z-index: 2;
     height: 100%;
     width: 40vh;    
     display: flex;

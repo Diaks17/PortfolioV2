@@ -1,80 +1,53 @@
 <template>
-    <div>
-        Hello world
-        <div id="container"></div>
-    </div>
+        <!-- <div id="container"> -->
+          <svg class="circle" width="458" height="458" viewBox="0 0 458 458" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="229" cy="229" r="229" fill="#FFA401"/>
+</svg>
+
+          <!-- <img src="../assets/img/kahlia.gif" alt="" srcset=""> -->
+        <!-- </div> -->
+    <!-- </div> -->
 </template>
 
+
 <script>
+import { gsap } from 'gsap';
 
 export default {
   mounted() {
-    document.body.classList.add('page-three');
+    // Sélectionnez le cercle après qu'il a été monté dans le DOM
+    const circle = document.querySelector('.circle');
+    // Appliquer une animation à votre cercle avec GSAP
+    gsap.to(circle, {
+      scale: 1.2, // Déformer le cercle pour simuler un battement de cœur
+      repeat: -1, // Répéter l'animation indéfiniment
+      yoyo: true, // Inverser l'animation à chaque itération
+      duration: 0.5, // Durée d'un battement de cœur (en secondes)
+      ease: 'power2.inOut', // Utiliser une courbe d'accélération pour un mouvement naturel
+      perspective: 400, // Ajouter une perspective pour un effet 3D
+    });
   },
-  beforeUnmount() {
-    document.body.classList.remove('page-three');
-  }
-}
-
-import * as THREE from 'three';
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
-import planetTexture from '@/assets/img/texture.jpg'; // Importez votre image de texture
-
-// Vérifier si window est défini
-if (typeof window !== 'undefined') {
-    // Création de la scène, de la caméra et du rendu
-    const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(25, window.innerWidth / window.innerHeight, 0.5, 2000);
-    const renderer = new THREE.WebGLRenderer({ alpha: true }); // Rendre le fond transparent
-    renderer.setSize(window.innerWidth, window.innerHeight);
-    document.getElementById('container').appendChild(renderer.domElement);
-
-    // Définir la largeur et la hauteur du canvas
-    renderer.setSize(1000, 800); // Définir la taille souhaitée
-    document.getElementById('container').appendChild(renderer.domElement);
-
-    // Ajout de contrôles pour déplacer la caméra
-    const controls = new OrbitControls(camera, renderer.domElement);
-
-    // Chargement de la texture
-    const textureLoader = new THREE.TextureLoader();
-    const texture = textureLoader.load(planetTexture);
-
-    // Création d'une sphère avec la texture
-    const geometry = new THREE.SphereGeometry(1, 100, 100);
-    const material = new THREE.MeshBasicMaterial({ map: texture });
-    const planet = new THREE.Mesh(geometry, material);
-    scene.add(planet);
-
-    // Positionnement de la caméra
-    camera.position.z = 5;
-
-    // Fonction d'animation
-    function animate() {
-        requestAnimationFrame(animate);
-        planet.rotation.y += 0.001; // Rotation de la planète sur son axe Y
-        renderer.render(scene, camera);
-    }
-    animate();
-
-    // Désactiver les contrôles lorsque la souris est sur le canvas
-    renderer.domElement.addEventListener('mouseenter', () => {
-        controls.enabled = false;
-    });
-
-    // Activer les contrôles lorsque la souris quitte le canvas
-    renderer.domElement.addEventListener('mouseleave', () => {
-        controls.enabled = true;
-    });
-} else {
-    // Gérer le cas où window n'est pas défini (par exemple, exécution côté serveur)
-    console.error('Window is not defined. Cannot create Three.js scene.');
 }
 </script>
 
 <style scoped>
+.circle {
+/* position: absolute; */
+/* z-index: -1; */
+/* margin: 5rem; */
+/* transform: perspective(1000px) rotateX(45deg) rotateY(45deg); */
+  height: 50vw;
+  width: 50vw;
+  border-radius: 50%;
+  background-color: #FFA401;
+}
+
 #container {
-  display: none;
+  /* height: 100vh; */
+  /* width: 100%; */
+  /* display: none; */
+  /* background: url("../assets/img/planet.png") no-repeat; */
+  background-size: 100%;
 }
 
 .page-three #container {
