@@ -16,9 +16,9 @@
   display: flex;
   flex-direction: column;
   width: 30%;
-  height: 100%;
+  height: 50%;
   margin: 0 auto;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   color: yellow
 }

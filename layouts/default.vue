@@ -156,7 +156,7 @@ html, body {
     width: 100vw;
     height: 100vh;
     margin: 0;
-    padding: 20px;
+    /* padding: 0 0 1rem 0; */
     font-family: 'Space Mono', monospace;
 }
 </style>
