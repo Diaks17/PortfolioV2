@@ -1,12 +1,10 @@
 <template>
+  
         <!-- <div id="container"> -->
           <svg class="circle" width="458" height="458" viewBox="0 0 458 458" fill="none" xmlns="http://www.w3.org/2000/svg">
 <circle cx="229" cy="229" r="229" fill="#FFA401"/>
 </svg>
 
-          <!-- <img src="../assets/img/kahlia.gif" alt="" srcset=""> -->
-        <!-- </div> -->
-    <!-- </div> -->
 </template>
 
 
@@ -29,18 +27,20 @@ export default {
   },
 }
 </script>
+<style>
 
-<style scoped>
 .circle {
-/* position: absolute; */
+position: absolute;
 /* z-index: -1; */
-/* margin: 5rem; */
+margin: 10%;
 /* transform: perspective(1000px) rotateX(45deg) rotateY(45deg); */
   height: 50vw;
   width: 50vw;
   border-radius: 50%;
   background-color: #FFA401;
 }
+</style>
+<style scoped>
 
 #container {
   /* height: 100vh; */

@@ -193,7 +193,7 @@ header {
     position: static;
     z-index: 2;
     height: 100%;
-    width: 40vh;    
+    width: 40vw;    
     display: flex;
     justify-self: center;
     background-color: #ffffff11;
