@@ -153,9 +153,13 @@ html, body {
 
 
 .container {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    flex-direction: column;
     width: 100vw;
-    height: 100vh;
-    margin: 0;
+    /* height: 100vh; */
+    padding: 1rem;
     /* padding: 0 0 1rem 0; */
     font-family: 'Space Mono', monospace;
 }
@@ -164,8 +168,9 @@ html, body {
 <style>
 header {
     display: flex;
+    width: 100%;
     justify-content: space-between;
-    padding: 0 5rem;
+    /* padding: 0 5rem; */
     color: #C59335;
     font-family: 'Auto Regular';
 }
@@ -191,7 +196,7 @@ header {
 /* NAVIGATION */
 .navbar {
     position: static;
-    z-index: 2;
+    z-index: 3;
     height: 100%;
     width: 40vw;    
     display: flex;

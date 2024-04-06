@@ -1,14 +1,41 @@
 <template>
-  <div class="projets-menu">
+  <div class="atropos my-atropos">
+  <!-- scale container (required) -->
+  <div class="atropos-scale">
+    <!-- rotate container (required) -->
+    <div class="atropos-rotate">
+      <!-- inner container (required) -->
+      <div class="atropos-inner">
+        <div class="projets-menu">
     <div class="projets-link">
       <nuxt-link to="/projets">PROJETS</nuxt-link></div>
     <div class="projets-link">
       <nuxt-link to="/photos">PHOTOS</nuxt-link>
     </div>
   </div>
+      </div>
+    </div>
+  </div>
+</div>
+  
 </template>
 
 <script>
+import Atropos from 'atropos';
+import 'atropos/css';
+export default {
+  mounted() {
+    const myAtropos = Atropos({
+      el: '.my-atropos',
+      rotateLock: true,
+      activeOffset: 40,
+      shadowScale: 1,
+      shadowOffset: 10,
+      rotateYMax: 30,
+      // rest of parameters
+    });
+  },
+}
 </script>
 
 <style scoped>

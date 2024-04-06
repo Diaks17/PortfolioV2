@@ -12,6 +12,7 @@
   "dependencies": {
     "@splinetool/runtime": "^1.0.87",
     "@splinetool/viewer": "^1.0.87",
+    "atropos": "^2.0.2",
     "ev-emitter": "^2.1.2",
     "exif-js": "^2.3.0",
     "exifr": "^7.1.3",

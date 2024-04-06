@@ -1,8 +1,8 @@
 <template>
   
         <!-- <div id="container"> -->
-          <svg class="circle" width="458" height="458" viewBox="0 0 458 458" fill="none" xmlns="http://www.w3.org/2000/svg">
-<circle cx="229" cy="229" r="229" fill="#FFA401"/>
+          <svg class="circle" width="400" height="400" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="200" cy="200" r="200" fill="#FFA401"/>
 </svg>
 
 </template>
@@ -17,12 +17,11 @@ export default {
     const circle = document.querySelector('.circle');
     // Appliquer une animation à votre cercle avec GSAP
     gsap.to(circle, {
-      scale: 1.2, // Déformer le cercle pour simuler un battement de cœur
+      scale: 1.1, // Déformer le cercle pour simuler un battement de cœur
       repeat: -1, // Répéter l'animation indéfiniment
       yoyo: true, // Inverser l'animation à chaque itération
       duration: 0.5, // Durée d'un battement de cœur (en secondes)
-      ease: 'power2.inOut', // Utiliser une courbe d'accélération pour un mouvement naturel
-      perspective: 400, // Ajouter une perspective pour un effet 3D
+      ease: 'power2.inOut'
     });
   },
 }
@@ -32,10 +31,10 @@ export default {
 .circle {
 position: absolute;
 /* z-index: -1; */
-margin: 10%;
+margin: 20%;
 /* transform: perspective(1000px) rotateX(45deg) rotateY(45deg); */
-  height: 50vw;
-  width: 50vw;
+  height: 40vw;
+  width: 40vw;
   border-radius: 50%;
   background-color: #FFA401;
 }
