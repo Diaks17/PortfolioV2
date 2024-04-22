@@ -3,7 +3,7 @@
       @mouseover="startAnimation"
       @mouseleave="resetAnimation">
     <div class="card-image">
-      <img :src="image" @mouseover="handleImageClick" />
+      <img :src="image" @mouseover="handleImageClick" alt="A photo of a mountain" />
       <div>
       </div>
     </div>
@@ -25,7 +25,7 @@
             />
           </g>
           <defs>
-            <filter
+  <filter
               id="filter0_b_1389_695"
               x="-10"
               y="-10"
@@ -52,7 +52,7 @@
         </svg>
 
       </div>
-      <div class="hexagon2">
+      <!-- <div class="hexagon2">
         <p id="exifdata" class="exifdata">{{ exifData }}</p>
         <svg width="138" height="138" viewBox="0 0 138 138" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g filter="url(#filter0_b_1389_696)">
@@ -67,7 +67,7 @@
             </filter>
           </defs>
         </svg>
-      </div>
+      </div> -->
     </div>
     
   </div>

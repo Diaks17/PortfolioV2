@@ -10,7 +10,7 @@
   </div>
 </template>
 
-<script>
+<script scoped>
 import Card from '../components/card.vue';
 import { ref } from 'vue';
 
@@ -20,10 +20,10 @@ export default {
   },
   setup() {
     const images = ref([
-      '_nuxt/assets/img/1.jpg',
-      '_nuxt/assets/img/2.jpg',
-      '_nuxt/assets/img/3.jpg',
-      '_nuxt/assets/img/4.jpg',
+      '/img/1.jpg',
+      '/img/2.jpg',
+      '/img/3.jpg',
+      '/img/4.jpg',
     ])
 
     return { images }

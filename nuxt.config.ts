@@ -4,10 +4,5 @@
   
   export default {
   devtools: { enabled: true },
-  head: {
-    script: [
-      { src: 'https://unpkg.com/@splinetool/viewer@1.0.87/build/spline-viewer.js', type: 'module' }
-    ]
-  }
   }
   

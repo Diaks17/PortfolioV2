@@ -5,7 +5,7 @@
                     <nuxt-link to="/" class="nav-link">ACCUEIL</nuxt-link>
                 </li>
                 <li>
-                    <nuxt-link to="/projets" class="nav-link">PROJETS</nuxt-link>
+                    <nuxt-link to="/projects/" class="nav-link">PROJETS</nuxt-link>
                 </li>
                 <li>
                     <nuxt-link to="/about" class="nav-link">ABOUT</nuxt-link>
