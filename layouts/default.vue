@@ -167,6 +167,8 @@ html, body {
 
 <style>
 header {
+    position: fixed;
+    top: 0;
     display: flex;
     width: 100%;
     justify-content: space-between;
@@ -195,10 +197,13 @@ header {
 }
 /* NAVIGATION */
 .navbar {
-    position: static;
+    position: fixed;
     z-index: 3;
+    top: 0;
+    left: 0;
+    bottom: 0;
     height: 100%;
-    width: 40vw;    
+    width: 20vw;    
     display: flex;
     justify-self: center;
     background-color: #ffffff11;
@@ -232,30 +237,30 @@ header {
 }
  /* SCREEN ASSETS */
 .arrow-tl {
-    position: absolute;
+    position: fixed;
     top: 1rem;
     left: 1rem;
     z-index: 2;
  }
 .arrow-tr {
-    position: absolute;
+    position: fixed;
     top: 1rem;
     right: 1rem;
 }
 
 .arrow-bl {
-    position: absolute;
+    position: fixed;
     bottom: 1rem;
     left: 1rem;
     z-index: 2;
 }
 .arrow-br {
-    position: absolute;
+    position: fixed;
     bottom: 1rem;
     right: 1rem;
 }
 .line {
-    position: absolute;
+    position: fixed;
     top: 5rem;
     right: 3rem;
 }

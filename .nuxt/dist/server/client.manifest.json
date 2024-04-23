@@ -7,12 +7,12 @@
     "module": true,
     "resourceType": "script"
   },
-  "C:/Users/Diakite/Documents/GitHub/PortfolioV2/node_modules/nuxt/dist/app/entry.js": {
+  "/Users/diaks/PortfolioV2/node_modules/nuxt/dist/app/entry.js": {
     "resourceType": "script",
     "module": true,
     "prefetch": true,
     "preload": true,
     "isEntry": true,
-    "file": "C:/Users/Diakite/Documents/GitHub/PortfolioV2/node_modules/nuxt/dist/app/entry.js"
+    "file": "/Users/diaks/PortfolioV2/node_modules/nuxt/dist/app/entry.js"
   }
 }
