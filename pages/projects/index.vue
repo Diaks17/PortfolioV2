@@ -1,5 +1,4 @@
 <template>
-  <div class="container">
     <div class="projets-menu">
       <div class="projets-link">
         <nuxt-link to="/projects/web/karma">RESAWEB</nuxt-link>
@@ -30,7 +29,6 @@
       </div>
       <!-- Ajoutez d'autres liens de projets ici -->
     </div>
-  </div>
 </template>
 
 <script>

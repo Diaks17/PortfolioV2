@@ -157,7 +157,7 @@ html, body {
     /* justify-content: space-between; */
     align-items: center;
     flex-direction: column;
-    width: 100vw;
+    width: 100%;
     /* height: 100vh; */
     padding: 1rem;
     /* padding: 0 0 1rem 0; */
