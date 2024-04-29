@@ -1,58 +1,69 @@
 <template>
-    <div class="projets-menu">
-      <div class="projets-link">
-        <nuxt-link to="/projects/web/karma">RESAWEB</nuxt-link>
+  <div class="projets-menu">
+      <div class="projets-link" v-for="(project, index) in projects" :key="index">
+          <nuxt-link :to="project.route">{{ project.name }}</nuxt-link>
       </div>
-      <div class="projets-link">
-        <nuxt-link to="/projects/web">SHOOTING</nuxt-link>
-      </div>
-      <div class="projets-link">
-        <nuxt-link to="/projects/web">RESAWEB</nuxt-link>
-      </div>
-      <div class="projets-link">
-        <nuxt-link to="/projects/web">RESAWEB</nuxt-link>
-      </div>
-      <div class="projets-link">
-        <nuxt-link to="/projects/web">RESAWEB</nuxt-link>
-      </div>
-      <div class="projets-link">
-        <nuxt-link to="/projects/web">RESAWEB</nuxt-link>
-      </div>
-      <div class="projets-link">
-        <nuxt-link to="/projects/web">RESAWEB</nuxt-link>
-      </div>
-      <div class="projets-link">
-        <nuxt-link to="/projects/web">RESAWEB</nuxt-link>
-      </div>
-      <div class="projets-link">
-        <nuxt-link to="/projects/web">RESAWEB</nuxt-link>
-      </div>
-      <!-- Ajoutez d'autres liens de projets ici -->
-    </div>
+  </div>
 </template>
 
 <script>
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
+export default {
+  mounted() {
+      gsap.registerPlugin(ScrollTrigger);
+
+      this.projects.forEach((project, index) => {
+          gsap.from(`.projets-link:nth-child(${index + 1})`, {
+              scrollTrigger: {
+                  trigger: `.projets-link:nth-child(${index + 1})`,
+                  scrub: 1,
+                  start: "top 80%",
+                  markers: true,
+              },
+              y: 100,
+              opacity: 1,
+              duration: 0.5,
+              ease: "power4.in",
+          });
+      });
+  },
+  data() {
+      return {
+          projects: [
+              { name: "RESAWEB", route: "/projects/web/karma" },
+              { name: "SHOOTING", route: "/projects/web" },
+              { name: "J'AIME ÇA", route: "/projects/web/jaimeca" },
+              { name: "J'AIME ÇA", route: "/projects/web/jaimeca" },
+              { name: "J'AIME ÇA", route: "/projects/web/jaimeca" },
+              { name: "J'AIME ÇA", route: "/projects/web/jaimeca" },
+              { name: "J'AIME ÇA", route: "/projects/web/jaimeca" },
+              { name: "J'AIME ÇA", route: "/projects/web/jaimeca" },
+              { name: "J'AIME ÇA", route: "/projects/web/jaimeca" },
+              { name: "J'AIME ÇA", route: "/projects/web/jaimeca" },
+              { name: "J'AIME ÇA", route: "/projects/web/jaimeca" },
+              { name: "J'AIME ÇA", route: "/projects/web/jaimeca" },
+              { name: "J'AIME ÇA", route: "/projects/web/jaimeca" },
+              // Ajoutez d'autres projets ici
+          ]
+      };
+  }
+};
 </script>
 
 <style scoped>
 .container {
-  position: relative;  
-  /* overflow: hidden; */
+  position: relative;
   margin-top: 10%;
-  /* margin: 0 auto; */
-  height: 50% ;
+  height: 50%;
 }
 
 .projets-menu {
   position: relative;
-  /* top: 50%; */
-  /* position: fixed; */
-  /* transform: translateY(-50%); */
   transition: top 0.3s ease;
   display: flex;
   flex-direction: column;
-  /* width: 30%; */
   height: 70%;
   margin: 0 auto;
   justify-content: space-around;
@@ -61,11 +72,12 @@
 }
 
 .hidden {
-  top: 200%; /* ou toute autre valeur pour cacher le menu */
+  top: 200%;
 }
 
 .projets-link {
   display: flex;
+  opacity: 0;
   justify-content: center;
   align-items: center;
   color: #C59335;

@@ -154,7 +154,7 @@ html, body {
 
 .container {
     display: flex;
-    /* justify-content: space-between; */
+    /* justify-content: center; */
     align-items: center;
     flex-direction: column;
     width: 100%;
@@ -170,7 +170,8 @@ header {
     position: fixed;
     top: 0;
     display: flex;
-    width: 100%;
+    z-index: 3;
+    width: 75%;
     justify-content: space-between;
     /* padding: 0 5rem; */
     color: #C59335;
@@ -231,8 +232,10 @@ header {
     font-weight: bold;
     font-size: 1.5rem;
     padding: 0.5rem;
+    transition: 4s;
 }
 .nav-link:hover {
+    transition: width 2s;
     background:linear-gradient(90deg, #132b4100, #132B41 , #132b4100);
 }
  /* SCREEN ASSETS */
@@ -240,7 +243,7 @@ header {
     position: fixed;
     top: 1rem;
     left: 1rem;
-    z-index: 2;
+    z-index: 3;
  }
 .arrow-tr {
     position: fixed;
@@ -252,7 +255,7 @@ header {
     position: fixed;
     bottom: 1rem;
     left: 1rem;
-    z-index: 2;
+    z-index: 3;
 }
 .arrow-br {
     position: fixed;
