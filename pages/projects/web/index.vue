@@ -21,7 +21,7 @@ export default {
   },
   setup() {
     const images = ref([
-      { path: '/img/p1.jpg', route: 'web/ecpm' },
+      { path: '/img/jaimeca1.jpg', route: 'web/jaimeca' },
       { path: '/img/p2.jpg', route: 'web/project2' },
       { path: '/img/p3.jpg', route: 'web/karma' },
       { path: '/img/p4.jpg', route: 'web/' },
