@@ -2,7 +2,7 @@
 <div class="project-container">
     <div class="project-description">
     <div class="resume">
-    <h2>J'AIME ÇA</h2>
+    <h2>LILBLACK</h2>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus ipsam ea debitis officia optio cupiditate nulla labore! Obcaecati nesciunt magnam accusantium in ad vitae suscipit, unde porro dolore perspiciatis quibusdam?</p>
     </div>
    <div class="membres">
@@ -39,16 +39,16 @@ export default {
   },
   setup() {
     const images = ref([
-      { path: '/img/jaimeca1.jpg' },
-      { path: '/img/jaimeca2.jpg'},
-      { path: '/img/jaimeca3.jpg'},
-      { path: '/img/jaimeca4.jpg'},
-      { path: '/img/jaimeca5.jpg'},
-      { path: '/img/jaimeca6.jpg'},
-      { path: '/img/jaimeca7.jpg'},
-      { path: '/img/jaimeca8.jpg'},
-      { path: '/img/jaimeca9.jpg'},
-      { path: '/img/jaimeca10.jpg'},
+      { path: '/img/lilblack2.jpg'},
+      { path: '/img/lilblack3.jpg'},
+      { path: '/img/lilblack1.jpg'},
+      { path: '/img/lilblack4.jpg'},
+      { path: '/img/lilblack5.jpg'},
+      { path: '/img/lilblack6.jpg'},
+      { path: '/img/lilblack7.jpg'},
+      { path: '/img/lilblack8.jpg'},
+      { path: '/img/lilblack9.jpg'},
+      { path: '/img/lilblack10.jpg'},
     ]);
 
     // onMounted(() => {

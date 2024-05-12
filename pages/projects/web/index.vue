@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="shootings">
     <h1>Photos</h1>
     <p>Lorem ipsum dolor sit amet consectetur. Leo suspendisse sit sit sed in non tempor. Ac sed purus risus lacus lacus malesuada.</p>
     
@@ -33,6 +33,12 @@ export default {
 </script>
 
 <style scoped>
+.shootings {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin-left: 20%;
+}
 h1 {
   font-size: 2rem;
   margin-bottom: 0;
