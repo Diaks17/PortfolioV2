@@ -2,7 +2,7 @@
 <div class="project-container">
     <div class="project-description">
     <div class="resume">
-    <h2>J'AIME ÇA</h2>
+    <h2>LILBLACK</h2>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus ipsam ea debitis officia optio cupiditate nulla labore! Obcaecati nesciunt magnam accusantium in ad vitae suscipit, unde porro dolore perspiciatis quibusdam?</p>
     </div>
    <div class="membres">
@@ -11,16 +11,16 @@
     </div>
 </div>
 
-  <img src="/img/jaimeca3.jpg" width="33%" srcset="">
+  <img src="/img/postTournage3.jpg" width="33%" srcset="">
   <div class="photos">
-
     <div
       :class="'photo photo' + index" 
       data-width="33" 
       v-for="(image, index) in images" 
-      :key="index" 
-    >
+      :key="index">
+
       <Shooting :image="image.path" />
+      
     </div>
   </div>
 </div>
@@ -39,16 +39,16 @@ export default {
   },
   setup() {
     const images = ref([
-      { path: '/img/jaimeca1.jpg' },
-      { path: '/img/jaimeca2.jpg'},
-      { path: '/img/jaimeca3.jpg'},
-      { path: '/img/jaimeca4.jpg'},
-      { path: '/img/jaimeca5.jpg'},
-      { path: '/img/jaimeca6.jpg'},
-      { path: '/img/jaimeca7.jpg'},
-      { path: '/img/jaimeca8.jpg'},
-      { path: '/img/jaimeca9.jpg'},
-      { path: '/img/jaimeca10.jpg'},
+      { path: '/img/postTournage2.jpg'},
+      { path: '/img/postTournage3.jpg'},
+      { path: '/img/postTournage1.jpg'},
+      { path: '/img/postTournage4.jpg'},
+      { path: '/img/postTournage5.jpg'},
+      { path: '/img/postTournage6.jpg'},
+      { path: '/img/postTournage7.jpg'},
+      { path: '/img/postTournage8.jpg'},
+      { path: '/img/postTournage9.jpg'},
+      { path: '/img/postTournage10.jpg'},
     ]);
 
     // onMounted(() => {

@@ -22,9 +22,9 @@ export default {
   setup() {
     const images = ref([
       { path: '/img/jaimeca1.jpg', route: 'web/jaimeca' },
-      { path: '/img/p2.jpg', route: 'web/project2' },
-      { path: '/img/p3.jpg', route: 'web/karma' },
-      { path: '/img/p4.jpg', route: 'web/' },
+      { path: '/img/lilblack1.jpg', route: 'web/lilblack' },
+      { path: '/img/postTournage1.jpg', route: 'web/post-tournage' },
+      // { path: '/img/p4.jpg', route: 'web/' },
     ])
 
     return { images }
@@ -36,8 +36,6 @@ export default {
 .shootings {
   display: flex;
   flex-direction: column;
-  width: 80%;
-  margin-left: 20%;
 }
 h1 {
   font-size: 2rem;
@@ -53,10 +51,9 @@ p {
 }
 .card-container {
   display: flex;
-  
+  align-items: center;
   gap: 20px;
-  justify-content: space-between;
-  align-items: flex-start;
+  justify-content: center;
   flex-wrap: wrap;
 }
 </style>

@@ -157,8 +157,8 @@ html, body {
     /* justify-content: center; */
     align-items: center;
     flex-direction: column;
-    width: 100%;
-    /* height: 100vh; */
+    width: 80%;
+    margin-left: 20%;
     padding: 1rem;
     /* padding: 0 0 1rem 0; */
     font-family: 'Space Mono', monospace;

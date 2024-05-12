@@ -6,13 +6,11 @@
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus ipsam ea debitis officia optio cupiditate nulla labore! Obcaecati nesciunt magnam accusantium in ad vitae suscipit, unde porro dolore perspiciatis quibusdam?</p>
     </div>
    <div class="membres">
-    <nuxt-link to="/projects/web/jaimeca">Kry_MD</nuxt-link>
-    <nuxt-link to="/projects/web/jaimeca">Leila</nuxt-link>
-
+    <nuxt-link to="/projects/web/jaimeca">@Kry_MD</nuxt-link>
     </div>
 </div>
 
-  <img src="/img/jaimeca3.jpg" width="33%" srcset="">
+  <img src="/img/lilblack3.jpg" width="33%" srcset="">
   <div class="photos">
     <div
       :class="'photo photo' + index" 
@@ -87,45 +85,5 @@ export default {
 </script>
 
 <style>
-.project-container {
-  margin: 0 auto;
-  margin-left: 20%;
-  display: flex;
-  flex-direction: column;
-  width: 80%;
-  justify-content: center;
-  align-items: center;
-}
-.project-description {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin-top: 2rem;
-
-}
-.resume {
-  width: 50%;
-  color: white;
-}
-.photos {
-  display: flex;
-  margin-top: 2rem;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 20px;
-}
-
-.photo {
-  width: 20vw;
-  /* opacity: 0; */
-}
-
-.photo img {
-  width: 100%;
-}
-
-.photo[data-width="33"] {
-  width: 25%;
-}
+@import url("~/assets/styles/shooting.css");
 </style>
