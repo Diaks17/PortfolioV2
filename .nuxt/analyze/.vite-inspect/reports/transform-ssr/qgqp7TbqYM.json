@@ -1,0 +1,288 @@
+{
+  "resolvedId": "/Users/diaks/PortfolioV2/pages/projects/index.vue?vue&type=style&index=0&scoped=1c93b942&lang.css",
+  "transforms": [
+    {
+      "name": "vite:vue",
+      "result": "\n.container {\n  position: relative;\n  margin-top: 10%;\n  height: 50%;\n}\n\n.projets-menu {\n  position: relative;\n  transition: top 0.3s ease;\n  display: flex;\n  flex-direction: column;\n  height: 70%;\n  margin: 0 auto;\n  justify-content: space-around;\n  align-items: flex-start;\n  color: yellow;\n}\n\n.hidden {\n  top: 200%;\n}\n\n.projets-link {\n  display: flex;\n  opacity: 0;\n  justify-content: center;\n  align-items: center;\n  color: #C59335;\n  font-size: 4rem;\n  font-weight: 700;\n  text-decoration: none;\n  text-transform: uppercase;\n  cursor: pointer;\n  transition: 0.3s;\n  font-family: 'Auto Extra';\n  opacity: 0.5;\n}\n\n.projets-link a {\n  color: #C59335;\n  text-decoration: none;\n}\n\n.projets-link:hover {\n  background: linear-gradient(90deg, #132b4100, #132B41, #132b4100);\n  opacity: 1;\n}\n",
+      "start": 1715600168330,
+      "end": 1715600168330,
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "/Users/diaks/PortfolioV2/pages/projects/index.vue"
+        ],
+        "names": [],
+        "mappings": "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",
+        "file": "/Users/diaks/PortfolioV2/pages/projects/index.vue",
+        "sourceRoot": "",
+        "sourcesContent": [
+          "<template>\n  <div class=\"projets-menu\">\n      <div class=\"projets-link\" v-for=\"(project, index) in projects\" :key=\"index\">\n          <nuxt-link :to=\"project.route\">{{ project.name }}</nuxt-link>\n      </div>\n  </div>\n</template>\n\n<script>\nimport { gsap } from 'gsap';\nimport { ScrollTrigger } from 'gsap/ScrollTrigger';\n\nexport default {\n  mounted() {\n      gsap.registerPlugin(ScrollTrigger);\n\n      this.projects.forEach((project, index) => {\n          gsap.from(`.projets-link:nth-child(${index + 1})`, {\n              scrollTrigger: {\n                  trigger: `.projets-link:nth-child(${index + 1})`,\n                  scrub: 1,\n                  start: \"top 80%\",\n              },\n              y: 100,\n              opacity: 1,\n              duration: 0.5,\n              ease: \"power4.in\",\n          });\n      });\n  },\n  data() {\n      return {\n          projects: [\n              { name: \"RESAWEB\", route: \"/projects/web/karma\" },\n              { name: \"OVER-FIGHT\", route: \"/projects/web/overlord-fight\" },\n              { name: \"SHOOTING\", route: \"/projects/web\" },\n              { name: \"PHOTOS\", route: \"/projects/photos\" },\n              { name: \"J'AIME ÇA\", route: \"/projects/web/jaimeca\" },\n              // Ajoutez d'autres projets ici\n          ]\n      };\n  }\n};\n</script>\n\n<style scoped>\n.container {\n  position: relative;\n  margin-top: 10%;\n  height: 50%;\n}\n\n.projets-menu {\n  position: relative;\n  transition: top 0.3s ease;\n  display: flex;\n  flex-direction: column;\n  height: 70%;\n  margin: 0 auto;\n  justify-content: space-around;\n  align-items: flex-start;\n  color: yellow;\n}\n\n.hidden {\n  top: 200%;\n}\n\n.projets-link {\n  display: flex;\n  opacity: 0;\n  justify-content: center;\n  align-items: center;\n  color: #C59335;\n  font-size: 4rem;\n  font-weight: 700;\n  text-decoration: none;\n  text-transform: uppercase;\n  cursor: pointer;\n  transition: 0.3s;\n  font-family: 'Auto Extra';\n  opacity: 0.5;\n}\n\n.projets-link a {\n  color: #C59335;\n  text-decoration: none;\n}\n\n.projets-link:hover {\n  background: linear-gradient(90deg, #132b4100, #132B41, #132b4100);\n  opacity: 1;\n}\n</style>\n"
+        ]
+      }
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1715600168330,
+      "end": 1715600168330,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1715600168330,
+      "end": 1715600168330,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1715600168330,
+      "end": 1715600168330,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1715600168330,
+      "end": 1715600168330,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1715600168331,
+      "end": 1715600168331,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "result": ".container{height:50%;margin-top:10%;position:relative}.projets-menu{align-items:flex-start;color:#ff0;display:flex;flex-direction:column;height:70%;justify-content:space-around;margin:0 auto;position:relative;transition:top .3s ease}.hidden{top:200%}.projets-link{align-items:center;cursor:pointer;display:flex;font-family:Auto Extra;font-size:4rem;font-weight:700;justify-content:center;opacity:0;opacity:.5;text-transform:uppercase;transition:.3s}.projets-link,.projets-link a{color:#c59335;text-decoration:none}.projets-link:hover{background:linear-gradient(90deg,#132b4100,#132b41,#132b4100);opacity:1}",
+      "start": 1715600168331,
+      "end": 1715600168341,
+      "order": "normal",
+      "sourcemaps": {
+        "file": "/Users/diaks/PortfolioV2/pages/projects/index.vue",
+        "mappings": "AACA,WAGE,UAAW,CADX,cAAe,CADf,iBAGF,CAEA,cAQE,sBAAuB,CACvB,UAAa,CANb,YAAa,CACb,qBAAsB,CACtB,UAAW,CAEX,4BAA6B,CAD7B,aAAc,CALd,iBAAkB,CAClB,uBAQF,CAEA,QACE,QACF,CAEA,cAIE,kBAAmB,CAMnB,cAAe,CATf,YAAa,CAWb,sBAAyB,CANzB,cAAe,CACf,eAAgB,CAJhB,sBAAuB,CADvB,SAAU,CAWV,UAAY,CAJZ,wBAAyB,CAEzB,cAGF,CAEA,8BAXE,aAAc,CAGd,oBAWF,CAEA,oBACE,6DAAiE,CACjE,SACF",
+        "names": [],
+        "sources": [
+          "/Users/diaks/PortfolioV2/pages/projects/index.vue"
+        ],
+        "sourcesContent": [
+          "\n.container {\n  position: relative;\n  margin-top: 10%;\n  height: 50%;\n}\n\n.projets-menu {\n  position: relative;\n  transition: top 0.3s ease;\n  display: flex;\n  flex-direction: column;\n  height: 70%;\n  margin: 0 auto;\n  justify-content: space-around;\n  align-items: flex-start;\n  color: yellow;\n}\n\n.hidden {\n  top: 200%;\n}\n\n.projets-link {\n  display: flex;\n  opacity: 0;\n  justify-content: center;\n  align-items: center;\n  color: #C59335;\n  font-size: 4rem;\n  font-weight: 700;\n  text-decoration: none;\n  text-transform: uppercase;\n  cursor: pointer;\n  transition: 0.3s;\n  font-family: 'Auto Extra';\n  opacity: 0.5;\n}\n\n.projets-link a {\n  color: #C59335;\n  text-decoration: none;\n}\n\n.projets-link:hover {\n  background: linear-gradient(90deg, #132b4100, #132B41, #132b4100);\n  opacity: 1;\n}\n"
+        ],
+        "version": 3
+      }
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1715600168341,
+      "end": 1715600168341,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1715600168342,
+      "end": 1715600168342,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1715600168342,
+      "end": 1715600168342,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": ".container[data-v-1c93b942]{height:50%;margin-top:10%;position:relative}.projets-menu[data-v-1c93b942]{align-items:flex-start;color:#ff0;display:flex;flex-direction:column;height:70%;justify-content:space-around;margin:0 auto;position:relative;transition:top .3s ease}.hidden[data-v-1c93b942]{top:200%}.projets-link[data-v-1c93b942]{align-items:center;cursor:pointer;display:flex;font-family:Auto Extra;font-size:4rem;font-weight:700;justify-content:center;opacity:0;opacity:.5;text-transform:uppercase;transition:.3s}.projets-link[data-v-1c93b942],.projets-link a[data-v-1c93b942]{color:#c59335;text-decoration:none}.projets-link[data-v-1c93b942]:hover{background:linear-gradient(90deg,#132b4100,#132b41,#132b4100);opacity:1}",
+      "start": 1715600168342,
+      "end": 1715600168344,
+      "order": "normal",
+      "sourcemaps": {
+        "file": "/Users/diaks/PortfolioV2/pages/projects/index.vue",
+        "mappings": "AAAA,4BAAW,UAAU,CAAC,cAAc,CAAC,iBAAiB,CAAC,+BAAc,sBAAsB,CAAC,UAAU,CAAC,YAAY,CAAC,qBAAqB,CAAC,UAAU,CAAC,4BAA4B,CAAC,aAAa,CAAC,iBAAiB,CAAC,uBAAuB,CAAC,yBAAQ,QAAQ,CAAC,+BAAc,kBAAkB,CAAC,cAAc,CAAC,YAAY,CAAC,sBAAsB,CAAC,cAAc,CAAC,eAAe,CAAC,sBAAsB,CAAC,SAAS,CAAC,UAAU,CAAC,wBAAwB,CAAC,cAAc,CAAC,gEAA8B,aAAa,CAAC,oBAAoB,CAAC,qCAAoB,6DAA6D,CAAC,SAAS",
+        "names": [],
+        "sources": [
+          "/Users/diaks/PortfolioV2/pages/projects/index.vue"
+        ],
+        "sourcesContent": [
+          null
+        ],
+        "version": 3
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1715600168344,
+      "end": 1715600168344,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1715600168344,
+      "end": 1715600168344,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1715600168344,
+      "end": 1715600168344,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1715600168344,
+      "end": 1715600168344,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1715600168344,
+      "end": 1715600168344,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1715600168344,
+      "end": 1715600168344,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1715600168344,
+      "end": 1715600168344,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1715600168344,
+      "end": 1715600168346,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1715600168346,
+      "end": 1715600168346,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "result": "",
+      "start": 1715600168346,
+      "end": 1715600168346,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1715600168346,
+      "end": 1715600168346,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1715600168346,
+      "end": 1715600168346,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1715600168346,
+      "end": 1715600168346,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1715600168346,
+      "end": 1715600168346,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1715600168346,
+      "end": 1715600168346,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1715600168346,
+      "end": 1715600168346,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1715600168346,
+      "end": 1715600168346,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1715600168346,
+      "end": 1715600168346,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1715600168346,
+      "end": 1715600168346,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1715600168346,
+      "end": 1715600168346,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1715600168346,
+      "end": 1715600168346,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1715600168346,
+      "end": 1715600168346,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1715600168346,
+      "end": 1715600168346,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1715600168346,
+      "end": 1715600168346,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-template",
+      "start": 1715600168346,
+      "end": 1715600168346,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1715600168346,
+      "end": 1715600168346,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1715600168346,
+      "end": 1715600168346,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1715600168346,
+      "end": 1715600168346,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1715600168346,
+      "end": 1715600168346,
+      "order": "normal"
+    }
+  ]
+}

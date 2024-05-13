@@ -1,0 +1,1 @@
+import{g as t}from"./index.FSCrshNh.js";import{_ as o}from"./entry.l48D-aGa.js";const r={mounted(){const e=document.querySelector(".circle");t.to(e,{scale:1.1,repeat:-1,yoyo:!0,duration:.5,ease:"power2.inOut"})}};function c(e,n,s,a,p,i){return null}const d=o(r,[["render",c],["__scopeId","data-v-6fe8f026"]]);export{d as default};

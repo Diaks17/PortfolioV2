@@ -1,0 +1,214 @@
+{
+  "resolvedId": "/Users/diaks/PortfolioV2/components/card.vue",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "<template>\n  <div class=\"card\"  \n      @mouseover=\"startAnimation\"\n      @mouseleave=\"resetAnimation\">\n    <div class=\"card-image\">\n      <img :src=\"image\" @mouseover=\"handleImageClick\" />\n      <div>\n      </div>\n    </div>\n    <div class=\"hexagon\">\n      <div class=\"hexagon1\">\n        <div class=\"number\">{{ cardIndex + 1 }}</div>\n        <svg\n          width=\"138\"\n          height=\"138\"\n          viewBox=\"0 0 138 138\"\n          fill=\"none\"\n          xmlns=\"http://www.w3.org/2000/svg\"\n        >\n          <g filter=\"url(#filter0_b_1389_695)\">\n            <path\n              d=\"M19 0H138V118L118 138H0V19L19 0Z\"\n              fill=\"white\"\n              fill-opacity=\"0.1\"\n            />\n          </g>\n          <defs>\n            <filter\n              id=\"filter0_b_1389_695\"\n              x=\"-10\"\n              y=\"-10\"\n              width=\"158\"\n              height=\"158\"\n              filterUnits=\"userSpaceOnUse\"\n              color-interpolation-filters=\"sRGB\"\n            >\n              <feFlood flood-opacity=\"0\" result=\"BackgroundImageFix\" />\n              <feGaussianBlur in=\"BackgroundImageFix\" stdDeviation=\"5\" />\n              <feComposite\n                in2=\"SourceAlpha\"\n                operator=\"in\"\n                result=\"effect1_backgroundBlur_1389_695\"\n              />\n              <feBlend\n                mode=\"normal\"\n                in=\"SourceGraphic\"\n                in2=\"effect1_backgroundBlur_1389_695\"\n                result=\"shape\"\n              />\n            </filter>\n          </defs>\n        </svg>\n\n      </div>\n      <div class=\"hexagon2\">\n        <p id=\"exifdata\" class=\"exifdata\">{{ exifData }}</p>\n        <svg width=\"138\" height=\"138\" viewBox=\"0 0 138 138\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n          <g filter=\"url(#filter0_b_1389_696)\">\n            <path d=\"M119 0H0V118L20 138H138V19L119 0Z\" fill=\"white\" fill-opacity=\"0.1\"/>\n          </g>\n          <defs>\n            <filter id=\"filter0_b_1389_696\" x=\"-10\" y=\"-10\" width=\"158\" height=\"158\" filterUnits=\"userSpaceOnUse\" color-interpolation-filters=\"sRGB\">\n              <feFlood flood-opacity=\"0\" result=\"BackgroundImageFix\"/>\n              <feGaussianBlur in=\"BackgroundImageFix\" stdDeviation=\"5\"/>\n              <feComposite in2=\"SourceAlpha\" operator=\"in\" result=\"effect1_backgroundBlur_1389_696\"/>\n              <feBlend mode=\"normal\" in=\"SourceGraphic\" in2=\"effect1_backgroundBlur_1389_696\" result=\"shape\"/>\n            </filter>\n          </defs>\n        </svg>\n      </div>\n    </div>\n    \n  </div>\n</template>\n\n<script>\nimport { gsap } from 'gsap';\nimport exifr from 'exifr';\n\nexport default {\n  props: {\n    image: String,\n    cardIndex: Number\n  },\n  data() {\n    return {\n      exifData: ''\n    };\n  },\n  methods: {\n    async handleImageClick(event) {\n      // Vérifiez le nom de la route pour déterminer si vous devez extraire les données EXIF\n      if (this.$route.name === 'photos') { // Remplacez 'nom_de_votre_page' par le nom de votre page photo\n        console.log('Image clicked')\n        const file = event.target.src\n        console.log('Image file:', file)\n        try {\n          const exifData = await exifr.parse(file)\n          console.log('EXIF data:', exifData)\n          this.exifData = 'ISO: ' + exifData.ISO + '\\n' +\n                          'Focal: ' + exifData.FNumber + '\\n' +\n                          'Shutter speed: ' + exifData.ShutterSpeedValue;\n        } catch (error) {\n          console.log('Error reading EXIF data:', error)\n          alert('Error reading EXIF data: ' + error.message)\n        }\n      }\n    },\n\n    startAnimation(event) {\n      const card = event.target.closest('.card');\n      const hexagon1 = card.querySelector('.hexagon1');\n      const hexagon2 = card.querySelector('.hexagon2');\n      const cardImage = card.querySelector('.card-image');\n      const exifdata = card.querySelector('.exifdata');\n\n      gsap.to(hexagon1, {y:-138,x:138, ease: \"power1.out\",  duration: 0.3,opacity: 1});\n      gsap.to(hexagon2, {y:-138,x:-138, ease: \"power1.out\",  duration: 0.3, opacity: 1});\n      gsap.to(cardImage, {scale: 0.85,ease: \"power1.out\", filter: 'grayscale(0)', duration: 0.3});\n      gsap.to(exifdata, { y:10, x:10, ease: \" power1.out\",  duration: 0.3, delay: 0.50, opacity: 1});\n    },\n\n    resetAnimation(event) {\n      const card = event.target.closest('.card');\n      const hexagon1 = card.querySelector('.hexagon1');\n      const hexagon2 = card.querySelector('.hexagon2');\n      const cardImage = card.querySelector('.card-image');\n      const exifdata = card.querySelector('.exifdata');\n\n      gsap.to(hexagon1, {y:0, x:0, ease: \"power1.out\",  duration: 0.25, opacity: 0, delay: 0.25});\n      gsap.to(hexagon2, {y:0, x:0, ease: \"power1.out\",  duration: 0.25, opacity: 0, delay: 0.25});\n      gsap.to(cardImage, {scale: 1,ease: \"power1.out\",filter: 'grayscale(0.7)', duration: 0.25, delay: 0.25});\n      gsap.to(exifdata, { y:0, x:0, ease: \" power1.out\",  duration: 0.25, opacity: 0});\n    }\n  }\n}\n</script>\n\n\n  \n  <style scoped>\n\n  .card {\n      position: relative;\n      width: 300px;\n      height: 300px;\n      overflow: hidden;\n  }\n  .card-image {\n      width: 100%;\n      height: 100%;\n      filter: grayscale(0.7);\n  }\n  .card-image img{\n      width: 100%;\n      height: 100%;\n      object-fit: cover;\n      /* overflow: hidden; */\n  }\n  .hexagon {\n      position: absolute;\n      /* z-index: -1; */\n      bottom: 0;\n      left: 0;\n      width: 100%;\n      height: 50%;\n      display: flex;\n      justify-content: space-between;\n  \n      align-items: flex-end;\n  }\n  .hexagon1  {\n      position: absolute;\n      bottom: -138px;\n      left: -138px;\n      /* opacity: 0; */\n      /* z-index: 1; */\n  }\n  .number {\n      position: absolute;\n      top: 50%;\n      left: 50%;\n      transform: translate(-50%, -50%);\n      color: white;\n      font-size: 3rem;\n  }\n  .hexagon2  {\n      position: absolute;\n      bottom: -138px;\n      right: -138px;\n      /* opacity: 0; */\n      /* z-index: 1; */\n  }\n  #exifdata {\n      position: absolute;\n      bottom: 10px;\n      right: 5px;\n      color: white;\n      font-size: 12px;\n      padding: 10px;\n      opacity: 0;\n     \n  }\n  </style>",
+      "start": 1715600163466,
+      "end": 1715600163837,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1715600163837,
+      "end": 1715600163837,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1715600163837,
+      "end": 1715600163837,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1715600163837,
+      "end": 1715600163837,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1715600163837,
+      "end": 1715600163837,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1715600163837,
+      "end": 1715600163837,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1715600163837,
+      "end": 1715600163837,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1715600163837,
+      "end": 1715600163837,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": "\nimport { gsap } from 'gsap';\nimport exifr from 'exifr';\n\nconst _sfc_main = {\n  props: {\n    image: String,\n    cardIndex: Number\n  },\n  data() {\n    return {\n      exifData: ''\n    };\n  },\n  methods: {\n    async handleImageClick(event) {\n      // Vérifiez le nom de la route pour déterminer si vous devez extraire les données EXIF\n      if (this.$route.name === 'photos') { // Remplacez 'nom_de_votre_page' par le nom de votre page photo\n        console.log('Image clicked')\n        const file = event.target.src\n        console.log('Image file:', file)\n        try {\n          const exifData = await exifr.parse(file)\n          console.log('EXIF data:', exifData)\n          this.exifData = 'ISO: ' + exifData.ISO + '\\n' +\n                          'Focal: ' + exifData.FNumber + '\\n' +\n                          'Shutter speed: ' + exifData.ShutterSpeedValue;\n        } catch (error) {\n          console.log('Error reading EXIF data:', error)\n          alert('Error reading EXIF data: ' + error.message)\n        }\n      }\n    },\n\n    startAnimation(event) {\n      const card = event.target.closest('.card');\n      const hexagon1 = card.querySelector('.hexagon1');\n      const hexagon2 = card.querySelector('.hexagon2');\n      const cardImage = card.querySelector('.card-image');\n      const exifdata = card.querySelector('.exifdata');\n\n      gsap.to(hexagon1, {y:-138,x:138, ease: \"power1.out\",  duration: 0.3,opacity: 1});\n      gsap.to(hexagon2, {y:-138,x:-138, ease: \"power1.out\",  duration: 0.3, opacity: 1});\n      gsap.to(cardImage, {scale: 0.85,ease: \"power1.out\", filter: 'grayscale(0)', duration: 0.3});\n      gsap.to(exifdata, { y:10, x:10, ease: \" power1.out\",  duration: 0.3, delay: 0.50, opacity: 1});\n    },\n\n    resetAnimation(event) {\n      const card = event.target.closest('.card');\n      const hexagon1 = card.querySelector('.hexagon1');\n      const hexagon2 = card.querySelector('.hexagon2');\n      const cardImage = card.querySelector('.card-image');\n      const exifdata = card.querySelector('.exifdata');\n\n      gsap.to(hexagon1, {y:0, x:0, ease: \"power1.out\",  duration: 0.25, opacity: 0, delay: 0.25});\n      gsap.to(hexagon2, {y:0, x:0, ease: \"power1.out\",  duration: 0.25, opacity: 0, delay: 0.25});\n      gsap.to(cardImage, {scale: 1,ease: \"power1.out\",filter: 'grayscale(0.7)', duration: 0.25, delay: 0.25});\n      gsap.to(exifdata, { y:0, x:0, ease: \" power1.out\",  duration: 0.25, opacity: 0});\n    }\n  }\n}\n\nimport { createElementVNode as _createElementVNode, toDisplayString as _toDisplayString, createStaticVNode as _createStaticVNode, openBlock as _openBlock, createElementBlock as _createElementBlock, pushScopeId as _pushScopeId, popScopeId as _popScopeId } from \"vue\"\n\nconst _withScopeId = n => (_pushScopeId(\"data-v-51d8adc3\"),n=n(),_popScopeId(),n)\nconst _hoisted_1 = { class: \"card-image\" }\nconst _hoisted_2 = [\"src\"]\nconst _hoisted_3 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_createElementVNode(\"div\", null, null, -1))\nconst _hoisted_4 = { class: \"hexagon\" }\nconst _hoisted_5 = { class: \"hexagon1\" }\nconst _hoisted_6 = { class: \"number\" }\nconst _hoisted_7 = /*#__PURE__*/_createStaticVNode(\"<svg width=\\\"138\\\" height=\\\"138\\\" viewBox=\\\"0 0 138 138\\\" fill=\\\"none\\\" xmlns=\\\"http://www.w3.org/2000/svg\\\" data-v-51d8adc3><g filter=\\\"url(#filter0_b_1389_695)\\\" data-v-51d8adc3><path d=\\\"M19 0H138V118L118 138H0V19L19 0Z\\\" fill=\\\"white\\\" fill-opacity=\\\"0.1\\\" data-v-51d8adc3></path></g><defs data-v-51d8adc3><filter id=\\\"filter0_b_1389_695\\\" x=\\\"-10\\\" y=\\\"-10\\\" width=\\\"158\\\" height=\\\"158\\\" filterUnits=\\\"userSpaceOnUse\\\" color-interpolation-filters=\\\"sRGB\\\" data-v-51d8adc3><feFlood flood-opacity=\\\"0\\\" result=\\\"BackgroundImageFix\\\" data-v-51d8adc3></feFlood><feGaussianBlur in=\\\"BackgroundImageFix\\\" stdDeviation=\\\"5\\\" data-v-51d8adc3></feGaussianBlur><feComposite in2=\\\"SourceAlpha\\\" operator=\\\"in\\\" result=\\\"effect1_backgroundBlur_1389_695\\\" data-v-51d8adc3></feComposite><feBlend mode=\\\"normal\\\" in=\\\"SourceGraphic\\\" in2=\\\"effect1_backgroundBlur_1389_695\\\" result=\\\"shape\\\" data-v-51d8adc3></feBlend></filter></defs></svg>\", 1)\nconst _hoisted_8 = { class: \"hexagon2\" }\nconst _hoisted_9 = {\n  id: \"exifdata\",\n  class: \"exifdata\"\n}\nconst _hoisted_10 = /*#__PURE__*/_createStaticVNode(\"<svg width=\\\"138\\\" height=\\\"138\\\" viewBox=\\\"0 0 138 138\\\" fill=\\\"none\\\" xmlns=\\\"http://www.w3.org/2000/svg\\\" data-v-51d8adc3><g filter=\\\"url(#filter0_b_1389_696)\\\" data-v-51d8adc3><path d=\\\"M119 0H0V118L20 138H138V19L119 0Z\\\" fill=\\\"white\\\" fill-opacity=\\\"0.1\\\" data-v-51d8adc3></path></g><defs data-v-51d8adc3><filter id=\\\"filter0_b_1389_696\\\" x=\\\"-10\\\" y=\\\"-10\\\" width=\\\"158\\\" height=\\\"158\\\" filterUnits=\\\"userSpaceOnUse\\\" color-interpolation-filters=\\\"sRGB\\\" data-v-51d8adc3><feFlood flood-opacity=\\\"0\\\" result=\\\"BackgroundImageFix\\\" data-v-51d8adc3></feFlood><feGaussianBlur in=\\\"BackgroundImageFix\\\" stdDeviation=\\\"5\\\" data-v-51d8adc3></feGaussianBlur><feComposite in2=\\\"SourceAlpha\\\" operator=\\\"in\\\" result=\\\"effect1_backgroundBlur_1389_696\\\" data-v-51d8adc3></feComposite><feBlend mode=\\\"normal\\\" in=\\\"SourceGraphic\\\" in2=\\\"effect1_backgroundBlur_1389_696\\\" result=\\\"shape\\\" data-v-51d8adc3></feBlend></filter></defs></svg>\", 1)\n\nfunction _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {\n  return (_openBlock(), _createElementBlock(\"div\", {\n    class: \"card\",\n    onMouseover: _cache[1] || (_cache[1] = (...args) => ($options.startAnimation && $options.startAnimation(...args))),\n    onMouseleave: _cache[2] || (_cache[2] = (...args) => ($options.resetAnimation && $options.resetAnimation(...args)))\n  }, [\n    _createElementVNode(\"div\", _hoisted_1, [\n      _createElementVNode(\"img\", {\n        src: $props.image,\n        onMouseover: _cache[0] || (_cache[0] = (...args) => ($options.handleImageClick && $options.handleImageClick(...args)))\n      }, null, 40, _hoisted_2),\n      _hoisted_3\n    ]),\n    _createElementVNode(\"div\", _hoisted_4, [\n      _createElementVNode(\"div\", _hoisted_5, [\n        _createElementVNode(\"div\", _hoisted_6, _toDisplayString($props.cardIndex + 1), 1),\n        _hoisted_7\n      ]),\n      _createElementVNode(\"div\", _hoisted_8, [\n        _createElementVNode(\"p\", _hoisted_9, _toDisplayString($data.exifData), 1),\n        _hoisted_10\n      ])\n    ])\n  ], 32))\n}\n\nimport \"/Users/diaks/PortfolioV2/components/card.vue?vue&type=style&index=0&scoped=51d8adc3&lang.css\"\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render],['__scopeId',\"data-v-51d8adc3\"]])",
+      "start": 1715600163837,
+      "end": 1715600163845,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1715600163845,
+      "end": 1715600163845,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1715600163845,
+      "end": 1715600163845,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1715600163845,
+      "end": 1715600163845,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1715600163845,
+      "end": 1715600163845,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1715600163845,
+      "end": 1715600163845,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1715600163845,
+      "end": 1715600163845,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1715600163845,
+      "end": 1715600163845,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1715600163846,
+      "end": 1715600163846,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1715600163846,
+      "end": 1715600163846,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1715600163846,
+      "end": 1715600163846,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1715600163846,
+      "end": 1715600163846,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1715600163846,
+      "end": 1715600163846,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1715600163846,
+      "end": 1715600163846,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1715600163846,
+      "end": 1715600163846,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1715600163846,
+      "end": 1715600163846,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1715600163846,
+      "end": 1715600163846,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1715600163846,
+      "end": 1715600163848,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1715600163848,
+      "end": 1715600163848,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1715600163848,
+      "end": 1715600163848,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1715600163848,
+      "end": 1715600163848,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1715600163848,
+      "end": 1715600163848,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1715600163848,
+      "end": 1715600163848,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1715600163848,
+      "end": 1715600163848,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1715600163848,
+      "end": 1715600163848,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1715600163848,
+      "end": 1715600163848,
+      "order": "normal"
+    }
+  ]
+}

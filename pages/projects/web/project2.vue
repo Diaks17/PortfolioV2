@@ -1,6 +1,6 @@
 <template>
     <section id="project2" class="project">
-        <div class="left-part">
+        <!-- <div class="left-part">
             <a href="./projets.php" class="back-projet"><img src="./img/arrowBack.svg" alt="" srcset=""></a>
             <p>Il s’agit d’un projet ou l’on devait réaliser la campagne publicitaire d’un évènement ou d’un lieu situé
                 à Londres, pour cela mon équipe et avons du réaliser plusieurs affiches et une maquette de la page
@@ -17,6 +17,6 @@
             <div class="third-part">
                 <img src="./img/site.jpg" alt="">
             </div>
-        </div>
+        </div> -->
     </section>
 </template>

@@ -1,0 +1,279 @@
+{
+  "resolvedId": "/Users/diaks/PortfolioV2/pages/about.vue?macro=true",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "<template>\n<!-- <svg class=\"circle\" width=\"458\" height=\"458\" viewBox=\"0 0 458 458\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<circle cx=\"229\" cy=\"229\" r=\"229\" fill=\"#FFA401\"/>\n</svg> -->\n<div class=\"atropos my-atropos\">\n  <!-- scale container (required) -->\n  <div class=\"atropos-scale \">\n    <!-- rotate container (required) -->\n    <div class=\"atropos-rotate\">\n      <!-- inner container (required) -->\n      <div class=\"atropos-inner\">\n        <div class=\"profil\">\n  <div class=\"infos\">\n      <h3>Nom:</h3>\n      <p>Diakite</p>\n      <h3>Prénom:</h3>\n      <p>Moussa</p>\n      <h3>Âge:</h3>\n      <p>21 ans</p>\n  </div>\n  <div class=\"mail\">\n    <h3>Email:</h3>\n    <p>diakitemoussaweb@gmail.com</p>\n  </div>\n  <div class=\"tel\">\n    <h3>Téléphone:</h3>\n    <p>07 00 00 00 00</p>\n  </div>\n  <div class=\"bio\">\n    <h3>Déscription:</h3>\n    <p>Il aime associer ses deux passions : le développement web et la photographie dans ses projets.<br>\n    Il est de nature curieux, attentif et rigoureux, des qualités qu’il sait mettre au service de son travail.</p>\n  </div>\n  <div class=\"wanted\">\n    <h3>Recherche:</h3>\n    <p>Un poste de développeur front-end</p>\n  </div>\n  <div class=\"reward\">\n    <h3>Récompense:</h3>\n    <p>Un développeur front curieux attentif avec une bonne capacité d’adaptation afin de réaliser les taches qui lui seront confiés</p>\n  </div>\n</div>  \n      </div>\n    </div>\n  </div>\n</div>\n</template>\n\n<script scoped>\nimport { gsap } from 'gsap';\nimport Atropos from 'atropos';\nimport 'atropos/css';\n\nexport default {\n  mounted() {\n    // Sélectionnez le cercle après qu'il a été monté dans le DOM\n    const circle = document.querySelector('.circle');\n    const profil = document.querySelector('.profil');\n\n    // Appliquer une animation à votre cercle avec GSAP\n    gsap.to(circle, {\n      scale: 1.1, // Déformer le cercle pour simuler un battement de cœur\n      repeat: -1, // Répéter l'animation indéfiniment\n      yoyo: true, // Inverser l'animation à chaque itération\n      duration: 0.8, // Durée d'un battement de cœur (en secondes)\n      ease: 'power2.inOut',\n    });\n    gsap.from(profil, {\n      x: -400,\n      opacity: 0,\n      duration: 2,\n      delay: 0,\n      ease: 'bounce.out'\n    });\n    const myAtropos = Atropos({\n  el: '.my-atropos',\n  rotateLock: true,\n  activeOffset: 40,\n  shadowScale: 1,\n  shadowOffset: 10,\n  rotateYMax: 30,\n  // rest of parameters\n});\n  },\n}\n\n</script>\n\n<style scoped>\n/* .container {\n  gap: 10em;\n} */\n.my-atropos {\n  width: 80%;\n  /* height: 160px; */\n}\n\n.profil {\n  position: relative;\n  z-index: 2;\n  width: 90%;\n  padding: 20px;\n  font-family: 'Auto Regular', sans-serif;\n  /* height: 80%; */\n  /* display: flex; */\n  flex-direction: column;\n  /* background-image: url(\"../assets/img/ruche.png\"); */\n  background-size: 150%;\n  background-repeat: no-repeat;\n  background-position: center;\n  background: linear-gradient(180deg, #132B41 0%, #021C1B 100%);\n  backdrop-filter: blur(20px);\n  border: 1px solid white;\n  color: white;\n}\n.infos, .mail, .tel {\n  display: flex;\n  /* justify-content: space-between; */\n  align-items: center;\n  gap: 10px;\n}\n.profil > div > h3  {\n  font-family: 'Auto Bold', sans-serif;\n}\n</style>",
+      "start": 1715600167954,
+      "end": 1715600167994,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1715600167994,
+      "end": 1715600167994,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1715600167994,
+      "end": 1715600167994,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1715600167994,
+      "end": 1715600167994,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1715600167994,
+      "end": 1715600167994,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1715600167994,
+      "end": 1715600167994,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1715600167994,
+      "end": 1715600167994,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1715600167994,
+      "end": 1715600167994,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1715600167994,
+      "end": 1715600167994,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1715600167994,
+      "end": 1715600167994,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": "\nimport { gsap } from 'gsap';\nimport Atropos from 'atropos';\nimport 'atropos/css';\n\nconst _sfc_main = {\n  mounted() {\n    // Sélectionnez le cercle après qu'il a été monté dans le DOM\n    const circle = document.querySelector('.circle');\n    const profil = document.querySelector('.profil');\n\n    // Appliquer une animation à votre cercle avec GSAP\n    gsap.to(circle, {\n      scale: 1.1, // Déformer le cercle pour simuler un battement de cœur\n      repeat: -1, // Répéter l'animation indéfiniment\n      yoyo: true, // Inverser l'animation à chaque itération\n      duration: 0.8, // Durée d'un battement de cœur (en secondes)\n      ease: 'power2.inOut',\n    });\n    gsap.from(profil, {\n      x: -400,\n      opacity: 0,\n      duration: 2,\n      delay: 0,\n      ease: 'bounce.out'\n    });\n    const myAtropos = Atropos({\n  el: '.my-atropos',\n  rotateLock: true,\n  activeOffset: 40,\n  shadowScale: 1,\n  shadowOffset: 10,\n  rotateYMax: 30,\n  // rest of parameters\n});\n  },\n}\n\n\nimport { mergeProps as _mergeProps } from \"vue\"\nimport { ssrRenderAttrs as _ssrRenderAttrs } from \"vue/server-renderer\"\n\nfunction _sfc_ssrRender(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {\n  _push(`<div${_ssrRenderAttrs(_mergeProps({ class: \"atropos my-atropos\" }, _attrs))} data-v-d2166212><div class=\"atropos-scale\" data-v-d2166212><div class=\"atropos-rotate\" data-v-d2166212><div class=\"atropos-inner\" data-v-d2166212><div class=\"profil\" data-v-d2166212><div class=\"infos\" data-v-d2166212><h3 data-v-d2166212>Nom:</h3><p data-v-d2166212>Diakite</p><h3 data-v-d2166212>Prénom:</h3><p data-v-d2166212>Moussa</p><h3 data-v-d2166212>Âge:</h3><p data-v-d2166212>21 ans</p></div><div class=\"mail\" data-v-d2166212><h3 data-v-d2166212>Email:</h3><p data-v-d2166212>diakitemoussaweb@gmail.com</p></div><div class=\"tel\" data-v-d2166212><h3 data-v-d2166212>Téléphone:</h3><p data-v-d2166212>07 00 00 00 00</p></div><div class=\"bio\" data-v-d2166212><h3 data-v-d2166212>Déscription:</h3><p data-v-d2166212>Il aime associer ses deux passions : le développement web et la photographie dans ses projets.<br data-v-d2166212> Il est de nature curieux, attentif et rigoureux, des qualités qu’il sait mettre au service de son travail.</p></div><div class=\"wanted\" data-v-d2166212><h3 data-v-d2166212>Recherche:</h3><p data-v-d2166212>Un poste de développeur front-end</p></div><div class=\"reward\" data-v-d2166212><h3 data-v-d2166212>Récompense:</h3><p data-v-d2166212>Un développeur front curieux attentif avec une bonne capacité d’adaptation afin de réaliser les taches qui lui seront confiés</p></div></div></div></div></div></div>`)\n}\n\nimport \"/Users/diaks/PortfolioV2/pages/about.vue?vue&type=style&index=0&scoped=d2166212&lang.css\"\n\nimport { useSSRContext as __vite_useSSRContext } from 'vue'\nconst _sfc_setup = _sfc_main.setup\n_sfc_main.setup = (props, ctx) => {\n  const ssrContext = __vite_useSSRContext()\n  ;(ssrContext.modules || (ssrContext.modules = new Set())).add(\"pages/about.vue\")\n  return _sfc_setup ? _sfc_setup(props, ctx) : undefined\n}\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['ssrRender',_sfc_ssrRender],['__scopeId',\"data-v-d2166212\"]])",
+      "start": 1715600167995,
+      "end": 1715600168021,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "file": "/Users/diaks/PortfolioV2/pages/about.vue",
+        "names": [],
+        "sources": [
+          "/Users/diaks/PortfolioV2/pages/about.vue"
+        ],
+        "sourcesContent": [
+          "<template>\n<!-- <svg class=\"circle\" width=\"458\" height=\"458\" viewBox=\"0 0 458 458\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<circle cx=\"229\" cy=\"229\" r=\"229\" fill=\"#FFA401\"/>\n</svg> -->\n<div class=\"atropos my-atropos\">\n  <!-- scale container (required) -->\n  <div class=\"atropos-scale \">\n    <!-- rotate container (required) -->\n    <div class=\"atropos-rotate\">\n      <!-- inner container (required) -->\n      <div class=\"atropos-inner\">\n        <div class=\"profil\">\n  <div class=\"infos\">\n      <h3>Nom:</h3>\n      <p>Diakite</p>\n      <h3>Prénom:</h3>\n      <p>Moussa</p>\n      <h3>Âge:</h3>\n      <p>21 ans</p>\n  </div>\n  <div class=\"mail\">\n    <h3>Email:</h3>\n    <p>diakitemoussaweb@gmail.com</p>\n  </div>\n  <div class=\"tel\">\n    <h3>Téléphone:</h3>\n    <p>07 00 00 00 00</p>\n  </div>\n  <div class=\"bio\">\n    <h3>Déscription:</h3>\n    <p>Il aime associer ses deux passions : le développement web et la photographie dans ses projets.<br>\n    Il est de nature curieux, attentif et rigoureux, des qualités qu’il sait mettre au service de son travail.</p>\n  </div>\n  <div class=\"wanted\">\n    <h3>Recherche:</h3>\n    <p>Un poste de développeur front-end</p>\n  </div>\n  <div class=\"reward\">\n    <h3>Récompense:</h3>\n    <p>Un développeur front curieux attentif avec une bonne capacité d’adaptation afin de réaliser les taches qui lui seront confiés</p>\n  </div>\n</div>  \n      </div>\n    </div>\n  </div>\n</div>\n</template>\n\n<script scoped>\nimport { gsap } from 'gsap';\nimport Atropos from 'atropos';\nimport 'atropos/css';\n\nexport default {\n  mounted() {\n    // Sélectionnez le cercle après qu'il a été monté dans le DOM\n    const circle = document.querySelector('.circle');\n    const profil = document.querySelector('.profil');\n\n    // Appliquer une animation à votre cercle avec GSAP\n    gsap.to(circle, {\n      scale: 1.1, // Déformer le cercle pour simuler un battement de cœur\n      repeat: -1, // Répéter l'animation indéfiniment\n      yoyo: true, // Inverser l'animation à chaque itération\n      duration: 0.8, // Durée d'un battement de cœur (en secondes)\n      ease: 'power2.inOut',\n    });\n    gsap.from(profil, {\n      x: -400,\n      opacity: 0,\n      duration: 2,\n      delay: 0,\n      ease: 'bounce.out'\n    });\n    const myAtropos = Atropos({\n  el: '.my-atropos',\n  rotateLock: true,\n  activeOffset: 40,\n  shadowScale: 1,\n  shadowOffset: 10,\n  rotateYMax: 30,\n  // rest of parameters\n});\n  },\n}\n\n</script>\n\n<style scoped>\n/* .container {\n  gap: 10em;\n} */\n.my-atropos {\n  width: 80%;\n  /* height: 160px; */\n}\n\n.profil {\n  position: relative;\n  z-index: 2;\n  width: 90%;\n  padding: 20px;\n  font-family: 'Auto Regular', sans-serif;\n  /* height: 80%; */\n  /* display: flex; */\n  flex-direction: column;\n  /* background-image: url(\"../assets/img/ruche.png\"); */\n  background-size: 150%;\n  background-repeat: no-repeat;\n  background-position: center;\n  background: linear-gradient(180deg, #132B41 0%, #021C1B 100%);\n  backdrop-filter: blur(20px);\n  border: 1px solid white;\n  color: white;\n}\n.infos, .mail, .tel {\n  display: flex;\n  /* justify-content: space-between; */\n  align-items: center;\n  gap: 10px;\n}\n.profil > div > h3  {\n  font-family: 'Auto Bold', sans-serif;\n}\n</style>"
+        ],
+        "mappings": ";AAiDA,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,EAAE,CAAC,CAAC,CAAC,EAAE,EAAE,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3B,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7B,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;;AAEpB,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE;EACb,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE;IACR,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,EAAE,EAAE,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,EAAE,CAAC,EAAE,CAAC,CAAC;IAC5D,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;IAChD,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;;IAEhD,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,EAAE,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC;IAClD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE;MACd,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,EAAE,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,EAAE,CAAC,CAAC,CAAC;MAClE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,EAAE,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;MAC9C,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;MACrD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,EAAE,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,EAAE,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;MAC3D,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;IACtB,CAAC,CAAC;IACF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE;MAChB,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC;MACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC;MACV,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC;MACX,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC;MACR,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;IACnB,CAAC,CAAC;IACF,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;EAC5B,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;EACjB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC;EAChB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC;EAChB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC;EACd,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC;EAChB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC;EACd,CAAC,EAAE,CAAC,CAAC,CAAC,EAAE,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtB,CAAC,CAAC;EACA,CAAC;AACH;;;;;;;EApFA,aAAA,gBAAA,cAIK,KAAK,EAAC,oBAAoB,IAJ/B"
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1715600168021,
+      "end": 1715600168021,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1715600168021,
+      "end": 1715600168021,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1715600168021,
+      "end": 1715600168021,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1715600168021,
+      "end": 1715600168021,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1715600168021,
+      "end": 1715600168021,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1715600168021,
+      "end": 1715600168021,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1715600168021,
+      "end": 1715600168022,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1715600168022,
+      "end": 1715600168022,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "result": "import { gsap } from \"gsap\";\nimport Atropos from \"atropos\";\nimport \"atropos/css\";\nconst _sfc_main = {\n  mounted() {\n    const circle = (void 0).querySelector(\".circle\");\n    const profil = (void 0).querySelector(\".profil\");\n    gsap.to(circle, {\n      scale: 1.1,\n      // Déformer le cercle pour simuler un battement de cœur\n      repeat: -1,\n      // Répéter l'animation indéfiniment\n      yoyo: true,\n      // Inverser l'animation à chaque itération\n      duration: 0.8,\n      // Durée d'un battement de cœur (en secondes)\n      ease: \"power2.inOut\"\n    });\n    gsap.from(profil, {\n      x: -400,\n      opacity: 0,\n      duration: 2,\n      delay: 0,\n      ease: \"bounce.out\"\n    });\n    const myAtropos = Atropos({\n      el: \".my-atropos\",\n      rotateLock: true,\n      activeOffset: 40,\n      shadowScale: 1,\n      shadowOffset: 10,\n      rotateYMax: 30\n      // rest of parameters\n    });\n  }\n};\nimport { mergeProps as _mergeProps } from \"vue\";\nimport { ssrRenderAttrs as _ssrRenderAttrs } from \"vue/server-renderer\";\nfunction _sfc_ssrRender(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {\n  _push(`<div${_ssrRenderAttrs(_mergeProps({ class: \"atropos my-atropos\" }, _attrs))} data-v-d2166212><div class=\"atropos-scale\" data-v-d2166212><div class=\"atropos-rotate\" data-v-d2166212><div class=\"atropos-inner\" data-v-d2166212><div class=\"profil\" data-v-d2166212><div class=\"infos\" data-v-d2166212><h3 data-v-d2166212>Nom:</h3><p data-v-d2166212>Diakite</p><h3 data-v-d2166212>Prénom:</h3><p data-v-d2166212>Moussa</p><h3 data-v-d2166212>Âge:</h3><p data-v-d2166212>21 ans</p></div><div class=\"mail\" data-v-d2166212><h3 data-v-d2166212>Email:</h3><p data-v-d2166212>diakitemoussaweb@gmail.com</p></div><div class=\"tel\" data-v-d2166212><h3 data-v-d2166212>Téléphone:</h3><p data-v-d2166212>07 00 00 00 00</p></div><div class=\"bio\" data-v-d2166212><h3 data-v-d2166212>Déscription:</h3><p data-v-d2166212>Il aime associer ses deux passions : le développement web et la photographie dans ses projets.<br data-v-d2166212> Il est de nature curieux, attentif et rigoureux, des qualités qu’il sait mettre au service de son travail.</p></div><div class=\"wanted\" data-v-d2166212><h3 data-v-d2166212>Recherche:</h3><p data-v-d2166212>Un poste de développeur front-end</p></div><div class=\"reward\" data-v-d2166212><h3 data-v-d2166212>Récompense:</h3><p data-v-d2166212>Un développeur front curieux attentif avec une bonne capacité d’adaptation afin de réaliser les taches qui lui seront confiés</p></div></div></div></div></div></div>`);\n}\nimport \"/Users/diaks/PortfolioV2/pages/about.vue?vue&type=style&index=0&scoped=d2166212&lang.css\";\nimport { useSSRContext as __vite_useSSRContext } from \"vue\";\nconst _sfc_setup = _sfc_main.setup;\n_sfc_main.setup = (props, ctx) => {\n  const ssrContext = __vite_useSSRContext();\n  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add(\"pages/about.vue\");\n  return _sfc_setup ? _sfc_setup(props, ctx) : void 0;\n};\nimport _export_sfc from \"\\0plugin-vue:export-helper\";\nexport default /* @__PURE__ */ _export_sfc(_sfc_main, [[\"ssrRender\", _sfc_ssrRender], [\"__scopeId\", \"data-v-d2166212\"]]);\n",
+      "start": 1715600168022,
+      "end": 1715600168347,
+      "order": "normal",
+      "sourcemaps": "{\n  \"version\": 3,\n  \"sources\": [\"/Users/diaks/PortfolioV2/pages/about.vue?macro=true\"],\n  \"sourcesContent\": [\"\\nimport { gsap } from 'gsap';\\nimport Atropos from 'atropos';\\nimport 'atropos/css';\\n\\nconst _sfc_main = {\\n  mounted() {\\n    // Sélectionnez le cercle après qu'il a été monté dans le DOM\\n    const circle = document.querySelector('.circle');\\n    const profil = document.querySelector('.profil');\\n\\n    // Appliquer une animation à votre cercle avec GSAP\\n    gsap.to(circle, {\\n      scale: 1.1, // Déformer le cercle pour simuler un battement de cœur\\n      repeat: -1, // Répéter l'animation indéfiniment\\n      yoyo: true, // Inverser l'animation à chaque itération\\n      duration: 0.8, // Durée d'un battement de cœur (en secondes)\\n      ease: 'power2.inOut',\\n    });\\n    gsap.from(profil, {\\n      x: -400,\\n      opacity: 0,\\n      duration: 2,\\n      delay: 0,\\n      ease: 'bounce.out'\\n    });\\n    const myAtropos = Atropos({\\n  el: '.my-atropos',\\n  rotateLock: true,\\n  activeOffset: 40,\\n  shadowScale: 1,\\n  shadowOffset: 10,\\n  rotateYMax: 30,\\n  // rest of parameters\\n});\\n  },\\n}\\n\\n\\nimport { mergeProps as _mergeProps } from \\\"vue\\\"\\nimport { ssrRenderAttrs as _ssrRenderAttrs } from \\\"vue/server-renderer\\\"\\n\\nfunction _sfc_ssrRender(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {\\n  _push(`<div${_ssrRenderAttrs(_mergeProps({ class: \\\"atropos my-atropos\\\" }, _attrs))} data-v-d2166212><div class=\\\"atropos-scale\\\" data-v-d2166212><div class=\\\"atropos-rotate\\\" data-v-d2166212><div class=\\\"atropos-inner\\\" data-v-d2166212><div class=\\\"profil\\\" data-v-d2166212><div class=\\\"infos\\\" data-v-d2166212><h3 data-v-d2166212>Nom:</h3><p data-v-d2166212>Diakite</p><h3 data-v-d2166212>Prénom:</h3><p data-v-d2166212>Moussa</p><h3 data-v-d2166212>Âge:</h3><p data-v-d2166212>21 ans</p></div><div class=\\\"mail\\\" data-v-d2166212><h3 data-v-d2166212>Email:</h3><p data-v-d2166212>diakitemoussaweb@gmail.com</p></div><div class=\\\"tel\\\" data-v-d2166212><h3 data-v-d2166212>Téléphone:</h3><p data-v-d2166212>07 00 00 00 00</p></div><div class=\\\"bio\\\" data-v-d2166212><h3 data-v-d2166212>Déscription:</h3><p data-v-d2166212>Il aime associer ses deux passions : le développement web et la photographie dans ses projets.<br data-v-d2166212> Il est de nature curieux, attentif et rigoureux, des qualités qu’il sait mettre au service de son travail.</p></div><div class=\\\"wanted\\\" data-v-d2166212><h3 data-v-d2166212>Recherche:</h3><p data-v-d2166212>Un poste de développeur front-end</p></div><div class=\\\"reward\\\" data-v-d2166212><h3 data-v-d2166212>Récompense:</h3><p data-v-d2166212>Un développeur front curieux attentif avec une bonne capacité d’adaptation afin de réaliser les taches qui lui seront confiés</p></div></div></div></div></div></div>`)\\n}\\n\\nimport \\\"/Users/diaks/PortfolioV2/pages/about.vue?vue&type=style&index=0&scoped=d2166212&lang.css\\\"\\n\\nimport { useSSRContext as __vite_useSSRContext } from 'vue'\\nconst _sfc_setup = _sfc_main.setup\\n_sfc_main.setup = (props, ctx) => {\\n  const ssrContext = __vite_useSSRContext()\\n  ;(ssrContext.modules || (ssrContext.modules = new Set())).add(\\\"pages/about.vue\\\")\\n  return _sfc_setup ? _sfc_setup(props, ctx) : undefined\\n}\\nimport _export_sfc from '\\u0000plugin-vue:export-helper'\\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['ssrRender',_sfc_ssrRender],['__scopeId',\\\"data-v-d2166212\\\"]])\"],\n  \"mappings\": \"AACA,SAAS,YAAY;AACrB,OAAO,aAAa;AACpB,OAAO;AAEP,MAAM,YAAY;AAAA,EAChB,UAAU;AAER,UAAM,SAAS,SAAS,cAAc,SAAS;AAC/C,UAAM,SAAS,SAAS,cAAc,SAAS;AAG/C,SAAK,GAAG,QAAQ;AAAA,MACd,OAAO;AAAA;AAAA,MACP,QAAQ;AAAA;AAAA,MACR,MAAM;AAAA;AAAA,MACN,UAAU;AAAA;AAAA,MACV,MAAM;AAAA,IACR,CAAC;AACD,SAAK,KAAK,QAAQ;AAAA,MAChB,GAAG;AAAA,MACH,SAAS;AAAA,MACT,UAAU;AAAA,MACV,OAAO;AAAA,MACP,MAAM;AAAA,IACR,CAAC;AACD,UAAM,YAAY,QAAQ;AAAA,MAC5B,IAAI;AAAA,MACJ,YAAY;AAAA,MACZ,cAAc;AAAA,MACd,aAAa;AAAA,MACb,cAAc;AAAA,MACd,YAAY;AAAA;AAAA,IAEd,CAAC;AAAA,EACC;AACF;AAGA,SAAS,cAAc,mBAAmB;AAC1C,SAAS,kBAAkB,uBAAuB;AAElD,SAAS,eAAe,MAAM,OAAO,SAAS,QAAQ,QAAQ,QAAQ,OAAO,UAAU;AACrF,QAAM,OAAO,gBAAgB,YAAY,EAAE,OAAO,qBAAqB,GAAG,MAAM,CAAC,CAAC,g0CAAg0C;AACp5C;AAEA,OAAO;AAEP,SAAS,iBAAiB,4BAA4B;AACtD,MAAM,aAAa,UAAU;AAC7B,UAAU,QAAQ,CAAC,OAAO,QAAQ;AAChC,QAAM,aAAa,qBAAqB;AACvC,GAAC,WAAW,YAAY,WAAW,UAAU,oBAAI,IAAI,IAAI,IAAI,iBAAiB;AAC/E,SAAO,aAAa,WAAW,OAAO,GAAG,IAAI;AAC/C;AACA,OAAO,iBAAiB;AACxB,eAA4B,4BAAY,WAAW,CAAC,CAAC,aAAY,cAAc,GAAE,CAAC,aAAY,iBAAiB,CAAC,CAAC;\",\n  \"names\": []\n}\n"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1715600168348,
+      "end": 1715600168348,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1715600168348,
+      "end": 1715600168348,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1715600168348,
+      "end": 1715600168348,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1715600168348,
+      "end": 1715600168348,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1715600168348,
+      "end": 1715600168348,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1715600168348,
+      "end": 1715600168348,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1715600168348,
+      "end": 1715600168348,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1715600168348,
+      "end": 1715600168348,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1715600168348,
+      "end": 1715600168348,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1715600168348,
+      "end": 1715600168350,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1715600168348,
+      "end": 1715600168350,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1715600168350,
+      "end": 1715600168350,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1715600168350,
+      "end": 1715600168350,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "result": "\nconst __nuxt_page_meta = null\nexport default __nuxt_page_meta\n",
+      "start": 1715600168350,
+      "end": 1715600168351,
+      "order": "post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          ""
+        ],
+        "names": [],
+        "mappings": "AAAA;AAAA;AAAA;AAAA"
+      }
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "result": "\nconst __nuxt_page_meta = null\nexport default __nuxt_page_meta\n",
+      "start": 1715600168350,
+      "end": 1715600168351,
+      "order": "post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          ""
+        ],
+        "names": [],
+        "mappings": "AAAA;AAAA;AAAA;AAAA"
+      }
+    },
+    {
+      "name": "nuxt:tree-shake-template",
+      "start": 1715600168351,
+      "end": 1715600168352,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1715600168352,
+      "end": 1715600168352,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1715600168352,
+      "end": 1715600168352,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1715600168352,
+      "end": 1715600168352,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1715600168352,
+      "end": 1715600168352,
+      "order": "normal"
+    }
+  ]
+}

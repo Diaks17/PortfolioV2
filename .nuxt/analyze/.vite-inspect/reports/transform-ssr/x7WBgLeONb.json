@@ -1,0 +1,288 @@
+{
+  "resolvedId": "/Users/diaks/PortfolioV2/pages/about.vue?vue&type=style&index=0&scoped=d2166212&lang.css?inline&used",
+  "transforms": [
+    {
+      "name": "vite:vue",
+      "result": "\n/* .container {\n  gap: 10em;\n} */\n.my-atropos {\n  width: 80%;\n  /* height: 160px; */\n}\n\n.profil {\n  position: relative;\n  z-index: 2;\n  width: 90%;\n  padding: 20px;\n  font-family: 'Auto Regular', sans-serif;\n  /* height: 80%; */\n  /* display: flex; */\n  flex-direction: column;\n  /* background-image: url(\"../assets/img/ruche.png\"); */\n  background-size: 150%;\n  background-repeat: no-repeat;\n  background-position: center;\n  background: linear-gradient(180deg, #132B41 0%, #021C1B 100%);\n  backdrop-filter: blur(20px);\n  border: 1px solid white;\n  color: white;\n}\n.infos, .mail, .tel {\n  display: flex;\n  /* justify-content: space-between; */\n  align-items: center;\n  gap: 10px;\n}\n.profil > div > h3  {\n  font-family: 'Auto Bold', sans-serif;\n}\n",
+      "start": 1715600168111,
+      "end": 1715600168112,
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "/Users/diaks/PortfolioV2/pages/about.vue"
+        ],
+        "names": [],
+        "mappings": "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",
+        "file": "/Users/diaks/PortfolioV2/pages/about.vue",
+        "sourceRoot": "",
+        "sourcesContent": [
+          "<template>\n<!-- <svg class=\"circle\" width=\"458\" height=\"458\" viewBox=\"0 0 458 458\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<circle cx=\"229\" cy=\"229\" r=\"229\" fill=\"#FFA401\"/>\n</svg> -->\n<div class=\"atropos my-atropos\">\n  <!-- scale container (required) -->\n  <div class=\"atropos-scale \">\n    <!-- rotate container (required) -->\n    <div class=\"atropos-rotate\">\n      <!-- inner container (required) -->\n      <div class=\"atropos-inner\">\n        <div class=\"profil\">\n  <div class=\"infos\">\n      <h3>Nom:</h3>\n      <p>Diakite</p>\n      <h3>Prénom:</h3>\n      <p>Moussa</p>\n      <h3>Âge:</h3>\n      <p>21 ans</p>\n  </div>\n  <div class=\"mail\">\n    <h3>Email:</h3>\n    <p>diakitemoussaweb@gmail.com</p>\n  </div>\n  <div class=\"tel\">\n    <h3>Téléphone:</h3>\n    <p>07 00 00 00 00</p>\n  </div>\n  <div class=\"bio\">\n    <h3>Déscription:</h3>\n    <p>Il aime associer ses deux passions : le développement web et la photographie dans ses projets.<br>\n    Il est de nature curieux, attentif et rigoureux, des qualités qu’il sait mettre au service de son travail.</p>\n  </div>\n  <div class=\"wanted\">\n    <h3>Recherche:</h3>\n    <p>Un poste de développeur front-end</p>\n  </div>\n  <div class=\"reward\">\n    <h3>Récompense:</h3>\n    <p>Un développeur front curieux attentif avec une bonne capacité d’adaptation afin de réaliser les taches qui lui seront confiés</p>\n  </div>\n</div>  \n      </div>\n    </div>\n  </div>\n</div>\n</template>\n\n<script scoped>\nimport { gsap } from 'gsap';\nimport Atropos from 'atropos';\nimport 'atropos/css';\n\nexport default {\n  mounted() {\n    // Sélectionnez le cercle après qu'il a été monté dans le DOM\n    const circle = document.querySelector('.circle');\n    const profil = document.querySelector('.profil');\n\n    // Appliquer une animation à votre cercle avec GSAP\n    gsap.to(circle, {\n      scale: 1.1, // Déformer le cercle pour simuler un battement de cœur\n      repeat: -1, // Répéter l'animation indéfiniment\n      yoyo: true, // Inverser l'animation à chaque itération\n      duration: 0.8, // Durée d'un battement de cœur (en secondes)\n      ease: 'power2.inOut',\n    });\n    gsap.from(profil, {\n      x: -400,\n      opacity: 0,\n      duration: 2,\n      delay: 0,\n      ease: 'bounce.out'\n    });\n    const myAtropos = Atropos({\n  el: '.my-atropos',\n  rotateLock: true,\n  activeOffset: 40,\n  shadowScale: 1,\n  shadowOffset: 10,\n  rotateYMax: 30,\n  // rest of parameters\n});\n  },\n}\n\n</script>\n\n<style scoped>\n/* .container {\n  gap: 10em;\n} */\n.my-atropos {\n  width: 80%;\n  /* height: 160px; */\n}\n\n.profil {\n  position: relative;\n  z-index: 2;\n  width: 90%;\n  padding: 20px;\n  font-family: 'Auto Regular', sans-serif;\n  /* height: 80%; */\n  /* display: flex; */\n  flex-direction: column;\n  /* background-image: url(\"../assets/img/ruche.png\"); */\n  background-size: 150%;\n  background-repeat: no-repeat;\n  background-position: center;\n  background: linear-gradient(180deg, #132B41 0%, #021C1B 100%);\n  backdrop-filter: blur(20px);\n  border: 1px solid white;\n  color: white;\n}\n.infos, .mail, .tel {\n  display: flex;\n  /* justify-content: space-between; */\n  align-items: center;\n  gap: 10px;\n}\n.profil > div > h3  {\n  font-family: 'Auto Bold', sans-serif;\n}\n</style>"
+        ]
+      }
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1715600168112,
+      "end": 1715600168112,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1715600168112,
+      "end": 1715600168112,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1715600168112,
+      "end": 1715600168112,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1715600168112,
+      "end": 1715600168112,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1715600168112,
+      "end": 1715600168112,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "result": ".my-atropos{width:80%}.profil{-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);background-position:50%;background-repeat:no-repeat;background-size:150%;background:linear-gradient(180deg,#132b41,#021c1b);border:1px solid #fff;color:#fff;flex-direction:column;font-family:Auto Regular,sans-serif;padding:20px;position:relative;width:90%;z-index:2}.infos,.mail,.tel{align-items:center;display:flex;gap:10px}.profil>div>h3{font-family:Auto Bold,sans-serif}",
+      "start": 1715600168112,
+      "end": 1715600168131,
+      "order": "normal",
+      "sourcemaps": {
+        "file": "/Users/diaks/PortfolioV2/pages/about.vue",
+        "mappings": "AAIA,YACE,SAEF,CAEA,QAcE,kCAA2B,CAA3B,0BAA2B,CAF3B,uBAA2B,CAD3B,2BAA4B,CAD5B,oBAAqB,CAGrB,kDAA6D,CAE7D,qBAAuB,CACvB,UAAY,CARZ,qBAAsB,CAHtB,mCAAuC,CADvC,YAAa,CAHb,iBAAkB,CAElB,SAAU,CADV,SAeF,CACA,kBAGE,kBAAmB,CAFnB,YAAa,CAGb,QACF,CACA,eACE,gCACF",
+        "names": [],
+        "sources": [
+          "/Users/diaks/PortfolioV2/pages/about.vue"
+        ],
+        "sourcesContent": [
+          "\n/* .container {\n  gap: 10em;\n} */\n.my-atropos {\n  width: 80%;\n  /* height: 160px; */\n}\n\n.profil {\n  position: relative;\n  z-index: 2;\n  width: 90%;\n  padding: 20px;\n  font-family: 'Auto Regular', sans-serif;\n  /* height: 80%; */\n  /* display: flex; */\n  flex-direction: column;\n  /* background-image: url(\"../assets/img/ruche.png\"); */\n  background-size: 150%;\n  background-repeat: no-repeat;\n  background-position: center;\n  background: linear-gradient(180deg, #132B41 0%, #021C1B 100%);\n  backdrop-filter: blur(20px);\n  border: 1px solid white;\n  color: white;\n}\n.infos, .mail, .tel {\n  display: flex;\n  /* justify-content: space-between; */\n  align-items: center;\n  gap: 10px;\n}\n.profil > div > h3  {\n  font-family: 'Auto Bold', sans-serif;\n}\n"
+        ],
+        "version": 3
+      }
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1715600168131,
+      "end": 1715600168131,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1715600168131,
+      "end": 1715600168131,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1715600168131,
+      "end": 1715600168131,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": ".my-atropos[data-v-d2166212]{width:80%}.profil[data-v-d2166212]{-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);background-position:50%;background-repeat:no-repeat;background-size:150%;background:linear-gradient(180deg,#132b41,#021c1b);border:1px solid #fff;color:#fff;flex-direction:column;font-family:Auto Regular,sans-serif;padding:20px;position:relative;width:90%;z-index:2}.infos[data-v-d2166212],.mail[data-v-d2166212],.tel[data-v-d2166212]{align-items:center;display:flex;gap:10px}.profil>div>h3[data-v-d2166212]{font-family:Auto Bold,sans-serif}",
+      "start": 1715600168131,
+      "end": 1715600168133,
+      "order": "normal",
+      "sourcemaps": {
+        "file": "/Users/diaks/PortfolioV2/pages/about.vue",
+        "mappings": "AAAA,6BAAY,SAAS,CAAC,yBAAQ,kCAAkC,CAAC,0BAA0B,CAAC,uBAAuB,CAAC,2BAA2B,CAAC,oBAAoB,CAAC,kDAAkD,CAAC,qBAAqB,CAAC,UAAU,CAAC,qBAAqB,CAAC,mCAAmC,CAAC,YAAY,CAAC,iBAAiB,CAAC,SAAS,CAAC,SAAS,CAAC,qEAAkB,kBAAkB,CAAC,YAAY,CAAC,QAAQ,CAAC,gCAAe,gCAAgC",
+        "names": [],
+        "sources": [
+          "/Users/diaks/PortfolioV2/pages/about.vue"
+        ],
+        "sourcesContent": [
+          null
+        ],
+        "version": 3
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1715600168133,
+      "end": 1715600168133,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1715600168133,
+      "end": 1715600168133,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1715600168133,
+      "end": 1715600168133,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1715600168133,
+      "end": 1715600168133,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1715600168133,
+      "end": 1715600168133,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1715600168133,
+      "end": 1715600168133,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1715600168133,
+      "end": 1715600168133,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1715600168133,
+      "end": 1715600168133,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1715600168133,
+      "end": 1715600168133,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "result": "export default \".my-atropos[data-v-d2166212]{width:80%}.profil[data-v-d2166212]{-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);background-position:50%;background-repeat:no-repeat;background-size:150%;background:linear-gradient(180deg,#132b41,#021c1b);border:1px solid #fff;color:#fff;flex-direction:column;font-family:Auto Regular,sans-serif;padding:20px;position:relative;width:90%;z-index:2}.infos[data-v-d2166212],.mail[data-v-d2166212],.tel[data-v-d2166212]{align-items:center;display:flex;gap:10px}.profil>div>h3[data-v-d2166212]{font-family:Auto Bold,sans-serif}\"",
+      "start": 1715600168133,
+      "end": 1715600168134,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1715600168134,
+      "end": 1715600168134,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1715600168134,
+      "end": 1715600168134,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1715600168134,
+      "end": 1715600168134,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1715600168134,
+      "end": 1715600168134,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1715600168134,
+      "end": 1715600168134,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1715600168134,
+      "end": 1715600168134,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1715600168134,
+      "end": 1715600168134,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1715600168134,
+      "end": 1715600168134,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1715600168134,
+      "end": 1715600168134,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1715600168134,
+      "end": 1715600168134,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1715600168134,
+      "end": 1715600168134,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1715600168134,
+      "end": 1715600168134,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1715600168134,
+      "end": 1715600168134,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1715600168134,
+      "end": 1715600168134,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-template",
+      "start": 1715600168134,
+      "end": 1715600168134,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1715600168134,
+      "end": 1715600168134,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1715600168134,
+      "end": 1715600168134,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1715600168134,
+      "end": 1715600168134,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1715600168134,
+      "end": 1715600168134,
+      "order": "normal"
+    }
+  ]
+}

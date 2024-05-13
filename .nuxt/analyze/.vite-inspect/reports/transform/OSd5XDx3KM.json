@@ -1,0 +1,223 @@
+{
+  "resolvedId": "/Users/diaks/PortfolioV2/pages/projects/photos.vue?macro=true",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "<template>\n  <div>\n    <h1>Photos</h1>\n    <p>Lorem ipsum dolor sit amet consectetur. Leo suspendisse sit sit sed in non tempor. Ac sed purus risus lacus lacus malesuada.</p>\n    \n    <div class=\"card-container\">\n      <Card v-for=\"(image, index) in images\" :key=\"index\" :image=\"image\" :card-index=\"index + 0\" />\n\n  </div>\n  </div>\n</template>\n\n<script scoped>\nimport Card from '../components/card.vue';\nimport { ref } from 'vue';\n\nexport default {\n  components: {\n    Card\n  },\n  setup() {\n    const images = ref([\n      '/img/photo1.jpg',\n      '/img/photo2.jpg',\n      '/img/photo3.jpg',\n      '/img/photo4.jpg',\n      '/img/photo5.jpg',\n      '/img/photo6.jpg',\n    ])\n\n    return { images }\n  }\n};\n// document.querySelector('.hexagon2').innerHTML = `<p id=\"exifdata\"></p>`;\n</script>\n<style scoped>\nh1 {\n  font-size: 2rem;\n  margin-bottom: 0;\n  color: #D29801;\n\n}\np {\n  font-size: 1rem;\n  color: white;\n  width: 50%;\n  margin-top: 0;\n}\n.card-container {\n  display: flex;\n  \n  gap: 20px;\n  justify-content: space-between;\n  align-items: flex-start;\n  flex-wrap: wrap;\n}\n</style>",
+      "start": 1715600163049,
+      "end": 1715600163238,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1715600163239,
+      "end": 1715600163239,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1715600163239,
+      "end": 1715600163239,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1715600163239,
+      "end": 1715600163239,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1715600163239,
+      "end": 1715600163239,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1715600163239,
+      "end": 1715600163239,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1715600163239,
+      "end": 1715600163239,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1715600163239,
+      "end": 1715600163239,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": "\nimport Card from '../components/card.vue';\nimport { ref } from 'vue';\n\nconst _sfc_main = {\n  components: {\n    Card\n  },\n  setup() {\n    const images = ref([\n      '/img/photo1.jpg',\n      '/img/photo2.jpg',\n      '/img/photo3.jpg',\n      '/img/photo4.jpg',\n      '/img/photo5.jpg',\n      '/img/photo6.jpg',\n    ])\n\n    return { images }\n  }\n};\n// document.querySelector('.hexagon2').innerHTML = `<p id=\"exifdata\"></p>`;\n\nimport { createElementVNode as _createElementVNode, renderList as _renderList, Fragment as _Fragment, openBlock as _openBlock, createElementBlock as _createElementBlock, resolveComponent as _resolveComponent, createBlock as _createBlock, pushScopeId as _pushScopeId, popScopeId as _popScopeId } from \"vue\"\n\nconst _withScopeId = n => (_pushScopeId(\"data-v-676f44d2\"),n=n(),_popScopeId(),n)\nconst _hoisted_1 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_createElementVNode(\"h1\", null, \"Photos\", -1))\nconst _hoisted_2 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_createElementVNode(\"p\", null, \"Lorem ipsum dolor sit amet consectetur. Leo suspendisse sit sit sed in non tempor. Ac sed purus risus lacus lacus malesuada.\", -1))\nconst _hoisted_3 = { class: \"card-container\" }\n\nfunction _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {\n  const _component_Card = _resolveComponent(\"Card\")\n\n  return (_openBlock(), _createElementBlock(\"div\", null, [\n    _hoisted_1,\n    _hoisted_2,\n    _createElementVNode(\"div\", _hoisted_3, [\n      (_openBlock(true), _createElementBlock(_Fragment, null, _renderList($setup.images, (image, index) => {\n        return (_openBlock(), _createBlock(_component_Card, {\n          key: index,\n          image: image,\n          \"card-index\": index + 0\n        }, null, 8, [\"image\", \"card-index\"]))\n      }), 128))\n    ])\n  ]))\n}\n\nimport \"/Users/diaks/PortfolioV2/pages/projects/photos.vue?vue&type=style&index=0&scoped=676f44d2&lang.css\"\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render],['__scopeId',\"data-v-676f44d2\"]])",
+      "start": 1715600163239,
+      "end": 1715600163250,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1715600163250,
+      "end": 1715600163250,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1715600163250,
+      "end": 1715600163250,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1715600163250,
+      "end": 1715600163250,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1715600163250,
+      "end": 1715600163250,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1715600163250,
+      "end": 1715600163251,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1715600163251,
+      "end": 1715600163251,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1715600163251,
+      "end": 1715600163251,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1715600163251,
+      "end": 1715600163251,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1715600163251,
+      "end": 1715600163251,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1715600163251,
+      "end": 1715600163251,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1715600163251,
+      "end": 1715600163251,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1715600163251,
+      "end": 1715600163251,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1715600163251,
+      "end": 1715600163251,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1715600163251,
+      "end": 1715600163251,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1715600163251,
+      "end": 1715600163251,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1715600163251,
+      "end": 1715600163251,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1715600163251,
+      "end": 1715600163252,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1715600163252,
+      "end": 1715600163252,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "result": "\nconst __nuxt_page_meta = null\nexport default __nuxt_page_meta\n",
+      "start": 1715600163252,
+      "end": 1715600163253,
+      "order": "post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          ""
+        ],
+        "names": [],
+        "mappings": "AAAA;AAAA;AAAA;AAAA"
+      }
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1715600163253,
+      "end": 1715600163253,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1715600163253,
+      "end": 1715600163253,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1715600163253,
+      "end": 1715600163253,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1715600163253,
+      "end": 1715600163253,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1715600163253,
+      "end": 1715600163253,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1715600163253,
+      "end": 1715600163253,
+      "order": "normal"
+    }
+  ]
+}

@@ -1,0 +1,215 @@
+{
+  "resolvedId": "/Users/diaks/PortfolioV2/pages/projects/index.vue",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "<template>\n  <div class=\"projets-menu\">\n      <div class=\"projets-link\" v-for=\"(project, index) in projects\" :key=\"index\">\n          <nuxt-link :to=\"project.route\">{{ project.name }}</nuxt-link>\n      </div>\n  </div>\n</template>\n\n<script>\nimport { gsap } from 'gsap';\nimport { ScrollTrigger } from 'gsap/ScrollTrigger';\n\nexport default {\n  mounted() {\n      gsap.registerPlugin(ScrollTrigger);\n\n      this.projects.forEach((project, index) => {\n          gsap.from(`.projets-link:nth-child(${index + 1})`, {\n              scrollTrigger: {\n                  trigger: `.projets-link:nth-child(${index + 1})`,\n                  scrub: 1,\n                  start: \"top 80%\",\n              },\n              y: 100,\n              opacity: 1,\n              duration: 0.5,\n              ease: \"power4.in\",\n          });\n      });\n  },\n  data() {\n      return {\n          projects: [\n              { name: \"RESAWEB\", route: \"/projects/web/karma\" },\n              { name: \"OVER-FIGHT\", route: \"/projects/web/overlord-fight\" },\n              { name: \"SHOOTING\", route: \"/projects/web\" },\n              { name: \"PHOTOS\", route: \"/projects/photos\" },\n              { name: \"J'AIME ÇA\", route: \"/projects/web/jaimeca\" },\n              // Ajoutez d'autres projets ici\n          ]\n      };\n  }\n};\n</script>\n\n<style scoped>\n.container {\n  position: relative;\n  margin-top: 10%;\n  height: 50%;\n}\n\n.projets-menu {\n  position: relative;\n  transition: top 0.3s ease;\n  display: flex;\n  flex-direction: column;\n  height: 70%;\n  margin: 0 auto;\n  justify-content: space-around;\n  align-items: flex-start;\n  color: yellow;\n}\n\n.hidden {\n  top: 200%;\n}\n\n.projets-link {\n  display: flex;\n  opacity: 0;\n  justify-content: center;\n  align-items: center;\n  color: #C59335;\n  font-size: 4rem;\n  font-weight: 700;\n  text-decoration: none;\n  text-transform: uppercase;\n  cursor: pointer;\n  transition: 0.3s;\n  font-family: 'Auto Extra';\n  opacity: 0.5;\n}\n\n.projets-link a {\n  color: #C59335;\n  text-decoration: none;\n}\n\n.projets-link:hover {\n  background: linear-gradient(90deg, #132b4100, #132B41, #132b4100);\n  opacity: 1;\n}\n</style>\n",
+      "start": 1715600163146,
+      "end": 1715600163354,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1715600163354,
+      "end": 1715600163354,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1715600163354,
+      "end": 1715600163354,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1715600163354,
+      "end": 1715600163354,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1715600163354,
+      "end": 1715600163354,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1715600163354,
+      "end": 1715600163354,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1715600163354,
+      "end": 1715600163354,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1715600163354,
+      "end": 1715600163354,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": "\nimport { gsap } from 'gsap';\nimport { ScrollTrigger } from 'gsap/ScrollTrigger';\n\nconst _sfc_main = {\n  mounted() {\n      gsap.registerPlugin(ScrollTrigger);\n\n      this.projects.forEach((project, index) => {\n          gsap.from(`.projets-link:nth-child(${index + 1})`, {\n              scrollTrigger: {\n                  trigger: `.projets-link:nth-child(${index + 1})`,\n                  scrub: 1,\n                  start: \"top 80%\",\n              },\n              y: 100,\n              opacity: 1,\n              duration: 0.5,\n              ease: \"power4.in\",\n          });\n      });\n  },\n  data() {\n      return {\n          projects: [\n              { name: \"RESAWEB\", route: \"/projects/web/karma\" },\n              { name: \"OVER-FIGHT\", route: \"/projects/web/overlord-fight\" },\n              { name: \"SHOOTING\", route: \"/projects/web\" },\n              { name: \"PHOTOS\", route: \"/projects/photos\" },\n              { name: \"J'AIME ÇA\", route: \"/projects/web/jaimeca\" },\n              // Ajoutez d'autres projets ici\n          ]\n      };\n  }\n};\n\nimport { renderList as _renderList, Fragment as _Fragment, openBlock as _openBlock, createElementBlock as _createElementBlock, toDisplayString as _toDisplayString, createTextVNode as _createTextVNode, resolveComponent as _resolveComponent, withCtx as _withCtx, createVNode as _createVNode, pushScopeId as _pushScopeId, popScopeId as _popScopeId } from \"vue\"\n\nconst _withScopeId = n => (_pushScopeId(\"data-v-1c93b942\"),n=n(),_popScopeId(),n)\nconst _hoisted_1 = { class: \"projets-menu\" }\n\nfunction _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {\n  const _component_nuxt_link = _resolveComponent(\"nuxt-link\")\n\n  return (_openBlock(), _createElementBlock(\"div\", _hoisted_1, [\n    (_openBlock(true), _createElementBlock(_Fragment, null, _renderList($data.projects, (project, index) => {\n      return (_openBlock(), _createElementBlock(\"div\", {\n        class: \"projets-link\",\n        key: index\n      }, [\n        _createVNode(_component_nuxt_link, {\n          to: project.route\n        }, {\n          default: _withCtx(() => [\n            _createTextVNode(_toDisplayString(project.name), 1)\n          ]),\n          _: 2\n        }, 1032, [\"to\"])\n      ]))\n    }), 128))\n  ]))\n}\n\nimport \"/Users/diaks/PortfolioV2/pages/projects/index.vue?vue&type=style&index=0&scoped=1c93b942&lang.css\"\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render],['__scopeId',\"data-v-1c93b942\"]])",
+      "start": 1715600163354,
+      "end": 1715600163356,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1715600163356,
+      "end": 1715600163356,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1715600163356,
+      "end": 1715600163356,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1715600163357,
+      "end": 1715600163357,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1715600163357,
+      "end": 1715600163357,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1715600163357,
+      "end": 1715600163357,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1715600163357,
+      "end": 1715600163357,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1715600163357,
+      "end": 1715600163357,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1715600163357,
+      "end": 1715600163357,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1715600163357,
+      "end": 1715600163357,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1715600163357,
+      "end": 1715600163357,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1715600163357,
+      "end": 1715600163357,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1715600163358,
+      "end": 1715600163358,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1715600163358,
+      "end": 1715600163358,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1715600163358,
+      "end": 1715600163358,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1715600163358,
+      "end": 1715600163358,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1715600163358,
+      "end": 1715600163359,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1715600163359,
+      "end": 1715600163360,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1715600163360,
+      "end": 1715600163360,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1715600163360,
+      "end": 1715600163360,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1715600163360,
+      "end": 1715600163360,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1715600163360,
+      "end": 1715600163360,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "result": "import { default as __nuxt_component_0 } from \"/Users/diaks/PortfolioV2/node_modules/nuxt/dist/app/components/nuxt-link\";\n\nimport { gsap } from 'gsap';\nimport { ScrollTrigger } from 'gsap/ScrollTrigger';\n\nconst _sfc_main = {\n  mounted() {\n      gsap.registerPlugin(ScrollTrigger);\n\n      this.projects.forEach((project, index) => {\n          gsap.from(`.projets-link:nth-child(${index + 1})`, {\n              scrollTrigger: {\n                  trigger: `.projets-link:nth-child(${index + 1})`,\n                  scrub: 1,\n                  start: \"top 80%\",\n              },\n              y: 100,\n              opacity: 1,\n              duration: 0.5,\n              ease: \"power4.in\",\n          });\n      });\n  },\n  data() {\n      return {\n          projects: [\n              { name: \"RESAWEB\", route: \"/projects/web/karma\" },\n              { name: \"OVER-FIGHT\", route: \"/projects/web/overlord-fight\" },\n              { name: \"SHOOTING\", route: \"/projects/web\" },\n              { name: \"PHOTOS\", route: \"/projects/photos\" },\n              { name: \"J'AIME ÇA\", route: \"/projects/web/jaimeca\" },\n              // Ajoutez d'autres projets ici\n          ]\n      };\n  }\n};\n\nimport { renderList as _renderList, Fragment as _Fragment, openBlock as _openBlock, createElementBlock as _createElementBlock, toDisplayString as _toDisplayString, createTextVNode as _createTextVNode, resolveComponent as _resolveComponent, withCtx as _withCtx, createVNode as _createVNode, pushScopeId as _pushScopeId, popScopeId as _popScopeId } from \"vue\"\n\nconst _withScopeId = n => (_pushScopeId(\"data-v-1c93b942\"),n=n(),_popScopeId(),n)\nconst _hoisted_1 = { class: \"projets-menu\" }\n\nfunction _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {\n  const _component_nuxt_link = __nuxt_component_0\n\n  return (_openBlock(), _createElementBlock(\"div\", _hoisted_1, [\n    (_openBlock(true), _createElementBlock(_Fragment, null, _renderList($data.projects, (project, index) => {\n      return (_openBlock(), _createElementBlock(\"div\", {\n        class: \"projets-link\",\n        key: index\n      }, [\n        _createVNode(_component_nuxt_link, {\n          to: project.route\n        }, {\n          default: _withCtx(() => [\n            _createTextVNode(_toDisplayString(project.name), 1)\n          ]),\n          _: 2\n        }, 1032, [\"to\"])\n      ]))\n    }), 128))\n  ]))\n}\n\nimport \"/Users/diaks/PortfolioV2/pages/projects/index.vue?vue&type=style&index=0&scoped=1c93b942&lang.css\"\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render],['__scopeId',\"data-v-1c93b942\"]])",
+      "start": 1715600163360,
+      "end": 1715600163361,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1715600163361,
+      "end": 1715600163361,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1715600163361,
+      "end": 1715600163362,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1715600163362,
+      "end": 1715600163362,
+      "order": "normal"
+    }
+  ]
+}

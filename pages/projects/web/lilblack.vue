@@ -6,7 +6,7 @@
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus ipsam ea debitis officia optio cupiditate nulla labore! Obcaecati nesciunt magnam accusantium in ad vitae suscipit, unde porro dolore perspiciatis quibusdam?</p>
     </div>
    <div class="membres">
-    <nuxt-link to="/projects/web/jaimeca">@Kry_MD</nuxt-link>
+    <nuxt-link to="https://www.instagram.com/liltheblack/">@Liltheblack</nuxt-link>
     </div>
 </div>
 

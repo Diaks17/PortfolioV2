@@ -1,0 +1,1 @@
+import{_ as t,o,c as n}from"./entry.l48D-aGa.js";const s={props:{image:String,resume:String},methods:{}},c=["src"];function r(_,a,e,i,m,p){return o(),n("img",{src:e.image},null,8,c)}const d=t(s,[["render",r]]);export{d as _};

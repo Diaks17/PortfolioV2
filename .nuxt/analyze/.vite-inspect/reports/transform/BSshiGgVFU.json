@@ -1,0 +1,223 @@
+{
+  "resolvedId": "/Users/diaks/PortfolioV2/pages/projects/web/lilblack.vue?macro=true",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "<template>\n<div class=\"project-container\">\n    <div class=\"project-description\">\n    <div class=\"resume\">\n    <h2>LILBLACK</h2>\n    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus ipsam ea debitis officia optio cupiditate nulla labore! Obcaecati nesciunt magnam accusantium in ad vitae suscipit, unde porro dolore perspiciatis quibusdam?</p>\n    </div>\n   <div class=\"membres\">\n    <nuxt-link to=\"https://www.instagram.com/liltheblack/\">@Liltheblack</nuxt-link>\n    </div>\n</div>\n\n  <img src=\"/img/lilblack3.jpg\" width=\"33%\" srcset=\"\">\n  <div class=\"photos\">\n    <div\n      :class=\"'photo photo' + index\" \n      data-width=\"33\" \n      v-for=\"(image, index) in images\" \n      :key=\"index\" \n    >\n      <Shooting :image=\"image.path\" />\n    </div>\n  </div>\n</div>\n\n</template>\n\n<script>\nimport Shooting from '~/components/shooting.vue';\nimport { gsap } from 'gsap';\nimport { ScrollTrigger } from 'gsap/ScrollTrigger';\nimport { ref, onMounted } from 'vue';\n\nexport default {\n  components: {\n    Shooting \n  },\n  setup() {\n    const images = ref([\n      { path: '/img/lilblack2.jpg'},\n      { path: '/img/lilblack3.jpg'},\n      { path: '/img/lilblack1.jpg'},\n      { path: '/img/lilblack4.jpg'},\n      { path: '/img/lilblack5.jpg'},\n      { path: '/img/lilblack6.jpg'},\n      { path: '/img/lilblack7.jpg'},\n      { path: '/img/lilblack8.jpg'},\n      { path: '/img/lilblack9.jpg'},\n      { path: '/img/lilblack10.jpg'},\n    ]);\n\n    // onMounted(() => {\n    //   gsap.registerPlugin(ScrollTrigger);\n      \n    //   // images.value.forEach((image, index) => {\n    //     gsap.to(\".photo0\", {\n    //       scrollTrigger: {\n    //         trigger: \".photo0\",\n    //         scrub: 1,\n    //         markers: true,\n    //       },\n    //       y: 50,\n    //       opacity: 1,\n    //       duration: 0.5,\n    //       ease: \"power4.in\",\n    //       visibility: \"visible\",\n    //     });\n    //     gsap.to(\".photo1\", {\n    //       scrollTrigger: {\n    //         trigger: \".photo0\",\n    //         start: \"top 200%\",\n    //         scrub: 1,\n    //         markers: true,\n    //       },\n    //       y: 50,\n    //       opacity: 1,\n    //       duration: 0.5,\n    //       ease: \"power4.in\",\n    //     });\n    //   });\n\n    return { images };\n  },\n};\n</script>\n\n<style>\n@import url(\"~/assets/styles/shooting.css\");\n</style>\n",
+      "start": 1715600163125,
+      "end": 1715600163298,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1715600163300,
+      "end": 1715600163300,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1715600163300,
+      "end": 1715600163300,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1715600163300,
+      "end": 1715600163300,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1715600163300,
+      "end": 1715600163300,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1715600163300,
+      "end": 1715600163300,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1715600163301,
+      "end": 1715600163301,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1715600163301,
+      "end": 1715600163301,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": "\nimport Shooting from '~/components/shooting.vue';\nimport { gsap } from 'gsap';\nimport { ScrollTrigger } from 'gsap/ScrollTrigger';\nimport { ref, onMounted } from 'vue';\n\nconst _sfc_main = {\n  components: {\n    Shooting \n  },\n  setup() {\n    const images = ref([\n      { path: '/img/lilblack2.jpg'},\n      { path: '/img/lilblack3.jpg'},\n      { path: '/img/lilblack1.jpg'},\n      { path: '/img/lilblack4.jpg'},\n      { path: '/img/lilblack5.jpg'},\n      { path: '/img/lilblack6.jpg'},\n      { path: '/img/lilblack7.jpg'},\n      { path: '/img/lilblack8.jpg'},\n      { path: '/img/lilblack9.jpg'},\n      { path: '/img/lilblack10.jpg'},\n    ]);\n\n    // onMounted(() => {\n    //   gsap.registerPlugin(ScrollTrigger);\n      \n    //   // images.value.forEach((image, index) => {\n    //     gsap.to(\".photo0\", {\n    //       scrollTrigger: {\n    //         trigger: \".photo0\",\n    //         scrub: 1,\n    //         markers: true,\n    //       },\n    //       y: 50,\n    //       opacity: 1,\n    //       duration: 0.5,\n    //       ease: \"power4.in\",\n    //       visibility: \"visible\",\n    //     });\n    //     gsap.to(\".photo1\", {\n    //       scrollTrigger: {\n    //         trigger: \".photo0\",\n    //         start: \"top 200%\",\n    //         scrub: 1,\n    //         markers: true,\n    //       },\n    //       y: 50,\n    //       opacity: 1,\n    //       duration: 0.5,\n    //       ease: \"power4.in\",\n    //     });\n    //   });\n\n    return { images };\n  },\n};\n\nimport { createElementVNode as _createElementVNode, createTextVNode as _createTextVNode, resolveComponent as _resolveComponent, withCtx as _withCtx, createVNode as _createVNode, renderList as _renderList, Fragment as _Fragment, openBlock as _openBlock, createElementBlock as _createElementBlock, normalizeClass as _normalizeClass } from \"vue\"\nimport _imports_0 from '/img/lilblack3.jpg'\n\n\nconst _hoisted_1 = { class: \"project-container\" }\nconst _hoisted_2 = { class: \"project-description\" }\nconst _hoisted_3 = /*#__PURE__*/_createElementVNode(\"div\", { class: \"resume\" }, [\n  /*#__PURE__*/_createElementVNode(\"h2\", null, \"LILBLACK\"),\n  /*#__PURE__*/_createElementVNode(\"p\", null, \"Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus ipsam ea debitis officia optio cupiditate nulla labore! Obcaecati nesciunt magnam accusantium in ad vitae suscipit, unde porro dolore perspiciatis quibusdam?\")\n], -1)\nconst _hoisted_4 = { class: \"membres\" }\nconst _hoisted_5 = /*#__PURE__*/_createElementVNode(\"img\", {\n  src: _imports_0,\n  width: \"33%\",\n  srcset: \"\"\n}, null, -1)\nconst _hoisted_6 = { class: \"photos\" }\n\nfunction _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {\n  const _component_nuxt_link = _resolveComponent(\"nuxt-link\")\n  const _component_Shooting = _resolveComponent(\"Shooting\")\n\n  return (_openBlock(), _createElementBlock(\"div\", _hoisted_1, [\n    _createElementVNode(\"div\", _hoisted_2, [\n      _hoisted_3,\n      _createElementVNode(\"div\", _hoisted_4, [\n        _createVNode(_component_nuxt_link, { to: \"https://www.instagram.com/liltheblack/\" }, {\n          default: _withCtx(() => [\n            _createTextVNode(\"@Liltheblack\")\n          ]),\n          _: 1\n        })\n      ])\n    ]),\n    _hoisted_5,\n    _createElementVNode(\"div\", _hoisted_6, [\n      (_openBlock(true), _createElementBlock(_Fragment, null, _renderList($setup.images, (image, index) => {\n        return (_openBlock(), _createElementBlock(\"div\", {\n          class: _normalizeClass('photo photo' + index),\n          \"data-width\": \"33\",\n          key: index\n        }, [\n          _createVNode(_component_Shooting, {\n            image: image.path\n          }, null, 8, [\"image\"])\n        ], 2))\n      }), 128))\n    ])\n  ]))\n}\n\nimport \"/Users/diaks/PortfolioV2/pages/projects/web/lilblack.vue?vue&type=style&index=0&lang.css\"\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render]])",
+      "start": 1715600163301,
+      "end": 1715600163306,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1715600163306,
+      "end": 1715600163306,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1715600163306,
+      "end": 1715600163306,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1715600163306,
+      "end": 1715600163306,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1715600163306,
+      "end": 1715600163306,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1715600163306,
+      "end": 1715600163306,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1715600163306,
+      "end": 1715600163306,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1715600163306,
+      "end": 1715600163306,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1715600163306,
+      "end": 1715600163306,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1715600163306,
+      "end": 1715600163306,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1715600163306,
+      "end": 1715600163306,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1715600163306,
+      "end": 1715600163306,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1715600163306,
+      "end": 1715600163306,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1715600163306,
+      "end": 1715600163306,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1715600163306,
+      "end": 1715600163306,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1715600163307,
+      "end": 1715600163307,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1715600163307,
+      "end": 1715600163307,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1715600163307,
+      "end": 1715600163308,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1715600163308,
+      "end": 1715600163308,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "result": "\nconst __nuxt_page_meta = null\nexport default __nuxt_page_meta\n",
+      "start": 1715600163308,
+      "end": 1715600163309,
+      "order": "post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          ""
+        ],
+        "names": [],
+        "mappings": "AAAA;AAAA;AAAA;AAAA"
+      }
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1715600163309,
+      "end": 1715600163309,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1715600163309,
+      "end": 1715600163309,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1715600163309,
+      "end": 1715600163309,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1715600163309,
+      "end": 1715600163309,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1715600163309,
+      "end": 1715600163309,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1715600163309,
+      "end": 1715600163309,
+      "order": "normal"
+    }
+  ]
+}

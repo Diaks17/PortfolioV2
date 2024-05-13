@@ -1,0 +1,215 @@
+{
+  "resolvedId": "/Users/diaks/PortfolioV2/pages/projects/web/index.vue",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "<template>\n  <div class=\"shootings\">\n    <h1>Photos</h1>\n    <p>Lorem ipsum dolor sit amet consectetur. Leo suspendisse sit sit sed in non tempor. Ac sed purus risus lacus lacus malesuada.</p>\n    \n    <div class=\"card-container\">\n      <nuxt-link v-for=\"(image, index) in images\" :key=\"index\" :to=\"image.route\">\n        <Cardproject :image=\"image.path\" :card-index=\"index + 0\" />\n      </nuxt-link>\n    </div>\n  </div>\n</template>\n\n<script>\nimport Cardproject from '~/components/cardproject.vue';\nimport { ref } from 'vue';\n\nexport default {\n  components: {\n    Cardproject\n  },\n  setup() {\n    const images = ref([\n      { path: '/img/jaimeca1.jpg', route: 'web/jaimeca' },\n      { path: '/img/lilblack1.jpg', route: 'web/lilblack' },\n      { path: '/img/postTournage1.jpg', route: 'web/post-tournage' },\n      // { path: '/img/p4.jpg', route: 'web/' },\n    ])\n\n    return { images }\n  }\n};\n</script>\n\n<style scoped>\n.shootings {\n  display: flex;\n  flex-direction: column;\n}\nh1 {\n  font-size: 2rem;\n  margin-bottom: 0;\n  color: #D29801;\n\n}\np {\n  font-size: 1rem;\n  color: white;\n  width: 50%;\n  margin-top: 0;\n}\n.card-container {\n  display: flex;\n  align-items: center;\n  gap: 20px;\n  justify-content: center;\n  flex-wrap: wrap;\n}\n</style>\n",
+      "start": 1715600163188,
+      "end": 1715600163371,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1715600163371,
+      "end": 1715600163371,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1715600163371,
+      "end": 1715600163371,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1715600163371,
+      "end": 1715600163371,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1715600163371,
+      "end": 1715600163371,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1715600163371,
+      "end": 1715600163371,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1715600163371,
+      "end": 1715600163371,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1715600163371,
+      "end": 1715600163371,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": "\nimport Cardproject from '~/components/cardproject.vue';\nimport { ref } from 'vue';\n\nconst _sfc_main = {\n  components: {\n    Cardproject\n  },\n  setup() {\n    const images = ref([\n      { path: '/img/jaimeca1.jpg', route: 'web/jaimeca' },\n      { path: '/img/lilblack1.jpg', route: 'web/lilblack' },\n      { path: '/img/postTournage1.jpg', route: 'web/post-tournage' },\n      // { path: '/img/p4.jpg', route: 'web/' },\n    ])\n\n    return { images }\n  }\n};\n\nimport { createElementVNode as _createElementVNode, renderList as _renderList, Fragment as _Fragment, openBlock as _openBlock, createElementBlock as _createElementBlock, resolveComponent as _resolveComponent, createVNode as _createVNode, withCtx as _withCtx, createBlock as _createBlock, pushScopeId as _pushScopeId, popScopeId as _popScopeId } from \"vue\"\n\nconst _withScopeId = n => (_pushScopeId(\"data-v-e6b9cc4f\"),n=n(),_popScopeId(),n)\nconst _hoisted_1 = { class: \"shootings\" }\nconst _hoisted_2 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_createElementVNode(\"h1\", null, \"Photos\", -1))\nconst _hoisted_3 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_createElementVNode(\"p\", null, \"Lorem ipsum dolor sit amet consectetur. Leo suspendisse sit sit sed in non tempor. Ac sed purus risus lacus lacus malesuada.\", -1))\nconst _hoisted_4 = { class: \"card-container\" }\n\nfunction _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {\n  const _component_Cardproject = _resolveComponent(\"Cardproject\")\n  const _component_nuxt_link = _resolveComponent(\"nuxt-link\")\n\n  return (_openBlock(), _createElementBlock(\"div\", _hoisted_1, [\n    _hoisted_2,\n    _hoisted_3,\n    _createElementVNode(\"div\", _hoisted_4, [\n      (_openBlock(true), _createElementBlock(_Fragment, null, _renderList($setup.images, (image, index) => {\n        return (_openBlock(), _createBlock(_component_nuxt_link, {\n          key: index,\n          to: image.route\n        }, {\n          default: _withCtx(() => [\n            _createVNode(_component_Cardproject, {\n              image: image.path,\n              \"card-index\": index + 0\n            }, null, 8, [\"image\", \"card-index\"])\n          ]),\n          _: 2\n        }, 1032, [\"to\"]))\n      }), 128))\n    ])\n  ]))\n}\n\nimport \"/Users/diaks/PortfolioV2/pages/projects/web/index.vue?vue&type=style&index=0&scoped=e6b9cc4f&lang.css\"\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render],['__scopeId',\"data-v-e6b9cc4f\"]])",
+      "start": 1715600163371,
+      "end": 1715600163373,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1715600163373,
+      "end": 1715600163373,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1715600163374,
+      "end": 1715600163374,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1715600163374,
+      "end": 1715600163374,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1715600163374,
+      "end": 1715600163374,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1715600163374,
+      "end": 1715600163374,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1715600163374,
+      "end": 1715600163374,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1715600163374,
+      "end": 1715600163374,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1715600163374,
+      "end": 1715600163374,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1715600163374,
+      "end": 1715600163374,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1715600163374,
+      "end": 1715600163374,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1715600163374,
+      "end": 1715600163374,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1715600163374,
+      "end": 1715600163374,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1715600163374,
+      "end": 1715600163374,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1715600163374,
+      "end": 1715600163374,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1715600163374,
+      "end": 1715600163374,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1715600163374,
+      "end": 1715600163374,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1715600163374,
+      "end": 1715600163375,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1715600163375,
+      "end": 1715600163375,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1715600163375,
+      "end": 1715600163375,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1715600163375,
+      "end": 1715600163375,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1715600163375,
+      "end": 1715600163375,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "result": "import { default as __nuxt_component_0 } from \"/Users/diaks/PortfolioV2/components/cardproject.vue\";\nimport { default as __nuxt_component_1 } from \"/Users/diaks/PortfolioV2/node_modules/nuxt/dist/app/components/nuxt-link\";\n\nimport Cardproject from '~/components/cardproject.vue';\nimport { ref } from 'vue';\n\nconst _sfc_main = {\n  components: {\n    Cardproject\n  },\n  setup() {\n    const images = ref([\n      { path: '/img/jaimeca1.jpg', route: 'web/jaimeca' },\n      { path: '/img/lilblack1.jpg', route: 'web/lilblack' },\n      { path: '/img/postTournage1.jpg', route: 'web/post-tournage' },\n      // { path: '/img/p4.jpg', route: 'web/' },\n    ])\n\n    return { images }\n  }\n};\n\nimport { createElementVNode as _createElementVNode, renderList as _renderList, Fragment as _Fragment, openBlock as _openBlock, createElementBlock as _createElementBlock, resolveComponent as _resolveComponent, createVNode as _createVNode, withCtx as _withCtx, createBlock as _createBlock, pushScopeId as _pushScopeId, popScopeId as _popScopeId } from \"vue\"\n\nconst _withScopeId = n => (_pushScopeId(\"data-v-e6b9cc4f\"),n=n(),_popScopeId(),n)\nconst _hoisted_1 = { class: \"shootings\" }\nconst _hoisted_2 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_createElementVNode(\"h1\", null, \"Photos\", -1))\nconst _hoisted_3 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_createElementVNode(\"p\", null, \"Lorem ipsum dolor sit amet consectetur. Leo suspendisse sit sit sed in non tempor. Ac sed purus risus lacus lacus malesuada.\", -1))\nconst _hoisted_4 = { class: \"card-container\" }\n\nfunction _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {\n  const _component_Cardproject = __nuxt_component_0\n  const _component_nuxt_link = __nuxt_component_1\n\n  return (_openBlock(), _createElementBlock(\"div\", _hoisted_1, [\n    _hoisted_2,\n    _hoisted_3,\n    _createElementVNode(\"div\", _hoisted_4, [\n      (_openBlock(true), _createElementBlock(_Fragment, null, _renderList($setup.images, (image, index) => {\n        return (_openBlock(), _createBlock(_component_nuxt_link, {\n          key: index,\n          to: image.route\n        }, {\n          default: _withCtx(() => [\n            _createVNode(_component_Cardproject, {\n              image: image.path,\n              \"card-index\": index + 0\n            }, null, 8, [\"image\", \"card-index\"])\n          ]),\n          _: 2\n        }, 1032, [\"to\"]))\n      }), 128))\n    ])\n  ]))\n}\n\nimport \"/Users/diaks/PortfolioV2/pages/projects/web/index.vue?vue&type=style&index=0&scoped=e6b9cc4f&lang.css\"\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render],['__scopeId',\"data-v-e6b9cc4f\"]])",
+      "start": 1715600163375,
+      "end": 1715600163376,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1715600163376,
+      "end": 1715600163376,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1715600163376,
+      "end": 1715600163376,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1715600163376,
+      "end": 1715600163376,
+      "order": "normal"
+    }
+  ]
+}

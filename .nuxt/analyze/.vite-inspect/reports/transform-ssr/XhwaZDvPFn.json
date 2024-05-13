@@ -1,0 +1,288 @@
+{
+  "resolvedId": "/Users/diaks/PortfolioV2/pages/projects/web/post-tournage.vue?vue&type=style&index=0&lang.css?inline&used",
+  "transforms": [
+    {
+      "name": "vite:vue",
+      "result": "\n@import url(\"~/assets/styles/shooting.css\");\n",
+      "start": 1715600168437,
+      "end": 1715600168437,
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "/Users/diaks/PortfolioV2/pages/projects/web/post-tournage.vue"
+        ],
+        "names": [],
+        "mappings": ";AAyFA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC",
+        "file": "/Users/diaks/PortfolioV2/pages/projects/web/post-tournage.vue",
+        "sourceRoot": "",
+        "sourcesContent": [
+          "<template>\n<div class=\"project-container\">\n    <div class=\"project-description\">\n    <div class=\"resume\">\n    <h2>LILBLACK</h2>\n    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus ipsam ea debitis officia optio cupiditate nulla labore! Obcaecati nesciunt magnam accusantium in ad vitae suscipit, unde porro dolore perspiciatis quibusdam?</p>\n    </div>\n   <div class=\"membres\">\n    <nuxt-link to=\"/projects/web/jaimeca\">@Kry_MD</nuxt-link>\n    <nuxt-link to=\"/projects/web/jaimeca\">@Leila</nuxt-link>\n    </div>\n</div>\n\n  <img src=\"/img/postTournage3.jpg\" width=\"33%\" srcset=\"\">\n  <div class=\"photos\">\n    <div\n      :class=\"'photo photo' + index\" \n      data-width=\"33\" \n      v-for=\"(image, index) in images\" \n      :key=\"index\">\n\n      <Shooting :image=\"image.path\" />\n      \n    </div>\n  </div>\n</div>\n\n</template>\n\n<script>\nimport Shooting from '~/components/shooting.vue';\nimport { gsap } from 'gsap';\nimport { ScrollTrigger } from 'gsap/ScrollTrigger';\nimport { ref, onMounted } from 'vue';\n\nexport default {\n  components: {\n    Shooting \n  },\n  setup() {\n    const images = ref([\n      { path: '/img/postTournage2.jpg'},\n      { path: '/img/postTournage3.jpg'},\n      { path: '/img/postTournage1.jpg'},\n      { path: '/img/postTournage4.jpg'},\n      { path: '/img/postTournage5.jpg'},\n      { path: '/img/postTournage6.jpg'},\n      { path: '/img/postTournage7.jpg'},\n      { path: '/img/postTournage8.jpg'},\n      { path: '/img/postTournage9.jpg'},\n      { path: '/img/postTournage10.jpg'},\n    ]);\n\n    // onMounted(() => {\n    //   gsap.registerPlugin(ScrollTrigger);\n      \n    //   // images.value.forEach((image, index) => {\n    //     gsap.to(\".photo0\", {\n    //       scrollTrigger: {\n    //         trigger: \".photo0\",\n    //         scrub: 1,\n    //         markers: true,\n    //       },\n    //       y: 50,\n    //       opacity: 1,\n    //       duration: 0.5,\n    //       ease: \"power4.in\",\n    //       visibility: \"visible\",\n    //     });\n    //     gsap.to(\".photo1\", {\n    //       scrollTrigger: {\n    //         trigger: \".photo0\",\n    //         start: \"top 200%\",\n    //         scrub: 1,\n    //         markers: true,\n    //       },\n    //       y: 50,\n    //       opacity: 1,\n    //       duration: 0.5,\n    //       ease: \"power4.in\",\n    //     });\n    //   });\n\n    return { images };\n  },\n};\n</script>\n\n<style>\n@import url(\"~/assets/styles/shooting.css\");\n</style>\n"
+        ]
+      }
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1715600168437,
+      "end": 1715600168437,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1715600168437,
+      "end": 1715600168438,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1715600168438,
+      "end": 1715600168438,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1715600168438,
+      "end": 1715600168438,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1715600168438,
+      "end": 1715600168438,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "result": ".project-container{align-items:center;display:flex;flex-direction:column;justify-content:center;margin:0 auto 0 20%;width:80%}.project-description{align-items:center;display:flex;justify-content:space-around;margin-top:2rem}.resume{color:#fff;width:50%}.membres{align-items:flex-start;display:flex;flex-direction:column;justify-content:space-around}.membres a{color:#fff;font-family:Space Mono,monospace;font-size:1.5rem;font-weight:700;padding:.5rem;text-decoration:none;transition:.5s}.membres a:hover{background:linear-gradient(90deg,#132b4100,#132b41,#132b4100);color:#c59335;transition:width 2s}.photos{align-items:flex-start;display:flex;flex-wrap:wrap;gap:20px;justify-content:center;margin-top:2rem}.photo{width:20vw}.photo img{width:100%}.photo[data-width=\"33\"]{width:25%}",
+      "start": 1715600168438,
+      "end": 1715600168706,
+      "order": "normal",
+      "sourcemaps": {
+        "file": "/Users/diaks/PortfolioV2/pages/projects/web/post-tournage.vue",
+        "mappings": "AAAA,mBAOI,kBAAmB,CAJnB,YAAa,CACb,qBAAsB,CAEtB,sBAAuB,CAJvB,mBAAgB,CAGhB,SAGJ,CACA,qBAGI,kBAAmB,CAFnB,YAAa,CACb,4BAA6B,CAE7B,eAEJ,CACA,QAEI,UAAY,CADZ,SAEJ,CACA,SAII,sBAAuB,CAHvB,YAAa,CAEb,qBAAsB,CADtB,4BAIJ,CACA,WAGI,UAAW,CACX,gCAAoC,CAEpC,gBAAiB,CADjB,eAAiB,CAEjB,aAAe,CALf,oBAAqB,CAMrB,cACJ,CACA,iBAGI,6DAAiE,CADjE,aAAc,CADd,mBAGJ,CACE,QAKE,sBAAuB,CAJvB,YAAa,CAEb,cAAe,CAGf,QAAS,CAFT,sBAAuB,CAFvB,eAKJ,CAEE,OACE,UAEJ,CAEA,WACI,UACJ,CAEA,wBACI,SACJ",
+        "names": [],
+        "sources": [
+          "/Users/diaks/PortfolioV2/assets/styles/shooting.css"
+        ],
+        "sourcesContent": [
+          ".project-container {\n    margin: 0 auto;\n    margin-left: 20%;\n    display: flex;\n    flex-direction: column;\n    width: 80%;\n    justify-content: center;\n    align-items: center;\n}\n.project-description {\n    display: flex;\n    justify-content: space-around;\n    align-items: center;\n    margin-top: 2rem;\n  \n}\n.resume {\n    width: 50%;\n    color: white;\n}\n.membres {\n    display: flex;\n    justify-content: space-around;\n    flex-direction: column;\n    align-items: flex-start;\n    /* margin-top: 2rem; */\n}\n.membres a {\n    /* width: 30%; */\n    text-decoration: none;\n    color: #fff;\n    font-family: 'Space Mono', monospace;\n    font-weight: bold;\n    font-size: 1.5rem;\n    padding: 0.5rem;\n    transition: 0.5s;\n}\n.membres a:hover {\n    transition: width 2s;\n    color: #C59335;\n    background:linear-gradient(90deg, #132b4100, #132B41 , #132b4100);\n}\n  .photos {\n    display: flex;\n    margin-top: 2rem;\n    flex-wrap: wrap;\n    justify-content: center;\n    align-items: flex-start;\n    gap: 20px;\n}\n  \n  .photo {\n    width: 20vw;\n    /* opacity: 0; */\n}\n  \n.photo img {\n    width: 100%;\n}\n  \n.photo[data-width=\"33\"] {\n    width: 25%;\n}"
+        ],
+        "version": 3
+      }
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1715600168706,
+      "end": 1715600168706,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1715600168706,
+      "end": 1715600168706,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1715600168706,
+      "end": 1715600168706,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": ".project-container{align-items:center;display:flex;flex-direction:column;justify-content:center;margin:0 auto 0 20%;width:80%}.project-description{align-items:center;display:flex;justify-content:space-around;margin-top:2rem}.resume{color:#fff;width:50%}.membres{align-items:flex-start;display:flex;flex-direction:column;justify-content:space-around}.membres a{color:#fff;font-family:Space Mono,monospace;font-size:1.5rem;font-weight:700;padding:.5rem;text-decoration:none;transition:.5s}.membres a:hover{background:linear-gradient(90deg,#132b4100,#132b41,#132b4100);color:#c59335;transition:width 2s}.photos{align-items:flex-start;display:flex;flex-wrap:wrap;gap:20px;justify-content:center;margin-top:2rem}.photo{width:20vw}.photo img{width:100%}.photo[data-width=\"33\"]{width:25%}",
+      "start": 1715600168706,
+      "end": 1715600168707,
+      "order": "normal",
+      "sourcemaps": {
+        "file": "/Users/diaks/PortfolioV2/pages/projects/web/post-tournage.vue",
+        "mappings": "AAAA,mBAAmB,kBAAkB,CAAC,YAAY,CAAC,qBAAqB,CAAC,sBAAsB,CAAC,mBAAmB,CAAC,SAAS,CAAC,qBAAqB,kBAAkB,CAAC,YAAY,CAAC,4BAA4B,CAAC,eAAe,CAAC,QAAQ,UAAU,CAAC,SAAS,CAAC,SAAS,sBAAsB,CAAC,YAAY,CAAC,qBAAqB,CAAC,4BAA4B,CAAC,WAAW,UAAU,CAAC,gCAAgC,CAAC,gBAAgB,CAAC,eAAe,CAAC,aAAa,CAAC,oBAAoB,CAAC,cAAc,CAAC,iBAAiB,6DAA6D,CAAC,aAAa,CAAC,mBAAmB,CAAC,QAAQ,sBAAsB,CAAC,YAAY,CAAC,cAAc,CAAC,QAAQ,CAAC,sBAAsB,CAAC,eAAe,CAAC,OAAO,UAAU,CAAC,WAAW,UAAU,CAAC,wBAAwB,SAAS",
+        "names": [],
+        "sources": [
+          "/Users/diaks/PortfolioV2/pages/projects/web/post-tournage.vue"
+        ],
+        "sourcesContent": [
+          null
+        ],
+        "version": 3
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1715600168707,
+      "end": 1715600168707,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1715600168707,
+      "end": 1715600168707,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1715600168707,
+      "end": 1715600168707,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1715600168707,
+      "end": 1715600168707,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1715600168707,
+      "end": 1715600168707,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1715600168707,
+      "end": 1715600168707,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1715600168707,
+      "end": 1715600168707,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1715600168707,
+      "end": 1715600168707,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1715600168707,
+      "end": 1715600168707,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "result": "export default \".project-container{align-items:center;display:flex;flex-direction:column;justify-content:center;margin:0 auto 0 20%;width:80%}.project-description{align-items:center;display:flex;justify-content:space-around;margin-top:2rem}.resume{color:#fff;width:50%}.membres{align-items:flex-start;display:flex;flex-direction:column;justify-content:space-around}.membres a{color:#fff;font-family:Space Mono,monospace;font-size:1.5rem;font-weight:700;padding:.5rem;text-decoration:none;transition:.5s}.membres a:hover{background:linear-gradient(90deg,#132b4100,#132b41,#132b4100);color:#c59335;transition:width 2s}.photos{align-items:flex-start;display:flex;flex-wrap:wrap;gap:20px;justify-content:center;margin-top:2rem}.photo{width:20vw}.photo img{width:100%}.photo[data-width=\\\"33\\\"]{width:25%}\"",
+      "start": 1715600168707,
+      "end": 1715600168707,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1715600168707,
+      "end": 1715600168707,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1715600168707,
+      "end": 1715600168707,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1715600168707,
+      "end": 1715600168707,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1715600168707,
+      "end": 1715600168707,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1715600168707,
+      "end": 1715600168707,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1715600168707,
+      "end": 1715600168707,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1715600168707,
+      "end": 1715600168707,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1715600168707,
+      "end": 1715600168707,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1715600168707,
+      "end": 1715600168707,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1715600168707,
+      "end": 1715600168707,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1715600168707,
+      "end": 1715600168707,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1715600168707,
+      "end": 1715600168707,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1715600168707,
+      "end": 1715600168707,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1715600168707,
+      "end": 1715600168707,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-template",
+      "start": 1715600168707,
+      "end": 1715600168708,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1715600168708,
+      "end": 1715600168708,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1715600168708,
+      "end": 1715600168708,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1715600168708,
+      "end": 1715600168708,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1715600168708,
+      "end": 1715600168708,
+      "order": "normal"
+    }
+  ]
+}

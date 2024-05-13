@@ -1,0 +1,261 @@
+{
+  "resolvedId": "/Users/diaks/PortfolioV2/pages/index.vue",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "<template>\n  \n        <!-- <div id=\"container\"> -->\n          <!-- <svg class=\"circle\" width=\"400\" height=\"400\" viewBox=\"0 0 400 400\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<circle cx=\"200\" cy=\"200\" r=\"200\" fill=\"#FFA401\"/>\n</svg> -->\n\n</template>\n\n\n<script>\nimport { gsap } from 'gsap';\n\nexport default {\n  mounted() {\n    // Sélectionnez le cercle après qu'il a été monté dans le DOM\n    const circle = document.querySelector('.circle');\n    // Appliquer une animation à votre cercle avec GSAP\n    gsap.to(circle, {\n      scale: 1.1, // Déformer le cercle pour simuler un battement de cœur\n      repeat: -1, // Répéter l'animation indéfiniment\n      yoyo: true, // Inverser l'animation à chaque itération\n      duration: 0.5, // Durée d'un battement de cœur (en secondes)\n      ease: 'power2.inOut'\n    });\n  },\n}\n</script>\n<style>\n\n.circle {\nposition: absolute;\n/* z-index: -1; */\nmargin: 20%;\n/* transform: perspective(1000px) rotateX(45deg) rotateY(45deg); */\n  height: 40vw;\n  width: 40vw;\n  border-radius: 50%;\n  background-color: #FFA401;\n}\n</style>\n<style scoped>\n\n#container {\n  /* height: 100vh; */\n  /* width: 100%; */\n  /* display: none; */\n  /* background: url(\"../assets/img/planet.png\") no-repeat; */\n  background-size: 100%;\n}\n\n.page-three #container {\n  display: block;\n}\n#container canvas {\n    width: 100% !important;\n    height: 100%;\n}\n</style>",
+      "start": 1715600167969,
+      "end": 1715600168184,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1715600168184,
+      "end": 1715600168184,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1715600168184,
+      "end": 1715600168184,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1715600168184,
+      "end": 1715600168184,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1715600168184,
+      "end": 1715600168184,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1715600168184,
+      "end": 1715600168184,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1715600168184,
+      "end": 1715600168184,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1715600168184,
+      "end": 1715600168184,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1715600168184,
+      "end": 1715600168184,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1715600168184,
+      "end": 1715600168184,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": "\nimport { gsap } from 'gsap';\n\nconst _sfc_main = {\n  mounted() {\n    // Sélectionnez le cercle après qu'il a été monté dans le DOM\n    const circle = document.querySelector('.circle');\n    // Appliquer une animation à votre cercle avec GSAP\n    gsap.to(circle, {\n      scale: 1.1, // Déformer le cercle pour simuler un battement de cœur\n      repeat: -1, // Répéter l'animation indéfiniment\n      yoyo: true, // Inverser l'animation à chaque itération\n      duration: 0.5, // Durée d'un battement de cœur (en secondes)\n      ease: 'power2.inOut'\n    });\n  },\n}\n\n\nfunction _sfc_ssrRender(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {\n  \n}\n\nimport \"/Users/diaks/PortfolioV2/pages/index.vue?vue&type=style&index=0&lang.css\"\nimport \"/Users/diaks/PortfolioV2/pages/index.vue?vue&type=style&index=1&scoped=6fe8f026&lang.css\"\n\nimport { useSSRContext as __vite_useSSRContext } from 'vue'\nconst _sfc_setup = _sfc_main.setup\n_sfc_main.setup = (props, ctx) => {\n  const ssrContext = __vite_useSSRContext()\n  ;(ssrContext.modules || (ssrContext.modules = new Set())).add(\"pages/index.vue\")\n  return _sfc_setup ? _sfc_setup(props, ctx) : undefined\n}\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['ssrRender',_sfc_ssrRender],['__scopeId',\"data-v-6fe8f026\"]])",
+      "start": 1715600168184,
+      "end": 1715600168185,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "file": "/Users/diaks/PortfolioV2/pages/index.vue",
+        "names": [],
+        "sources": [
+          "/Users/diaks/PortfolioV2/pages/index.vue"
+        ],
+        "sourcesContent": [
+          "<template>\n  \n        <!-- <div id=\"container\"> -->\n          <!-- <svg class=\"circle\" width=\"400\" height=\"400\" viewBox=\"0 0 400 400\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<circle cx=\"200\" cy=\"200\" r=\"200\" fill=\"#FFA401\"/>\n</svg> -->\n\n</template>\n\n\n<script>\nimport { gsap } from 'gsap';\n\nexport default {\n  mounted() {\n    // Sélectionnez le cercle après qu'il a été monté dans le DOM\n    const circle = document.querySelector('.circle');\n    // Appliquer une animation à votre cercle avec GSAP\n    gsap.to(circle, {\n      scale: 1.1, // Déformer le cercle pour simuler un battement de cœur\n      repeat: -1, // Répéter l'animation indéfiniment\n      yoyo: true, // Inverser l'animation à chaque itération\n      duration: 0.5, // Durée d'un battement de cœur (en secondes)\n      ease: 'power2.inOut'\n    });\n  },\n}\n</script>\n<style>\n\n.circle {\nposition: absolute;\n/* z-index: -1; */\nmargin: 20%;\n/* transform: perspective(1000px) rotateX(45deg) rotateY(45deg); */\n  height: 40vw;\n  width: 40vw;\n  border-radius: 50%;\n  background-color: #FFA401;\n}\n</style>\n<style scoped>\n\n#container {\n  /* height: 100vh; */\n  /* width: 100%; */\n  /* display: none; */\n  /* background: url(\"../assets/img/planet.png\") no-repeat; */\n  background-size: 100%;\n}\n\n.page-three #container {\n  display: block;\n}\n#container canvas {\n    width: 100% !important;\n    height: 100%;\n}\n</style>"
+        ],
+        "mappings": ";AAWA,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,EAAE,CAAC,CAAC,CAAC,EAAE,EAAE,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;;AAE3B,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE;EACb,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE;IACR,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,EAAE,EAAE,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,EAAE,CAAC,EAAE,CAAC,CAAC;IAC5D,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;IAChD,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,EAAE,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC;IAClD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE;MACd,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,EAAE,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,EAAE,CAAC,CAAC,CAAC;MAClE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,EAAE,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;MAC9C,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;MACrD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,EAAE,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,EAAE,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;MAC3D,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;IACrB,CAAC,CAAC;EACJ,CAAC;AACH"
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1715600168185,
+      "end": 1715600168185,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1715600168185,
+      "end": 1715600168185,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1715600168185,
+      "end": 1715600168185,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1715600168185,
+      "end": 1715600168185,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1715600168185,
+      "end": 1715600168185,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1715600168185,
+      "end": 1715600168185,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1715600168185,
+      "end": 1715600168185,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1715600168185,
+      "end": 1715600168188,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "result": "import { gsap } from \"gsap\";\nconst _sfc_main = {\n  mounted() {\n    const circle = (void 0).querySelector(\".circle\");\n    gsap.to(circle, {\n      scale: 1.1,\n      // Déformer le cercle pour simuler un battement de cœur\n      repeat: -1,\n      // Répéter l'animation indéfiniment\n      yoyo: true,\n      // Inverser l'animation à chaque itération\n      duration: 0.5,\n      // Durée d'un battement de cœur (en secondes)\n      ease: \"power2.inOut\"\n    });\n  }\n};\nfunction _sfc_ssrRender(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {\n}\nimport \"/Users/diaks/PortfolioV2/pages/index.vue?vue&type=style&index=0&lang.css\";\nimport \"/Users/diaks/PortfolioV2/pages/index.vue?vue&type=style&index=1&scoped=6fe8f026&lang.css\";\nimport { useSSRContext as __vite_useSSRContext } from \"vue\";\nconst _sfc_setup = _sfc_main.setup;\n_sfc_main.setup = (props, ctx) => {\n  const ssrContext = __vite_useSSRContext();\n  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add(\"pages/index.vue\");\n  return _sfc_setup ? _sfc_setup(props, ctx) : void 0;\n};\nimport _export_sfc from \"\\0plugin-vue:export-helper\";\nexport default /* @__PURE__ */ _export_sfc(_sfc_main, [[\"ssrRender\", _sfc_ssrRender], [\"__scopeId\", \"data-v-6fe8f026\"]]);\n",
+      "start": 1715600168188,
+      "end": 1715600168530,
+      "order": "normal",
+      "sourcemaps": "{\n  \"version\": 3,\n  \"sources\": [\"/Users/diaks/PortfolioV2/pages/index.vue\"],\n  \"sourcesContent\": [\"\\nimport { gsap } from 'gsap';\\n\\nconst _sfc_main = {\\n  mounted() {\\n    // Sélectionnez le cercle après qu'il a été monté dans le DOM\\n    const circle = document.querySelector('.circle');\\n    // Appliquer une animation à votre cercle avec GSAP\\n    gsap.to(circle, {\\n      scale: 1.1, // Déformer le cercle pour simuler un battement de cœur\\n      repeat: -1, // Répéter l'animation indéfiniment\\n      yoyo: true, // Inverser l'animation à chaque itération\\n      duration: 0.5, // Durée d'un battement de cœur (en secondes)\\n      ease: 'power2.inOut'\\n    });\\n  },\\n}\\n\\n\\nfunction _sfc_ssrRender(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {\\n  \\n}\\n\\nimport \\\"/Users/diaks/PortfolioV2/pages/index.vue?vue&type=style&index=0&lang.css\\\"\\nimport \\\"/Users/diaks/PortfolioV2/pages/index.vue?vue&type=style&index=1&scoped=6fe8f026&lang.css\\\"\\n\\nimport { useSSRContext as __vite_useSSRContext } from 'vue'\\nconst _sfc_setup = _sfc_main.setup\\n_sfc_main.setup = (props, ctx) => {\\n  const ssrContext = __vite_useSSRContext()\\n  ;(ssrContext.modules || (ssrContext.modules = new Set())).add(\\\"pages/index.vue\\\")\\n  return _sfc_setup ? _sfc_setup(props, ctx) : undefined\\n}\\nimport _export_sfc from '\\u0000plugin-vue:export-helper'\\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['ssrRender',_sfc_ssrRender],['__scopeId',\\\"data-v-6fe8f026\\\"]])\"],\n  \"mappings\": \"AACA,SAAS,YAAY;AAErB,MAAM,YAAY;AAAA,EAChB,UAAU;AAER,UAAM,SAAS,SAAS,cAAc,SAAS;AAE/C,SAAK,GAAG,QAAQ;AAAA,MACd,OAAO;AAAA;AAAA,MACP,QAAQ;AAAA;AAAA,MACR,MAAM;AAAA;AAAA,MACN,UAAU;AAAA;AAAA,MACV,MAAM;AAAA,IACR,CAAC;AAAA,EACH;AACF;AAGA,SAAS,eAAe,MAAM,OAAO,SAAS,QAAQ,QAAQ,QAAQ,OAAO,UAAU;AAEvF;AAEA,OAAO;AACP,OAAO;AAEP,SAAS,iBAAiB,4BAA4B;AACtD,MAAM,aAAa,UAAU;AAC7B,UAAU,QAAQ,CAAC,OAAO,QAAQ;AAChC,QAAM,aAAa,qBAAqB;AACvC,GAAC,WAAW,YAAY,WAAW,UAAU,oBAAI,IAAI,IAAI,IAAI,iBAAiB;AAC/E,SAAO,aAAa,WAAW,OAAO,GAAG,IAAI;AAC/C;AACA,OAAO,iBAAiB;AACxB,eAA4B,4BAAY,WAAW,CAAC,CAAC,aAAY,cAAc,GAAE,CAAC,aAAY,iBAAiB,CAAC,CAAC;\",\n  \"names\": []\n}\n"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1715600168530,
+      "end": 1715600168530,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1715600168530,
+      "end": 1715600168530,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1715600168530,
+      "end": 1715600168530,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1715600168530,
+      "end": 1715600168530,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1715600168530,
+      "end": 1715600168530,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1715600168531,
+      "end": 1715600168531,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1715600168531,
+      "end": 1715600168531,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1715600168531,
+      "end": 1715600168531,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1715600168531,
+      "end": 1715600168531,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1715600168531,
+      "end": 1715600168533,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1715600168531,
+      "end": 1715600168533,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1715600168533,
+      "end": 1715600168533,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1715600168533,
+      "end": 1715600168533,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1715600168533,
+      "end": 1715600168533,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1715600168533,
+      "end": 1715600168533,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-template",
+      "start": 1715600168533,
+      "end": 1715600168533,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1715600168533,
+      "end": 1715600168533,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1715600168533,
+      "end": 1715600168533,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1715600168533,
+      "end": 1715600168534,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1715600168534,
+      "end": 1715600168534,
+      "order": "normal"
+    }
+  ]
+}

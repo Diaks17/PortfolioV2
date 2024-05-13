@@ -1,0 +1,246 @@
+{
+  "resolvedId": "virtual:nuxt:/Users/diaks/PortfolioV2/.nuxt/routes.mjs",
+  "transforms": [
+    {
+      "name": "virtual",
+      "result": "import { default as aboutojwZDg1BmXMeta } from \"/Users/diaks/PortfolioV2/pages/about.vue?macro=true\";\nimport { default as indexMrCWoprn61Meta } from \"/Users/diaks/PortfolioV2/pages/index.vue?macro=true\";\nimport { default as indexO69r27gWcQMeta } from \"/Users/diaks/PortfolioV2/pages/projects/index.vue?macro=true\";\nimport { default as photos0nX8GB89oZMeta } from \"/Users/diaks/PortfolioV2/pages/projects/photos.vue?macro=true\";\nimport { default as ecpmGP4stDggtXMeta } from \"/Users/diaks/PortfolioV2/pages/projects/web/ecpm.vue?macro=true\";\nimport { default as index4vFaz7caawMeta } from \"/Users/diaks/PortfolioV2/pages/projects/web/index.vue?macro=true\";\nimport { default as jaimecarF7Hp9cd0zMeta } from \"/Users/diaks/PortfolioV2/pages/projects/web/jaimeca.vue?macro=true\";\nimport { default as karmaROisrOrnPKMeta } from \"/Users/diaks/PortfolioV2/pages/projects/web/karma.vue?macro=true\";\nimport { default as lilblackpy03J9rrSgMeta } from \"/Users/diaks/PortfolioV2/pages/projects/web/lilblack.vue?macro=true\";\nimport { default as overlord_45fight2bGcfNDPK6Meta } from \"/Users/diaks/PortfolioV2/pages/projects/web/overlord-fight.vue?macro=true\";\nimport { default as post_45tournageDcHi0ZT6czMeta } from \"/Users/diaks/PortfolioV2/pages/projects/web/post-tournage.vue?macro=true\";\nimport { default as project2LcxMMiBppYMeta } from \"/Users/diaks/PortfolioV2/pages/projects/web/project2.vue?macro=true\";\nexport default [\n  {\n    name: aboutojwZDg1BmXMeta?.name ?? \"about\",\n    path: aboutojwZDg1BmXMeta?.path ?? \"/about\",\n    meta: aboutojwZDg1BmXMeta || {},\n    alias: aboutojwZDg1BmXMeta?.alias || [],\n    redirect: aboutojwZDg1BmXMeta?.redirect,\n    component: () => import(\"/Users/diaks/PortfolioV2/pages/about.vue\").then(m => m.default || m)\n  },\n  {\n    name: indexMrCWoprn61Meta?.name ?? \"index\",\n    path: indexMrCWoprn61Meta?.path ?? \"/\",\n    meta: indexMrCWoprn61Meta || {},\n    alias: indexMrCWoprn61Meta?.alias || [],\n    redirect: indexMrCWoprn61Meta?.redirect,\n    component: () => import(\"/Users/diaks/PortfolioV2/pages/index.vue\").then(m => m.default || m)\n  },\n  {\n    name: indexO69r27gWcQMeta?.name ?? \"projects\",\n    path: indexO69r27gWcQMeta?.path ?? \"/projects\",\n    meta: indexO69r27gWcQMeta || {},\n    alias: indexO69r27gWcQMeta?.alias || [],\n    redirect: indexO69r27gWcQMeta?.redirect,\n    component: () => import(\"/Users/diaks/PortfolioV2/pages/projects/index.vue\").then(m => m.default || m)\n  },\n  {\n    name: photos0nX8GB89oZMeta?.name ?? \"projects-photos\",\n    path: photos0nX8GB89oZMeta?.path ?? \"/projects/photos\",\n    meta: photos0nX8GB89oZMeta || {},\n    alias: photos0nX8GB89oZMeta?.alias || [],\n    redirect: photos0nX8GB89oZMeta?.redirect,\n    component: () => import(\"/Users/diaks/PortfolioV2/pages/projects/photos.vue\").then(m => m.default || m)\n  },\n  {\n    name: ecpmGP4stDggtXMeta?.name ?? \"projects-web-ecpm\",\n    path: ecpmGP4stDggtXMeta?.path ?? \"/projects/web/ecpm\",\n    meta: ecpmGP4stDggtXMeta || {},\n    alias: ecpmGP4stDggtXMeta?.alias || [],\n    redirect: ecpmGP4stDggtXMeta?.redirect,\n    component: () => import(\"/Users/diaks/PortfolioV2/pages/projects/web/ecpm.vue\").then(m => m.default || m)\n  },\n  {\n    name: index4vFaz7caawMeta?.name ?? \"projects-web\",\n    path: index4vFaz7caawMeta?.path ?? \"/projects/web\",\n    meta: index4vFaz7caawMeta || {},\n    alias: index4vFaz7caawMeta?.alias || [],\n    redirect: index4vFaz7caawMeta?.redirect,\n    component: () => import(\"/Users/diaks/PortfolioV2/pages/projects/web/index.vue\").then(m => m.default || m)\n  },\n  {\n    name: jaimecarF7Hp9cd0zMeta?.name ?? \"projects-web-jaimeca\",\n    path: jaimecarF7Hp9cd0zMeta?.path ?? \"/projects/web/jaimeca\",\n    meta: jaimecarF7Hp9cd0zMeta || {},\n    alias: jaimecarF7Hp9cd0zMeta?.alias || [],\n    redirect: jaimecarF7Hp9cd0zMeta?.redirect,\n    component: () => import(\"/Users/diaks/PortfolioV2/pages/projects/web/jaimeca.vue\").then(m => m.default || m)\n  },\n  {\n    name: karmaROisrOrnPKMeta?.name ?? \"projects-web-karma\",\n    path: karmaROisrOrnPKMeta?.path ?? \"/projects/web/karma\",\n    meta: karmaROisrOrnPKMeta || {},\n    alias: karmaROisrOrnPKMeta?.alias || [],\n    redirect: karmaROisrOrnPKMeta?.redirect,\n    component: () => import(\"/Users/diaks/PortfolioV2/pages/projects/web/karma.vue\").then(m => m.default || m)\n  },\n  {\n    name: lilblackpy03J9rrSgMeta?.name ?? \"projects-web-lilblack\",\n    path: lilblackpy03J9rrSgMeta?.path ?? \"/projects/web/lilblack\",\n    meta: lilblackpy03J9rrSgMeta || {},\n    alias: lilblackpy03J9rrSgMeta?.alias || [],\n    redirect: lilblackpy03J9rrSgMeta?.redirect,\n    component: () => import(\"/Users/diaks/PortfolioV2/pages/projects/web/lilblack.vue\").then(m => m.default || m)\n  },\n  {\n    name: overlord_45fight2bGcfNDPK6Meta?.name ?? \"projects-web-overlord-fight\",\n    path: overlord_45fight2bGcfNDPK6Meta?.path ?? \"/projects/web/overlord-fight\",\n    meta: overlord_45fight2bGcfNDPK6Meta || {},\n    alias: overlord_45fight2bGcfNDPK6Meta?.alias || [],\n    redirect: overlord_45fight2bGcfNDPK6Meta?.redirect,\n    component: () => import(\"/Users/diaks/PortfolioV2/pages/projects/web/overlord-fight.vue\").then(m => m.default || m)\n  },\n  {\n    name: post_45tournageDcHi0ZT6czMeta?.name ?? \"projects-web-post-tournage\",\n    path: post_45tournageDcHi0ZT6czMeta?.path ?? \"/projects/web/post-tournage\",\n    meta: post_45tournageDcHi0ZT6czMeta || {},\n    alias: post_45tournageDcHi0ZT6czMeta?.alias || [],\n    redirect: post_45tournageDcHi0ZT6czMeta?.redirect,\n    component: () => import(\"/Users/diaks/PortfolioV2/pages/projects/web/post-tournage.vue\").then(m => m.default || m)\n  },\n  {\n    name: project2LcxMMiBppYMeta?.name ?? \"projects-web-project2\",\n    path: project2LcxMMiBppYMeta?.path ?? \"/projects/web/project2\",\n    meta: project2LcxMMiBppYMeta || {},\n    alias: project2LcxMMiBppYMeta?.alias || [],\n    redirect: project2LcxMMiBppYMeta?.redirect,\n    component: () => import(\"/Users/diaks/PortfolioV2/pages/projects/web/project2.vue\").then(m => m.default || m)\n  }\n]",
+      "start": 1715600167932,
+      "end": 1715600167932,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1715600167932,
+      "end": 1715600167932,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1715600167932,
+      "end": 1715600167932,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1715600167932,
+      "end": 1715600167932,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1715600167932,
+      "end": 1715600167932,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1715600167932,
+      "end": 1715600167932,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1715600167932,
+      "end": 1715600167932,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1715600167932,
+      "end": 1715600167932,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1715600167932,
+      "end": 1715600167932,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1715600167932,
+      "end": 1715600167932,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1715600167932,
+      "end": 1715600167932,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1715600167932,
+      "end": 1715600167932,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1715600167932,
+      "end": 1715600167933,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1715600167932,
+      "end": 1715600167933,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1715600167933,
+      "end": 1715600167933,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1715600167933,
+      "end": 1715600167933,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1715600167933,
+      "end": 1715600167933,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1715600167933,
+      "end": 1715600167933,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1715600167934,
+      "end": 1715600167935,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1715600167935,
+      "end": 1715600167935,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1715600167935,
+      "end": 1715600167935,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1715600167935,
+      "end": 1715600167935,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1715600167935,
+      "end": 1715600167935,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1715600167935,
+      "end": 1715600167935,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1715600167935,
+      "end": 1715600167935,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1715600167935,
+      "end": 1715600167936,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1715600167936,
+      "end": 1715600167936,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1715600167936,
+      "end": 1715600167936,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1715600167936,
+      "end": 1715600167936,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1715600167936,
+      "end": 1715600167939,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1715600167936,
+      "end": 1715600167939,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1715600167939,
+      "end": 1715600167939,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1715600167939,
+      "end": 1715600167939,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1715600167939,
+      "end": 1715600167939,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1715600167939,
+      "end": 1715600167939,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-template",
+      "start": 1715600167939,
+      "end": 1715600167939,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1715600167939,
+      "end": 1715600167939,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1715600167939,
+      "end": 1715600167939,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1715600167940,
+      "end": 1715600167940,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1715600167940,
+      "end": 1715600167940,
+      "order": "normal"
+    }
+  ]
+}

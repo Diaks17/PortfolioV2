@@ -1,0 +1,214 @@
+{
+  "resolvedId": "/Users/diaks/PortfolioV2/pages/index.vue",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "<template>\n  \n        <!-- <div id=\"container\"> -->\n          <!-- <svg class=\"circle\" width=\"400\" height=\"400\" viewBox=\"0 0 400 400\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<circle cx=\"200\" cy=\"200\" r=\"200\" fill=\"#FFA401\"/>\n</svg> -->\n\n</template>\n\n\n<script>\nimport { gsap } from 'gsap';\n\nexport default {\n  mounted() {\n    // Sélectionnez le cercle après qu'il a été monté dans le DOM\n    const circle = document.querySelector('.circle');\n    // Appliquer une animation à votre cercle avec GSAP\n    gsap.to(circle, {\n      scale: 1.1, // Déformer le cercle pour simuler un battement de cœur\n      repeat: -1, // Répéter l'animation indéfiniment\n      yoyo: true, // Inverser l'animation à chaque itération\n      duration: 0.5, // Durée d'un battement de cœur (en secondes)\n      ease: 'power2.inOut'\n    });\n  },\n}\n</script>\n<style>\n\n.circle {\nposition: absolute;\n/* z-index: -1; */\nmargin: 20%;\n/* transform: perspective(1000px) rotateX(45deg) rotateY(45deg); */\n  height: 40vw;\n  width: 40vw;\n  border-radius: 50%;\n  background-color: #FFA401;\n}\n</style>\n<style scoped>\n\n#container {\n  /* height: 100vh; */\n  /* width: 100%; */\n  /* display: none; */\n  /* background: url(\"../assets/img/planet.png\") no-repeat; */\n  background-size: 100%;\n}\n\n.page-three #container {\n  display: block;\n}\n#container canvas {\n    width: 100% !important;\n    height: 100%;\n}\n</style>",
+      "start": 1715600163138,
+      "end": 1715600163339,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1715600163339,
+      "end": 1715600163339,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1715600163339,
+      "end": 1715600163339,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1715600163339,
+      "end": 1715600163339,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1715600163339,
+      "end": 1715600163339,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1715600163339,
+      "end": 1715600163339,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1715600163339,
+      "end": 1715600163339,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1715600163339,
+      "end": 1715600163339,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": "\nimport { gsap } from 'gsap';\n\nconst _sfc_main = {\n  mounted() {\n    // Sélectionnez le cercle après qu'il a été monté dans le DOM\n    const circle = document.querySelector('.circle');\n    // Appliquer une animation à votre cercle avec GSAP\n    gsap.to(circle, {\n      scale: 1.1, // Déformer le cercle pour simuler un battement de cœur\n      repeat: -1, // Répéter l'animation indéfiniment\n      yoyo: true, // Inverser l'animation à chaque itération\n      duration: 0.5, // Durée d'un battement de cœur (en secondes)\n      ease: 'power2.inOut'\n    });\n  },\n}\n\n\nfunction _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {\n  return null\n}\n\nimport \"/Users/diaks/PortfolioV2/pages/index.vue?vue&type=style&index=0&lang.css\"\nimport \"/Users/diaks/PortfolioV2/pages/index.vue?vue&type=style&index=1&scoped=6fe8f026&lang.css\"\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render],['__scopeId',\"data-v-6fe8f026\"]])",
+      "start": 1715600163339,
+      "end": 1715600163340,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1715600163340,
+      "end": 1715600163340,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1715600163340,
+      "end": 1715600163340,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1715600163340,
+      "end": 1715600163340,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1715600163340,
+      "end": 1715600163341,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1715600163341,
+      "end": 1715600163341,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1715600163341,
+      "end": 1715600163341,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1715600163342,
+      "end": 1715600163342,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1715600163346,
+      "end": 1715600163346,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1715600163346,
+      "end": 1715600163346,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1715600163346,
+      "end": 1715600163346,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1715600163346,
+      "end": 1715600163346,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1715600163346,
+      "end": 1715600163346,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1715600163346,
+      "end": 1715600163346,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1715600163349,
+      "end": 1715600163349,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1715600163349,
+      "end": 1715600163349,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1715600163349,
+      "end": 1715600163350,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1715600163350,
+      "end": 1715600163353,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1715600163353,
+      "end": 1715600163353,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1715600163353,
+      "end": 1715600163353,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1715600163353,
+      "end": 1715600163353,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1715600163353,
+      "end": 1715600163353,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1715600163353,
+      "end": 1715600163353,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1715600163353,
+      "end": 1715600163353,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1715600163353,
+      "end": 1715600163353,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1715600163353,
+      "end": 1715600163353,
+      "order": "normal"
+    }
+  ]
+}

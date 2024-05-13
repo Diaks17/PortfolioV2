@@ -1,0 +1,259 @@
+{
+  "resolvedId": "/Users/diaks/PortfolioV2/components/card.vue",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "<template>\n  <div class=\"card\"  \n      @mouseover=\"startAnimation\"\n      @mouseleave=\"resetAnimation\">\n    <div class=\"card-image\">\n      <img :src=\"image\" @mouseover=\"handleImageClick\" />\n      <div>\n      </div>\n    </div>\n    <div class=\"hexagon\">\n      <div class=\"hexagon1\">\n        <div class=\"number\">{{ cardIndex + 1 }}</div>\n        <svg\n          width=\"138\"\n          height=\"138\"\n          viewBox=\"0 0 138 138\"\n          fill=\"none\"\n          xmlns=\"http://www.w3.org/2000/svg\"\n        >\n          <g filter=\"url(#filter0_b_1389_695)\">\n            <path\n              d=\"M19 0H138V118L118 138H0V19L19 0Z\"\n              fill=\"white\"\n              fill-opacity=\"0.1\"\n            />\n          </g>\n          <defs>\n            <filter\n              id=\"filter0_b_1389_695\"\n              x=\"-10\"\n              y=\"-10\"\n              width=\"158\"\n              height=\"158\"\n              filterUnits=\"userSpaceOnUse\"\n              color-interpolation-filters=\"sRGB\"\n            >\n              <feFlood flood-opacity=\"0\" result=\"BackgroundImageFix\" />\n              <feGaussianBlur in=\"BackgroundImageFix\" stdDeviation=\"5\" />\n              <feComposite\n                in2=\"SourceAlpha\"\n                operator=\"in\"\n                result=\"effect1_backgroundBlur_1389_695\"\n              />\n              <feBlend\n                mode=\"normal\"\n                in=\"SourceGraphic\"\n                in2=\"effect1_backgroundBlur_1389_695\"\n                result=\"shape\"\n              />\n            </filter>\n          </defs>\n        </svg>\n\n      </div>\n      <div class=\"hexagon2\">\n        <p id=\"exifdata\" class=\"exifdata\">{{ exifData }}</p>\n        <svg width=\"138\" height=\"138\" viewBox=\"0 0 138 138\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n          <g filter=\"url(#filter0_b_1389_696)\">\n            <path d=\"M119 0H0V118L20 138H138V19L119 0Z\" fill=\"white\" fill-opacity=\"0.1\"/>\n          </g>\n          <defs>\n            <filter id=\"filter0_b_1389_696\" x=\"-10\" y=\"-10\" width=\"158\" height=\"158\" filterUnits=\"userSpaceOnUse\" color-interpolation-filters=\"sRGB\">\n              <feFlood flood-opacity=\"0\" result=\"BackgroundImageFix\"/>\n              <feGaussianBlur in=\"BackgroundImageFix\" stdDeviation=\"5\"/>\n              <feComposite in2=\"SourceAlpha\" operator=\"in\" result=\"effect1_backgroundBlur_1389_696\"/>\n              <feBlend mode=\"normal\" in=\"SourceGraphic\" in2=\"effect1_backgroundBlur_1389_696\" result=\"shape\"/>\n            </filter>\n          </defs>\n        </svg>\n      </div>\n    </div>\n    \n  </div>\n</template>\n\n<script>\nimport { gsap } from 'gsap';\nimport exifr from 'exifr';\n\nexport default {\n  props: {\n    image: String,\n    cardIndex: Number\n  },\n  data() {\n    return {\n      exifData: ''\n    };\n  },\n  methods: {\n    async handleImageClick(event) {\n      // Vérifiez le nom de la route pour déterminer si vous devez extraire les données EXIF\n      if (this.$route.name === 'photos') { // Remplacez 'nom_de_votre_page' par le nom de votre page photo\n        console.log('Image clicked')\n        const file = event.target.src\n        console.log('Image file:', file)\n        try {\n          const exifData = await exifr.parse(file)\n          console.log('EXIF data:', exifData)\n          this.exifData = 'ISO: ' + exifData.ISO + '\\n' +\n                          'Focal: ' + exifData.FNumber + '\\n' +\n                          'Shutter speed: ' + exifData.ShutterSpeedValue;\n        } catch (error) {\n          console.log('Error reading EXIF data:', error)\n          alert('Error reading EXIF data: ' + error.message)\n        }\n      }\n    },\n\n    startAnimation(event) {\n      const card = event.target.closest('.card');\n      const hexagon1 = card.querySelector('.hexagon1');\n      const hexagon2 = card.querySelector('.hexagon2');\n      const cardImage = card.querySelector('.card-image');\n      const exifdata = card.querySelector('.exifdata');\n\n      gsap.to(hexagon1, {y:-138,x:138, ease: \"power1.out\",  duration: 0.3,opacity: 1});\n      gsap.to(hexagon2, {y:-138,x:-138, ease: \"power1.out\",  duration: 0.3, opacity: 1});\n      gsap.to(cardImage, {scale: 0.85,ease: \"power1.out\", filter: 'grayscale(0)', duration: 0.3});\n      gsap.to(exifdata, { y:10, x:10, ease: \" power1.out\",  duration: 0.3, delay: 0.50, opacity: 1});\n    },\n\n    resetAnimation(event) {\n      const card = event.target.closest('.card');\n      const hexagon1 = card.querySelector('.hexagon1');\n      const hexagon2 = card.querySelector('.hexagon2');\n      const cardImage = card.querySelector('.card-image');\n      const exifdata = card.querySelector('.exifdata');\n\n      gsap.to(hexagon1, {y:0, x:0, ease: \"power1.out\",  duration: 0.25, opacity: 0, delay: 0.25});\n      gsap.to(hexagon2, {y:0, x:0, ease: \"power1.out\",  duration: 0.25, opacity: 0, delay: 0.25});\n      gsap.to(cardImage, {scale: 1,ease: \"power1.out\",filter: 'grayscale(0.7)', duration: 0.25, delay: 0.25});\n      gsap.to(exifdata, { y:0, x:0, ease: \" power1.out\",  duration: 0.25, opacity: 0});\n    }\n  }\n}\n</script>\n\n\n  \n  <style scoped>\n\n  .card {\n      position: relative;\n      width: 300px;\n      height: 300px;\n      overflow: hidden;\n  }\n  .card-image {\n      width: 100%;\n      height: 100%;\n      filter: grayscale(0.7);\n  }\n  .card-image img{\n      width: 100%;\n      height: 100%;\n      object-fit: cover;\n      /* overflow: hidden; */\n  }\n  .hexagon {\n      position: absolute;\n      /* z-index: -1; */\n      bottom: 0;\n      left: 0;\n      width: 100%;\n      height: 50%;\n      display: flex;\n      justify-content: space-between;\n  \n      align-items: flex-end;\n  }\n  .hexagon1  {\n      position: absolute;\n      bottom: -138px;\n      left: -138px;\n      /* opacity: 0; */\n      /* z-index: 1; */\n  }\n  .number {\n      position: absolute;\n      top: 50%;\n      left: 50%;\n      transform: translate(-50%, -50%);\n      color: white;\n      font-size: 3rem;\n  }\n  .hexagon2  {\n      position: absolute;\n      bottom: -138px;\n      right: -138px;\n      /* opacity: 0; */\n      /* z-index: 1; */\n  }\n  #exifdata {\n      position: absolute;\n      bottom: 10px;\n      right: 5px;\n      color: white;\n      font-size: 12px;\n      padding: 10px;\n      opacity: 0;\n     \n  }\n  </style>",
+      "start": 1715600168622,
+      "end": 1715600169030,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1715600169030,
+      "end": 1715600169030,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1715600169030,
+      "end": 1715600169030,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1715600169030,
+      "end": 1715600169030,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1715600169030,
+      "end": 1715600169030,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1715600169030,
+      "end": 1715600169030,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1715600169030,
+      "end": 1715600169030,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1715600169030,
+      "end": 1715600169030,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1715600169030,
+      "end": 1715600169030,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1715600169030,
+      "end": 1715600169030,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": "\nimport { gsap } from 'gsap';\nimport exifr from 'exifr';\n\nconst _sfc_main = {\n  props: {\n    image: String,\n    cardIndex: Number\n  },\n  data() {\n    return {\n      exifData: ''\n    };\n  },\n  methods: {\n    async handleImageClick(event) {\n      // Vérifiez le nom de la route pour déterminer si vous devez extraire les données EXIF\n      if (this.$route.name === 'photos') { // Remplacez 'nom_de_votre_page' par le nom de votre page photo\n        console.log('Image clicked')\n        const file = event.target.src\n        console.log('Image file:', file)\n        try {\n          const exifData = await exifr.parse(file)\n          console.log('EXIF data:', exifData)\n          this.exifData = 'ISO: ' + exifData.ISO + '\\n' +\n                          'Focal: ' + exifData.FNumber + '\\n' +\n                          'Shutter speed: ' + exifData.ShutterSpeedValue;\n        } catch (error) {\n          console.log('Error reading EXIF data:', error)\n          alert('Error reading EXIF data: ' + error.message)\n        }\n      }\n    },\n\n    startAnimation(event) {\n      const card = event.target.closest('.card');\n      const hexagon1 = card.querySelector('.hexagon1');\n      const hexagon2 = card.querySelector('.hexagon2');\n      const cardImage = card.querySelector('.card-image');\n      const exifdata = card.querySelector('.exifdata');\n\n      gsap.to(hexagon1, {y:-138,x:138, ease: \"power1.out\",  duration: 0.3,opacity: 1});\n      gsap.to(hexagon2, {y:-138,x:-138, ease: \"power1.out\",  duration: 0.3, opacity: 1});\n      gsap.to(cardImage, {scale: 0.85,ease: \"power1.out\", filter: 'grayscale(0)', duration: 0.3});\n      gsap.to(exifdata, { y:10, x:10, ease: \" power1.out\",  duration: 0.3, delay: 0.50, opacity: 1});\n    },\n\n    resetAnimation(event) {\n      const card = event.target.closest('.card');\n      const hexagon1 = card.querySelector('.hexagon1');\n      const hexagon2 = card.querySelector('.hexagon2');\n      const cardImage = card.querySelector('.card-image');\n      const exifdata = card.querySelector('.exifdata');\n\n      gsap.to(hexagon1, {y:0, x:0, ease: \"power1.out\",  duration: 0.25, opacity: 0, delay: 0.25});\n      gsap.to(hexagon2, {y:0, x:0, ease: \"power1.out\",  duration: 0.25, opacity: 0, delay: 0.25});\n      gsap.to(cardImage, {scale: 1,ease: \"power1.out\",filter: 'grayscale(0.7)', duration: 0.25, delay: 0.25});\n      gsap.to(exifdata, { y:0, x:0, ease: \" power1.out\",  duration: 0.25, opacity: 0});\n    }\n  }\n}\n\nimport { mergeProps as _mergeProps } from \"vue\"\nimport { ssrRenderAttr as _ssrRenderAttr, ssrRenderAttrs as _ssrRenderAttrs, ssrInterpolate as _ssrInterpolate } from \"vue/server-renderer\"\n\nfunction _sfc_ssrRender(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {\n  _push(`<div${\n    _ssrRenderAttrs(_mergeProps({ class: \"card\" }, _attrs))\n  } data-v-51d8adc3><div class=\"card-image\" data-v-51d8adc3><img${\n    _ssrRenderAttr(\"src\", $props.image)\n  } data-v-51d8adc3><div data-v-51d8adc3></div></div><div class=\"hexagon\" data-v-51d8adc3><div class=\"hexagon1\" data-v-51d8adc3><div class=\"number\" data-v-51d8adc3>${\n    _ssrInterpolate($props.cardIndex + 1)\n  }</div><svg width=\"138\" height=\"138\" viewBox=\"0 0 138 138\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\" data-v-51d8adc3><g filter=\"url(#filter0_b_1389_695)\" data-v-51d8adc3><path d=\"M19 0H138V118L118 138H0V19L19 0Z\" fill=\"white\" fill-opacity=\"0.1\" data-v-51d8adc3></path></g><defs data-v-51d8adc3><filter id=\"filter0_b_1389_695\" x=\"-10\" y=\"-10\" width=\"158\" height=\"158\" filterUnits=\"userSpaceOnUse\" color-interpolation-filters=\"sRGB\" data-v-51d8adc3><feFlood flood-opacity=\"0\" result=\"BackgroundImageFix\" data-v-51d8adc3></feFlood><feGaussianBlur in=\"BackgroundImageFix\" stdDeviation=\"5\" data-v-51d8adc3></feGaussianBlur><feComposite in2=\"SourceAlpha\" operator=\"in\" result=\"effect1_backgroundBlur_1389_695\" data-v-51d8adc3></feComposite><feBlend mode=\"normal\" in=\"SourceGraphic\" in2=\"effect1_backgroundBlur_1389_695\" result=\"shape\" data-v-51d8adc3></feBlend></filter></defs></svg></div><div class=\"hexagon2\" data-v-51d8adc3><p id=\"exifdata\" class=\"exifdata\" data-v-51d8adc3>${\n    _ssrInterpolate($data.exifData)\n  }</p><svg width=\"138\" height=\"138\" viewBox=\"0 0 138 138\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\" data-v-51d8adc3><g filter=\"url(#filter0_b_1389_696)\" data-v-51d8adc3><path d=\"M119 0H0V118L20 138H138V19L119 0Z\" fill=\"white\" fill-opacity=\"0.1\" data-v-51d8adc3></path></g><defs data-v-51d8adc3><filter id=\"filter0_b_1389_696\" x=\"-10\" y=\"-10\" width=\"158\" height=\"158\" filterUnits=\"userSpaceOnUse\" color-interpolation-filters=\"sRGB\" data-v-51d8adc3><feFlood flood-opacity=\"0\" result=\"BackgroundImageFix\" data-v-51d8adc3></feFlood><feGaussianBlur in=\"BackgroundImageFix\" stdDeviation=\"5\" data-v-51d8adc3></feGaussianBlur><feComposite in2=\"SourceAlpha\" operator=\"in\" result=\"effect1_backgroundBlur_1389_696\" data-v-51d8adc3></feComposite><feBlend mode=\"normal\" in=\"SourceGraphic\" in2=\"effect1_backgroundBlur_1389_696\" result=\"shape\" data-v-51d8adc3></feBlend></filter></defs></svg></div></div></div>`)\n}\n\nimport \"/Users/diaks/PortfolioV2/components/card.vue?vue&type=style&index=0&scoped=51d8adc3&lang.css\"\n\nimport { useSSRContext as __vite_useSSRContext } from 'vue'\nconst _sfc_setup = _sfc_main.setup\n_sfc_main.setup = (props, ctx) => {\n  const ssrContext = __vite_useSSRContext()\n  ;(ssrContext.modules || (ssrContext.modules = new Set())).add(\"components/card.vue\")\n  return _sfc_setup ? _sfc_setup(props, ctx) : undefined\n}\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['ssrRender',_sfc_ssrRender],['__scopeId',\"data-v-51d8adc3\"]])",
+      "start": 1715600169030,
+      "end": 1715600169036,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "file": "/Users/diaks/PortfolioV2/components/card.vue",
+        "names": [],
+        "sources": [
+          "/Users/diaks/PortfolioV2/components/card.vue"
+        ],
+        "sourcesContent": [
+          "<template>\n  <div class=\"card\"  \n      @mouseover=\"startAnimation\"\n      @mouseleave=\"resetAnimation\">\n    <div class=\"card-image\">\n      <img :src=\"image\" @mouseover=\"handleImageClick\" />\n      <div>\n      </div>\n    </div>\n    <div class=\"hexagon\">\n      <div class=\"hexagon1\">\n        <div class=\"number\">{{ cardIndex + 1 }}</div>\n        <svg\n          width=\"138\"\n          height=\"138\"\n          viewBox=\"0 0 138 138\"\n          fill=\"none\"\n          xmlns=\"http://www.w3.org/2000/svg\"\n        >\n          <g filter=\"url(#filter0_b_1389_695)\">\n            <path\n              d=\"M19 0H138V118L118 138H0V19L19 0Z\"\n              fill=\"white\"\n              fill-opacity=\"0.1\"\n            />\n          </g>\n          <defs>\n            <filter\n              id=\"filter0_b_1389_695\"\n              x=\"-10\"\n              y=\"-10\"\n              width=\"158\"\n              height=\"158\"\n              filterUnits=\"userSpaceOnUse\"\n              color-interpolation-filters=\"sRGB\"\n            >\n              <feFlood flood-opacity=\"0\" result=\"BackgroundImageFix\" />\n              <feGaussianBlur in=\"BackgroundImageFix\" stdDeviation=\"5\" />\n              <feComposite\n                in2=\"SourceAlpha\"\n                operator=\"in\"\n                result=\"effect1_backgroundBlur_1389_695\"\n              />\n              <feBlend\n                mode=\"normal\"\n                in=\"SourceGraphic\"\n                in2=\"effect1_backgroundBlur_1389_695\"\n                result=\"shape\"\n              />\n            </filter>\n          </defs>\n        </svg>\n\n      </div>\n      <div class=\"hexagon2\">\n        <p id=\"exifdata\" class=\"exifdata\">{{ exifData }}</p>\n        <svg width=\"138\" height=\"138\" viewBox=\"0 0 138 138\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n          <g filter=\"url(#filter0_b_1389_696)\">\n            <path d=\"M119 0H0V118L20 138H138V19L119 0Z\" fill=\"white\" fill-opacity=\"0.1\"/>\n          </g>\n          <defs>\n            <filter id=\"filter0_b_1389_696\" x=\"-10\" y=\"-10\" width=\"158\" height=\"158\" filterUnits=\"userSpaceOnUse\" color-interpolation-filters=\"sRGB\">\n              <feFlood flood-opacity=\"0\" result=\"BackgroundImageFix\"/>\n              <feGaussianBlur in=\"BackgroundImageFix\" stdDeviation=\"5\"/>\n              <feComposite in2=\"SourceAlpha\" operator=\"in\" result=\"effect1_backgroundBlur_1389_696\"/>\n              <feBlend mode=\"normal\" in=\"SourceGraphic\" in2=\"effect1_backgroundBlur_1389_696\" result=\"shape\"/>\n            </filter>\n          </defs>\n        </svg>\n      </div>\n    </div>\n    \n  </div>\n</template>\n\n<script>\nimport { gsap } from 'gsap';\nimport exifr from 'exifr';\n\nexport default {\n  props: {\n    image: String,\n    cardIndex: Number\n  },\n  data() {\n    return {\n      exifData: ''\n    };\n  },\n  methods: {\n    async handleImageClick(event) {\n      // Vérifiez le nom de la route pour déterminer si vous devez extraire les données EXIF\n      if (this.$route.name === 'photos') { // Remplacez 'nom_de_votre_page' par le nom de votre page photo\n        console.log('Image clicked')\n        const file = event.target.src\n        console.log('Image file:', file)\n        try {\n          const exifData = await exifr.parse(file)\n          console.log('EXIF data:', exifData)\n          this.exifData = 'ISO: ' + exifData.ISO + '\\n' +\n                          'Focal: ' + exifData.FNumber + '\\n' +\n                          'Shutter speed: ' + exifData.ShutterSpeedValue;\n        } catch (error) {\n          console.log('Error reading EXIF data:', error)\n          alert('Error reading EXIF data: ' + error.message)\n        }\n      }\n    },\n\n    startAnimation(event) {\n      const card = event.target.closest('.card');\n      const hexagon1 = card.querySelector('.hexagon1');\n      const hexagon2 = card.querySelector('.hexagon2');\n      const cardImage = card.querySelector('.card-image');\n      const exifdata = card.querySelector('.exifdata');\n\n      gsap.to(hexagon1, {y:-138,x:138, ease: \"power1.out\",  duration: 0.3,opacity: 1});\n      gsap.to(hexagon2, {y:-138,x:-138, ease: \"power1.out\",  duration: 0.3, opacity: 1});\n      gsap.to(cardImage, {scale: 0.85,ease: \"power1.out\", filter: 'grayscale(0)', duration: 0.3});\n      gsap.to(exifdata, { y:10, x:10, ease: \" power1.out\",  duration: 0.3, delay: 0.50, opacity: 1});\n    },\n\n    resetAnimation(event) {\n      const card = event.target.closest('.card');\n      const hexagon1 = card.querySelector('.hexagon1');\n      const hexagon2 = card.querySelector('.hexagon2');\n      const cardImage = card.querySelector('.card-image');\n      const exifdata = card.querySelector('.exifdata');\n\n      gsap.to(hexagon1, {y:0, x:0, ease: \"power1.out\",  duration: 0.25, opacity: 0, delay: 0.25});\n      gsap.to(hexagon2, {y:0, x:0, ease: \"power1.out\",  duration: 0.25, opacity: 0, delay: 0.25});\n      gsap.to(cardImage, {scale: 1,ease: \"power1.out\",filter: 'grayscale(0.7)', duration: 0.25, delay: 0.25});\n      gsap.to(exifdata, { y:0, x:0, ease: \" power1.out\",  duration: 0.25, opacity: 0});\n    }\n  }\n}\n</script>\n\n\n  \n  <style scoped>\n\n  .card {\n      position: relative;\n      width: 300px;\n      height: 300px;\n      overflow: hidden;\n  }\n  .card-image {\n      width: 100%;\n      height: 100%;\n      filter: grayscale(0.7);\n  }\n  .card-image img{\n      width: 100%;\n      height: 100%;\n      object-fit: cover;\n      /* overflow: hidden; */\n  }\n  .hexagon {\n      position: absolute;\n      /* z-index: -1; */\n      bottom: 0;\n      left: 0;\n      width: 100%;\n      height: 50%;\n      display: flex;\n      justify-content: space-between;\n  \n      align-items: flex-end;\n  }\n  .hexagon1  {\n      position: absolute;\n      bottom: -138px;\n      left: -138px;\n      /* opacity: 0; */\n      /* z-index: 1; */\n  }\n  .number {\n      position: absolute;\n      top: 50%;\n      left: 50%;\n      transform: translate(-50%, -50%);\n      color: white;\n      font-size: 3rem;\n  }\n  .hexagon2  {\n      position: absolute;\n      bottom: -138px;\n      right: -138px;\n      /* opacity: 0; */\n      /* z-index: 1; */\n  }\n  #exifdata {\n      position: absolute;\n      bottom: 10px;\n      right: 5px;\n      color: white;\n      font-size: 12px;\n      padding: 10px;\n      opacity: 0;\n     \n  }\n  </style>"
+        ],
+        "mappings": ";AA4EA,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,EAAE,CAAC,CAAC,CAAC,EAAE,EAAE,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3B,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;;AAEzB,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE;EACb,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE;IACL,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;IACb,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC;EAClB,CAAC;EACD,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE;IACL,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE;MACL,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC;IACb,CAAC;EACH,CAAC;EACD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE;IACP,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE;MAC5B,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,EAAE,CAAC,CAAC,EAAE,CAAC,EAAE,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,EAAE,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC;MACrF,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,EAAE,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,EAAE,CAAC,EAAE,CAAC,CAAC,EAAE,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC;QACjG,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;QAC3B,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,EAAE,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;QAC5B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC;QAC/B,CAAC,CAAC,EAAE;UACF,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,EAAE,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;UACvC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;UAClC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,EAAE,CAAC,CAAC,CAAC,CAAC,EAAE,EAAE,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,EAAE,CAAC,CAAC,CAAC,EAAE;0BAC9B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,EAAE,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,EAAE,CAAC,CAAC,CAAC,EAAE;0BACpC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,EAAE,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;QAChE,EAAE,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE;UACd,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC;UAC7C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,EAAE,EAAE,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;QACnD;MACF;IACF,CAAC;;IAED,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE;MACpB,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,EAAE,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;MAC1C,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;MAChD,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;MAChD,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;MACnD,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;;MAEhD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC;MAChF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC;MAClF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC;MAC3F,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,EAAE,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,EAAE,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC;IAChG,CAAC;;IAED,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE;MACpB,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,EAAE,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;MAC1C,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;MAChD,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;MAChD,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;MACnD,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;;MAEhD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;MAC3F,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;MAC3F,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;MACvG,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,EAAE,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,EAAE,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC;IAClF;EACF;AACF;;;;;;EAvIA;IAAA,gBAAA,cACO,KAAK,EAAC,MAAM,IADnB;;IAAA,eAKY,KAAG,EAAE,YAAK;;IALtB,gBAW+B,gBAAS;;IAXxC,gBAuD6C,cAAQ"
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1715600169036,
+      "end": 1715600169036,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1715600169036,
+      "end": 1715600169036,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1715600169036,
+      "end": 1715600169036,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1715600169036,
+      "end": 1715600169036,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1715600169036,
+      "end": 1715600169036,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1715600169036,
+      "end": 1715600169036,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1715600169036,
+      "end": 1715600169036,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1715600169036,
+      "end": 1715600169037,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1715600169037,
+      "end": 1715600169037,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1715600169037,
+      "end": 1715600169037,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1715600169037,
+      "end": 1715600169037,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1715600169037,
+      "end": 1715600169037,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1715600169037,
+      "end": 1715600169037,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1715600169037,
+      "end": 1715600169037,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1715600169037,
+      "end": 1715600169037,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1715600169037,
+      "end": 1715600169037,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1715600169037,
+      "end": 1715600169037,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1715600169037,
+      "end": 1715600169037,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1715600169037,
+      "end": 1715600169039,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1715600169037,
+      "end": 1715600169039,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1715600169039,
+      "end": 1715600169039,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1715600169039,
+      "end": 1715600169039,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1715600169039,
+      "end": 1715600169039,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1715600169039,
+      "end": 1715600169039,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-template",
+      "start": 1715600169039,
+      "end": 1715600169039,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1715600169039,
+      "end": 1715600169039,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1715600169039,
+      "end": 1715600169039,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1715600169039,
+      "end": 1715600169040,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1715600169040,
+      "end": 1715600169040,
+      "order": "normal"
+    }
+  ]
+}

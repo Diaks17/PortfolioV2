@@ -1,0 +1,223 @@
+{
+  "resolvedId": "/Users/diaks/PortfolioV2/pages/about.vue?macro=true",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "<template>\n<!-- <svg class=\"circle\" width=\"458\" height=\"458\" viewBox=\"0 0 458 458\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<circle cx=\"229\" cy=\"229\" r=\"229\" fill=\"#FFA401\"/>\n</svg> -->\n<div class=\"atropos my-atropos\">\n  <!-- scale container (required) -->\n  <div class=\"atropos-scale \">\n    <!-- rotate container (required) -->\n    <div class=\"atropos-rotate\">\n      <!-- inner container (required) -->\n      <div class=\"atropos-inner\">\n        <div class=\"profil\">\n  <div class=\"infos\">\n      <h3>Nom:</h3>\n      <p>Diakite</p>\n      <h3>Prénom:</h3>\n      <p>Moussa</p>\n      <h3>Âge:</h3>\n      <p>21 ans</p>\n  </div>\n  <div class=\"mail\">\n    <h3>Email:</h3>\n    <p>diakitemoussaweb@gmail.com</p>\n  </div>\n  <div class=\"tel\">\n    <h3>Téléphone:</h3>\n    <p>07 00 00 00 00</p>\n  </div>\n  <div class=\"bio\">\n    <h3>Déscription:</h3>\n    <p>Il aime associer ses deux passions : le développement web et la photographie dans ses projets.<br>\n    Il est de nature curieux, attentif et rigoureux, des qualités qu’il sait mettre au service de son travail.</p>\n  </div>\n  <div class=\"wanted\">\n    <h3>Recherche:</h3>\n    <p>Un poste de développeur front-end</p>\n  </div>\n  <div class=\"reward\">\n    <h3>Récompense:</h3>\n    <p>Un développeur front curieux attentif avec une bonne capacité d’adaptation afin de réaliser les taches qui lui seront confiés</p>\n  </div>\n</div>  \n      </div>\n    </div>\n  </div>\n</div>\n</template>\n\n<script scoped>\nimport { gsap } from 'gsap';\nimport Atropos from 'atropos';\nimport 'atropos/css';\n\nexport default {\n  mounted() {\n    // Sélectionnez le cercle après qu'il a été monté dans le DOM\n    const circle = document.querySelector('.circle');\n    const profil = document.querySelector('.profil');\n\n    // Appliquer une animation à votre cercle avec GSAP\n    gsap.to(circle, {\n      scale: 1.1, // Déformer le cercle pour simuler un battement de cœur\n      repeat: -1, // Répéter l'animation indéfiniment\n      yoyo: true, // Inverser l'animation à chaque itération\n      duration: 0.8, // Durée d'un battement de cœur (en secondes)\n      ease: 'power2.inOut',\n    });\n    gsap.from(profil, {\n      x: -400,\n      opacity: 0,\n      duration: 2,\n      delay: 0,\n      ease: 'bounce.out'\n    });\n    const myAtropos = Atropos({\n  el: '.my-atropos',\n  rotateLock: true,\n  activeOffset: 40,\n  shadowScale: 1,\n  shadowOffset: 10,\n  rotateYMax: 30,\n  // rest of parameters\n});\n  },\n}\n\n</script>\n\n<style scoped>\n/* .container {\n  gap: 10em;\n} */\n.my-atropos {\n  width: 80%;\n  /* height: 160px; */\n}\n\n.profil {\n  position: relative;\n  z-index: 2;\n  width: 90%;\n  padding: 20px;\n  font-family: 'Auto Regular', sans-serif;\n  /* height: 80%; */\n  /* display: flex; */\n  flex-direction: column;\n  /* background-image: url(\"../assets/img/ruche.png\"); */\n  background-size: 150%;\n  background-repeat: no-repeat;\n  background-position: center;\n  background: linear-gradient(180deg, #132B41 0%, #021C1B 100%);\n  backdrop-filter: blur(20px);\n  border: 1px solid white;\n  color: white;\n}\n.infos, .mail, .tel {\n  display: flex;\n  /* justify-content: space-between; */\n  align-items: center;\n  gap: 10px;\n}\n.profil > div > h3  {\n  font-family: 'Auto Bold', sans-serif;\n}\n</style>",
+      "start": 1715600163010,
+      "end": 1715600163200,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1715600163200,
+      "end": 1715600163200,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1715600163200,
+      "end": 1715600163200,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1715600163200,
+      "end": 1715600163201,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1715600163201,
+      "end": 1715600163201,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1715600163201,
+      "end": 1715600163201,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1715600163201,
+      "end": 1715600163201,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1715600163201,
+      "end": 1715600163201,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": "\nimport { gsap } from 'gsap';\nimport Atropos from 'atropos';\nimport 'atropos/css';\n\nconst _sfc_main = {\n  mounted() {\n    // Sélectionnez le cercle après qu'il a été monté dans le DOM\n    const circle = document.querySelector('.circle');\n    const profil = document.querySelector('.profil');\n\n    // Appliquer une animation à votre cercle avec GSAP\n    gsap.to(circle, {\n      scale: 1.1, // Déformer le cercle pour simuler un battement de cœur\n      repeat: -1, // Répéter l'animation indéfiniment\n      yoyo: true, // Inverser l'animation à chaque itération\n      duration: 0.8, // Durée d'un battement de cœur (en secondes)\n      ease: 'power2.inOut',\n    });\n    gsap.from(profil, {\n      x: -400,\n      opacity: 0,\n      duration: 2,\n      delay: 0,\n      ease: 'bounce.out'\n    });\n    const myAtropos = Atropos({\n  el: '.my-atropos',\n  rotateLock: true,\n  activeOffset: 40,\n  shadowScale: 1,\n  shadowOffset: 10,\n  rotateYMax: 30,\n  // rest of parameters\n});\n  },\n}\n\n\nimport { createElementVNode as _createElementVNode, createTextVNode as _createTextVNode, createStaticVNode as _createStaticVNode, openBlock as _openBlock, createElementBlock as _createElementBlock, pushScopeId as _pushScopeId, popScopeId as _popScopeId } from \"vue\"\n\nconst _withScopeId = n => (_pushScopeId(\"data-v-d2166212\"),n=n(),_popScopeId(),n)\nconst _hoisted_1 = { class: \"atropos my-atropos\" }\nconst _hoisted_2 = /*#__PURE__*/_createStaticVNode(\"<div class=\\\"atropos-scale\\\" data-v-d2166212><div class=\\\"atropos-rotate\\\" data-v-d2166212><div class=\\\"atropos-inner\\\" data-v-d2166212><div class=\\\"profil\\\" data-v-d2166212><div class=\\\"infos\\\" data-v-d2166212><h3 data-v-d2166212>Nom:</h3><p data-v-d2166212>Diakite</p><h3 data-v-d2166212>Prénom:</h3><p data-v-d2166212>Moussa</p><h3 data-v-d2166212>Âge:</h3><p data-v-d2166212>21 ans</p></div><div class=\\\"mail\\\" data-v-d2166212><h3 data-v-d2166212>Email:</h3><p data-v-d2166212>diakitemoussaweb@gmail.com</p></div><div class=\\\"tel\\\" data-v-d2166212><h3 data-v-d2166212>Téléphone:</h3><p data-v-d2166212>07 00 00 00 00</p></div><div class=\\\"bio\\\" data-v-d2166212><h3 data-v-d2166212>Déscription:</h3><p data-v-d2166212>Il aime associer ses deux passions : le développement web et la photographie dans ses projets.<br data-v-d2166212> Il est de nature curieux, attentif et rigoureux, des qualités qu’il sait mettre au service de son travail.</p></div><div class=\\\"wanted\\\" data-v-d2166212><h3 data-v-d2166212>Recherche:</h3><p data-v-d2166212>Un poste de développeur front-end</p></div><div class=\\\"reward\\\" data-v-d2166212><h3 data-v-d2166212>Récompense:</h3><p data-v-d2166212>Un développeur front curieux attentif avec une bonne capacité d’adaptation afin de réaliser les taches qui lui seront confiés</p></div></div></div></div></div>\", 1)\nconst _hoisted_3 = [\n  _hoisted_2\n]\n\nfunction _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {\n  return (_openBlock(), _createElementBlock(\"div\", _hoisted_1, _hoisted_3))\n}\n\nimport \"/Users/diaks/PortfolioV2/pages/about.vue?vue&type=style&index=0&scoped=d2166212&lang.css\"\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render],['__scopeId',\"data-v-d2166212\"]])",
+      "start": 1715600163201,
+      "end": 1715600163215,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1715600163215,
+      "end": 1715600163215,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1715600163215,
+      "end": 1715600163215,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1715600163215,
+      "end": 1715600163215,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1715600163215,
+      "end": 1715600163215,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1715600163215,
+      "end": 1715600163215,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1715600163215,
+      "end": 1715600163215,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1715600163215,
+      "end": 1715600163215,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1715600163215,
+      "end": 1715600163215,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1715600163215,
+      "end": 1715600163215,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1715600163215,
+      "end": 1715600163215,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1715600163215,
+      "end": 1715600163215,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1715600163215,
+      "end": 1715600163215,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1715600163215,
+      "end": 1715600163215,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1715600163215,
+      "end": 1715600163215,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1715600163215,
+      "end": 1715600163215,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1715600163215,
+      "end": 1715600163216,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1715600163216,
+      "end": 1715600163218,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1715600163218,
+      "end": 1715600163218,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "result": "\nconst __nuxt_page_meta = null\nexport default __nuxt_page_meta\n",
+      "start": 1715600163218,
+      "end": 1715600163220,
+      "order": "post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          ""
+        ],
+        "names": [],
+        "mappings": "AAAA;AAAA;AAAA;AAAA"
+      }
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1715600163220,
+      "end": 1715600163220,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1715600163220,
+      "end": 1715600163221,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1715600163221,
+      "end": 1715600163221,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1715600163221,
+      "end": 1715600163221,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1715600163221,
+      "end": 1715600163221,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1715600163221,
+      "end": 1715600163221,
+      "order": "normal"
+    }
+  ]
+}

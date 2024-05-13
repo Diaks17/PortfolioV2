@@ -1,0 +1,288 @@
+{
+  "resolvedId": "/Users/diaks/PortfolioV2/pages/index.vue?vue&type=style&index=0&lang.css",
+  "transforms": [
+    {
+      "name": "vite:vue",
+      "result": "\n\n.circle {\nposition: absolute;\n/* z-index: -1; */\nmargin: 20%;\n/* transform: perspective(1000px) rotateX(45deg) rotateY(45deg); */\n  height: 40vw;\n  width: 40vw;\n  border-radius: 50%;\n  background-color: #FFA401;\n}\n",
+      "start": 1715600168568,
+      "end": 1715600168568,
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "/Users/diaks/PortfolioV2/pages/index.vue"
+        ],
+        "names": [],
+        "mappings": ";;AA8BA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE;AACR,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClB,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,EAAE,CAAC;AACjB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC;AACX,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC;EAChE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC;EACZ,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC;EACX,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC;EAClB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3B",
+        "file": "/Users/diaks/PortfolioV2/pages/index.vue",
+        "sourceRoot": "",
+        "sourcesContent": [
+          "<template>\n  \n        <!-- <div id=\"container\"> -->\n          <!-- <svg class=\"circle\" width=\"400\" height=\"400\" viewBox=\"0 0 400 400\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<circle cx=\"200\" cy=\"200\" r=\"200\" fill=\"#FFA401\"/>\n</svg> -->\n\n</template>\n\n\n<script>\nimport { gsap } from 'gsap';\n\nexport default {\n  mounted() {\n    // Sélectionnez le cercle après qu'il a été monté dans le DOM\n    const circle = document.querySelector('.circle');\n    // Appliquer une animation à votre cercle avec GSAP\n    gsap.to(circle, {\n      scale: 1.1, // Déformer le cercle pour simuler un battement de cœur\n      repeat: -1, // Répéter l'animation indéfiniment\n      yoyo: true, // Inverser l'animation à chaque itération\n      duration: 0.5, // Durée d'un battement de cœur (en secondes)\n      ease: 'power2.inOut'\n    });\n  },\n}\n</script>\n<style>\n\n.circle {\nposition: absolute;\n/* z-index: -1; */\nmargin: 20%;\n/* transform: perspective(1000px) rotateX(45deg) rotateY(45deg); */\n  height: 40vw;\n  width: 40vw;\n  border-radius: 50%;\n  background-color: #FFA401;\n}\n</style>\n<style scoped>\n\n#container {\n  /* height: 100vh; */\n  /* width: 100%; */\n  /* display: none; */\n  /* background: url(\"../assets/img/planet.png\") no-repeat; */\n  background-size: 100%;\n}\n\n.page-three #container {\n  display: block;\n}\n#container canvas {\n    width: 100% !important;\n    height: 100%;\n}\n</style>"
+        ]
+      }
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1715600168568,
+      "end": 1715600168568,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1715600168568,
+      "end": 1715600168568,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1715600168568,
+      "end": 1715600168568,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1715600168568,
+      "end": 1715600168568,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1715600168568,
+      "end": 1715600168568,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "result": ".circle{background-color:#ffa401;border-radius:50%;height:40vw;margin:20%;position:absolute;width:40vw}",
+      "start": 1715600168568,
+      "end": 1715600168574,
+      "order": "normal",
+      "sourcemaps": {
+        "file": "/Users/diaks/PortfolioV2/pages/index.vue",
+        "mappings": "AAEA,QAQE,wBAAyB,CADzB,iBAAkB,CAFlB,WAAY,CAFd,UAAW,CAFX,iBAAkB,CAKhB,UAGF",
+        "names": [],
+        "sources": [
+          "/Users/diaks/PortfolioV2/pages/index.vue"
+        ],
+        "sourcesContent": [
+          "\n\n.circle {\nposition: absolute;\n/* z-index: -1; */\nmargin: 20%;\n/* transform: perspective(1000px) rotateX(45deg) rotateY(45deg); */\n  height: 40vw;\n  width: 40vw;\n  border-radius: 50%;\n  background-color: #FFA401;\n}\n"
+        ],
+        "version": 3
+      }
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1715600168574,
+      "end": 1715600168574,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1715600168574,
+      "end": 1715600168574,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1715600168574,
+      "end": 1715600168574,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": ".circle{background-color:#ffa401;border-radius:50%;height:40vw;margin:20%;position:absolute;width:40vw}",
+      "start": 1715600168574,
+      "end": 1715600168575,
+      "order": "normal",
+      "sourcemaps": {
+        "file": "/Users/diaks/PortfolioV2/pages/index.vue",
+        "mappings": "AAAA,QAAQ,wBAAwB,CAAC,iBAAiB,CAAC,WAAW,CAAC,UAAU,CAAC,iBAAiB,CAAC,UAAU",
+        "names": [],
+        "sources": [
+          "/Users/diaks/PortfolioV2/pages/index.vue"
+        ],
+        "sourcesContent": [
+          null
+        ],
+        "version": 3
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1715600168575,
+      "end": 1715600168575,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1715600168575,
+      "end": 1715600168575,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1715600168575,
+      "end": 1715600168575,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1715600168575,
+      "end": 1715600168575,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1715600168575,
+      "end": 1715600168575,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1715600168575,
+      "end": 1715600168575,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1715600168575,
+      "end": 1715600168575,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1715600168576,
+      "end": 1715600168577,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1715600168577,
+      "end": 1715600168578,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "result": "",
+      "start": 1715600168578,
+      "end": 1715600168578,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1715600168578,
+      "end": 1715600168578,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1715600168578,
+      "end": 1715600168578,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1715600168578,
+      "end": 1715600168578,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1715600168578,
+      "end": 1715600168578,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1715600168578,
+      "end": 1715600168578,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1715600168578,
+      "end": 1715600168578,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1715600168578,
+      "end": 1715600168578,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1715600168578,
+      "end": 1715600168578,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1715600168578,
+      "end": 1715600168578,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1715600168578,
+      "end": 1715600168579,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1715600168579,
+      "end": 1715600168579,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1715600168579,
+      "end": 1715600168579,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1715600168579,
+      "end": 1715600168579,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1715600168579,
+      "end": 1715600168579,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-template",
+      "start": 1715600168579,
+      "end": 1715600168579,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1715600168579,
+      "end": 1715600168579,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1715600168579,
+      "end": 1715600168579,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1715600168579,
+      "end": 1715600168579,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1715600168579,
+      "end": 1715600168579,
+      "order": "normal"
+    }
+  ]
+}
