@@ -1,57 +1,49 @@
 <template>
-    <nav class="navbar">
+    <!-- <nav class="navbar">
             <ul class="nav-menu">
                 <li>
                     <nuxt-link to="/" class="nav-link">ACCUEIL</nuxt-link>
                 </li>
                 <li>
-                    <nuxt-link to="/projects/" class="nav-link">PROJETS</nuxt-link>
+                   
                 </li>
                 <li>
                     <nuxt-link to="/about" class="nav-link">ABOUT</nuxt-link>
                 </li>
             </ul>
-    </nav>
+    </nav> -->
 
+     
+<div class="h-screen w-full bg-white relative flex overflow-hidden">
+
+<!-- Sidebar -->
+<aside class="h-full w-16 flex flex-col space-y-10 items-center justify-center relative bg-gray-800 text-white">
+  <!-- Profile -->
+  <nuxt-link to="/about" class="nav-link {'nuxt-link-active': isRouteActive(id) }" :to="id + '?someParams=true'"><div class="h-10 w-10 flex items-center justify-center rounded-lg cursor-pointer hover:text-gray-800 nav-link  hover:duration-300 hover:ease-linear"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" /></svg>
     
-     <svg class="arrow-bl" width="69" height="65" viewBox="0 0 69 65" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M1 1V63.3281H67.6056V47.9452L17.4926 49.2158V1H1Z" stroke="#C59335" stroke-width="1.65378" stroke-miterlimit="10"/>
-</svg>
-<svg class="arrow-br" width="67" height="70" viewBox="0 0 67 70" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M1 68.5637H66.1748V1H48.0983V50.4785L1 49.5291V68.5637Z" stroke="#C59335" stroke-width="1.65378" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-<svg class="arrow-tl" width="69" height="65" viewBox="0 0 69 65" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M1 63.3203V1H67.6064V16.383L17.4934 15.1124V63.3203H1Z" stroke="#C59335" stroke-width="1.65378" stroke-miterlimit="10"/>
-</svg>
-<svg class="arrow-tr" width="67" height="70" viewBox="0 0 67 70" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M1 1H66.1669V68.5558H48.0905V19.0773L1 20.0259V1Z" stroke="#C59335" stroke-width="1.65378" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-<svg class="line" width="3" height="350" viewBox="0 0 3 592" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M2.99999 574.337C2.99999 572.967 2.32844 571.855 1.50001 571.855C0.671583 571.855 -1.68407e-07 572.967 -1.0849e-07 574.337C-4.85726e-08 575.708 0.671583 576.819 1.50001 576.819C2.32844 576.819 2.99999 575.708 2.99999 574.337Z" fill="#C59335"/>
-<path d="M2.99999 536.943C2.99999 535.572 2.32844 534.461 1.50001 534.461C0.671583 534.461 -1.68407e-07 535.572 -1.0849e-07 536.943C-4.85724e-08 538.314 0.671583 539.425 1.50001 539.425C2.32844 539.425 2.99999 538.314 2.99999 536.943Z" fill="#C59335"/>
-<path d="M2.99999 588.58C2.99999 587.209 2.32844 586.098 1.50001 586.098C0.671583 586.098 -1.68407e-07 587.209 -1.0849e-07 588.58C-4.85726e-08 589.95 0.671583 591.062 1.50001 591.062C2.32844 591.062 2.99999 589.95 2.99999 588.58Z" fill="#C59335"/>
-<path d="M2.99999 308.445C2.99999 307.074 2.32844 305.963 1.50001 305.963C0.671583 305.963 -1.68408e-07 307.074 -1.0849e-07 308.445C-4.85731e-08 309.816 0.671583 310.927 1.50001 310.927C2.32844 310.927 2.99999 309.816 2.99999 308.445Z" fill="#C59335"/>
-<path d="M2.99999 321.227C2.99999 319.856 2.32844 318.745 1.50001 318.745C0.671583 318.745 -1.68408e-07 319.856 -1.0849e-07 321.227C-4.85731e-08 322.598 0.671583 323.709 1.50001 323.709C2.32844 323.709 2.99999 322.598 2.99999 321.227Z" fill="#C59335"/>
-<path d="M2.99999 282.301C2.99999 280.93 2.32844 279.819 1.50001 279.819C0.671583 279.819 -1.68408e-07 280.93 -1.0849e-07 282.301C-4.85731e-08 283.672 0.671583 284.783 1.50001 284.783C2.32844 284.783 2.99999 283.672 2.99999 282.301Z" fill="#C59335"/>
-<path d="M2.99999 295.083C2.99999 293.712 2.32844 292.601 1.50001 292.601C0.671583 292.601 -1.68406e-07 293.712 -1.08489e-07 295.083C-4.85718e-08 296.453 0.671583 297.564 1.50001 297.564C2.32844 297.564 2.99999 296.453 2.99999 295.083Z" fill="#C59335"/>
-<path d="M2.99999 119.964C2.99999 118.594 2.32844 117.482 1.50001 117.482C0.671583 117.482 -1.68408e-07 118.594 -1.0849e-07 119.964C-4.85731e-08 121.335 0.671583 122.446 1.50001 122.446C2.32844 122.446 2.99999 121.335 2.99999 119.964Z" fill="#C59335"/>
-<path d="M2.99999 83.7514C2.99999 82.3807 2.32844 81.2695 1.50001 81.2695C0.671583 81.2695 -1.68408e-07 82.3807 -1.0849e-07 83.7514C-4.85731e-08 85.1222 0.671583 86.2334 1.50001 86.2334C2.32844 86.2334 2.99999 85.1222 2.99999 83.7514Z" fill="#C59335"/>
-<path d="M2.99999 132.746C2.99999 131.375 2.32844 130.264 1.50001 130.264C0.671583 130.264 -1.68406e-07 131.375 -1.08489e-07 132.746C-4.85718e-08 134.116 0.671583 135.228 1.50001 135.228C2.32844 135.228 2.99999 134.116 2.99999 132.746Z" fill="#C59335"/>
-<path d="M2.99999 334.17C2.99999 332.8 2.32844 331.688 1.50001 331.688C0.671583 331.688 -1.68408e-07 332.8 -1.0849e-07 334.17C-4.85731e-08 335.541 0.671583 336.652 1.50001 336.652C2.32844 336.652 2.99999 335.541 2.99999 334.17Z" fill="#C59335"/>
-<path d="M-7.67244e-07 454.283L-4.58642e-08 470.787C-2.05342e-08 471.366 0.283902 471.836 0.634121 471.836L2.36587 471.836C2.71609 471.836 2.99999 471.366 2.99999 470.787L2.99999 454.283C2.99999 453.704 2.71609 453.234 2.36587 453.234L0.63412 453.234C0.283902 453.234 -7.92574e-07 453.704 -7.67244e-07 454.283Z" fill="#C59335"/>
-<path d="M-7.67244e-07 347.074L-4.58636e-08 363.578C-2.05336e-08 364.157 0.283902 364.627 0.634121 364.627L2.36587 364.627C2.71609 364.627 2.99999 364.157 2.99999 363.578L2.99999 347.074C2.99999 346.495 2.71609 346.025 2.36587 346.025L0.63412 346.025C0.283902 346.025 -7.92574e-07 346.495 -7.67244e-07 347.074Z" fill="#C59335"/>
-<path d="M-7.67244e-07 252.984L-4.58636e-08 269.487C-2.05336e-08 270.066 0.283902 270.536 0.634121 270.536L2.36587 270.536C2.71609 270.536 2.99999 270.066 2.99999 269.487L2.99999 252.984C2.99999 252.404 2.71609 251.934 2.36587 251.934L0.63412 251.934C0.283902 251.934 -7.92574e-07 252.404 -7.67244e-07 252.984Z" fill="#C59335"/>
-<path d="M-7.67244e-07 225.703L-4.58636e-08 242.207C-2.05336e-08 242.786 0.283902 243.256 0.634121 243.256L2.36587 243.256C2.71609 243.256 2.99999 242.786 2.99999 242.207L2.99999 225.703C2.99999 225.124 2.71609 224.654 2.36587 224.654L0.63412 224.654C0.283902 224.654 -7.92574e-07 225.124 -7.67244e-07 225.703Z" fill="#C59335"/>
-<path d="M-7.67244e-07 481.298L-4.58639e-08 497.801C-2.05339e-08 498.381 0.283902 498.851 0.634121 498.851L2.36587 498.851C2.71609 498.851 2.99999 498.381 2.99999 497.801L2.99999 481.298C2.99999 480.719 2.71609 480.249 2.36587 480.249L0.63412 480.249C0.283902 480.249 -7.92574e-07 480.719 -7.67244e-07 481.298Z" fill="#C59335"/>
-<path d="M-7.67244e-07 508.31L-4.58639e-08 524.813C-2.05339e-08 525.393 0.283902 525.862 0.634121 525.862L2.36587 525.862C2.71609 525.862 2.99999 525.393 2.99999 524.813L2.99999 508.31C2.99999 507.73 2.71609 507.261 2.36587 507.261L0.63412 507.261C0.283902 507.261 -7.92574e-07 507.73 -7.67244e-07 508.31Z" fill="#C59335"/>
-<path d="M-7.67246e-07 1.04903L-4.58636e-08 17.5523C-2.05336e-08 18.1318 0.283902 18.6016 0.634121 18.6016L2.36587 18.6016C2.71609 18.6016 2.99999 18.1318 2.99999 17.5523L2.99999 1.04903C2.99999 0.469545 2.71609 -0.000209927 2.36587 -0.000209912L0.63412 -0.000209836C0.283902 -0.000209821 -7.92576e-07 0.469545 -7.67246e-07 1.04903Z" fill="#C59335"/>
-<path d="M-7.67243e-07 28.0618L-4.58636e-08 44.565C-2.05336e-08 45.1445 0.283902 45.6143 0.634121 45.6143L2.36587 45.6143C2.71609 45.6143 2.99999 45.1445 2.99999 44.565L2.99999 28.0618C2.99999 27.4823 2.71609 27.0125 2.36587 27.0125L0.63412 27.0125C0.283902 27.0125 -7.92573e-07 27.4823 -7.67243e-07 28.0618Z" fill="#C59335"/>
-<path d="M-7.67243e-07 55.0735L-4.58636e-08 71.5767C-2.05336e-08 72.1562 0.283902 72.626 0.634121 72.626L2.36587 72.626C2.71609 72.626 2.99999 72.1562 2.99999 71.5767L2.99999 55.0735C2.99999 54.494 2.71609 54.0242 2.36587 54.0242L0.63412 54.0242C0.283902 54.0242 -7.92573e-07 54.494 -7.67243e-07 55.0735Z" fill="#C59335"/>
-</svg>
-    
-<div class="container">
-    <header>
-        <span class="links">
+  </div></nuxt-link>
+
+  <!-- Courses -->
+  <nuxt-link to="/projects/" class="nav-link"><div class="h-10 w-10 flex items-center justify-center rounded-lg cursor-pointer hover:text-gray-800 nav-link  hover:duration-300 hover:ease-linear">  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg>
+   
+  </div></nuxt-link>
+
+
+  <!-- Configuration -->
+  <div class="h-10 w-10 flex items-center justify-center rounded-lg cursor-pointer hover:text-gray-800 nav-link  hover:duration-300 hover:ease-linear">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+    </svg>
+  </div>
+</aside>
+
+
+
+<div class="w-full h-full flex flex-col justify-between">
+  <!-- Header -->
+  <header class="h-16 w-full flex items-center relative justify-end px-5 space-x-10 bg-gray-800">
+    <span class="links">
             <a href="https://www.instagram.com/mo_oss.a/"><svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M14.0356 0.422453C14.9573 0.418916 15.879 0.428179 16.8005 0.450241L17.0455 0.459083C17.3285 0.469188 17.6076 0.481819 17.9449 0.496976C19.2888 0.560132 20.2058 0.772336 21.0104 1.08433C21.844 1.40516 22.5463 1.83967 23.2486 2.54196C23.8907 3.17302 24.3877 3.93637 24.7049 4.77894C25.0169 5.58354 25.2291 6.50182 25.2923 7.84578C25.3074 8.18177 25.3201 8.46218 25.3302 8.74512L25.3377 8.99016C25.3602 9.91121 25.3699 10.8325 25.3668 11.7539L25.3681 12.6961V14.3508C25.3712 15.2726 25.3615 16.1943 25.339 17.1158L25.3314 17.3608C25.3213 17.6438 25.3087 17.9229 25.2935 18.2602C25.2304 19.6041 25.0157 20.5211 24.7049 21.3257C24.3887 22.1692 23.8916 22.9332 23.2486 23.564C22.617 24.206 21.8533 24.703 21.0104 25.0204C20.2058 25.3323 19.2888 25.5445 17.9449 25.6077C17.6076 25.6229 17.3285 25.6355 17.0455 25.6456L16.8005 25.6532C15.879 25.6756 14.9573 25.6853 14.0356 25.6822L13.0933 25.6835H11.4399C10.5182 25.6866 9.59648 25.6769 8.67502 25.6544L8.42998 25.6469C8.13014 25.636 7.83036 25.6234 7.53066 25.609C6.18673 25.5458 5.26972 25.3311 4.46387 25.0204C3.62099 24.7037 2.85751 24.2067 2.22693 23.564C1.58407 22.9328 1.08664 22.1689 0.769322 21.3257C0.457338 20.5211 0.245138 19.6041 0.181983 18.2602C0.167916 17.9604 0.155285 17.6607 0.14409 17.3608L0.137775 17.1158C0.114488 16.1943 0.103961 15.2726 0.106198 14.3508V11.7539C0.102672 10.8325 0.111936 9.91122 0.133986 8.99016L0.142827 8.74512C0.152932 8.46218 0.165563 8.18177 0.18072 7.84578C0.243875 6.50056 0.456074 5.5848 0.768058 4.77894C1.08557 3.93596 1.58397 3.17282 2.22819 2.54322C2.85834 1.89998 3.62134 1.40209 4.46387 1.08433C5.26972 0.772336 6.18546 0.560132 7.53066 0.496976L8.42998 0.459083L8.67502 0.452768C9.59605 0.429492 10.5174 0.418965 11.4387 0.42119L14.0356 0.422453ZM12.7371 6.73803C11.9003 6.72619 11.0695 6.88079 10.293 7.19283C9.51649 7.50488 8.80973 7.96815 8.2138 8.55572C7.61787 9.14329 7.14466 9.84344 6.82167 10.6155C6.49868 11.3875 6.33235 12.2161 6.33235 13.053C6.33235 13.8899 6.49868 14.7184 6.82167 15.4905C7.14466 16.2625 7.61787 16.9627 8.2138 17.5502C8.80973 18.1378 9.51649 18.6011 10.293 18.9131C11.0695 19.2252 11.9003 19.3797 12.7371 19.3679C14.4121 19.3679 16.0185 18.7025 17.2028 17.5181C18.3872 16.3337 19.0526 14.7273 19.0526 13.0523C19.0526 11.3773 18.3872 9.77095 17.2028 8.58655C16.0185 7.40215 14.4121 6.73803 12.7371 6.73803ZM12.7371 9.26426C13.2405 9.25498 13.7406 9.3461 14.2084 9.5323C14.6761 9.71849 15.1021 9.99603 15.4613 10.3487C15.8206 10.7014 16.106 11.1221 16.3009 11.5863C16.4957 12.0505 16.5961 12.5489 16.5962 13.0523C16.5963 13.5558 16.4961 14.0542 16.3014 14.5185C16.1067 14.9827 15.8214 15.4036 15.4622 15.7563C15.1031 16.1091 14.6772 16.3868 14.2095 16.5732C13.7419 16.7595 13.2417 16.8508 12.7384 16.8417C11.7334 16.8417 10.7696 16.4425 10.059 15.7318C9.34834 15.0212 8.94911 14.0573 8.94911 13.0523C8.94911 12.0473 9.34834 11.0835 10.059 10.3729C10.7696 9.66223 11.7334 9.26299 12.7384 9.26299L12.7371 9.26426ZM19.3684 4.84335C18.9609 4.85966 18.5755 5.03301 18.293 5.32709C18.0104 5.62117 17.8526 6.01317 17.8526 6.42099C17.8526 6.8288 18.0104 7.2208 18.293 7.51488C18.5755 7.80896 18.9609 7.98231 19.3684 7.99862C19.7871 7.99862 20.1887 7.83227 20.4848 7.53617C20.7809 7.24007 20.9472 6.83847 20.9472 6.41972C20.9472 6.00097 20.7809 5.59938 20.4848 5.30328C20.1887 5.00718 19.7871 4.84083 19.3684 4.84083V4.84335Z" fill="#C59335"/>
 </svg>
@@ -79,12 +71,65 @@
                 <p>HOUR MIN SEC</p>
             </span>
         </div>
-    </header>
-        <nuxt-page />
+    <!-- Informação -->
+    <div class="flex flex-shrink-0 items-center space-x-4 text-white">
+      
+      <!-- Texto -->
+      <div class="flex flex-col items-end ">
+        <!-- Nome -->
+        <div class="text-md font-medium ">Unknow Unknow</div>
+        <!-- Título -->
+        <div class="text-sm font-regular">Student</div>
+      </div>
+      
+      <!-- Foto -->
+      <div class="h-10 w-10 rounded-full cursor-pointer bg-gray-200 border-2 border-blue-400"></div>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main class="max-w-full h-full flex relative overflow-y-hidden">
+    <!-- Container -->
+    <div class="h-full w-full m-4 flex flex-wrap items-start justify-start rounded-tl grid-flow-col auto-cols-max gap-4 overflow-y-scroll">
+      <!-- Container -->
+      <nuxt-page />
+      <!-- <div class="w-96 h-60 rounded-lg flex-shrink-0 flex-grow bg-gray-400"></div>
+      <div class="w-96 h-60 rounded-lg flex-shrink-0 flex-grow bg-gray-400"></div>
+      <div class="w-96 h-60 rounded-lg flex-shrink-0 flex-grow bg-gray-400"></div>
+      <div class="w-96 h-60 rounded-lg flex-shrink-0 flex-grow bg-gray-400"></div>
+      <div class="w-96 h-60 rounded-lg flex-shrink-0 flex-grow bg-gray-400"></div>
+      <div class="w-96 h-60 rounded-lg flex-shrink-0 flex-grow bg-gray-400"></div>
+      <div class="w-96 h-60 rounded-lg flex-shrink-0 flex-grow bg-gray-400"></div>
+      <div class="w-96 h-60 rounded-lg flex-shrink-0 flex-grow bg-gray-400"></div>
+      <div class="w-96 h-60 rounded-lg flex-shrink-0 flex-grow bg-gray-400"></div> -->
+    </div>
+  </main>
 </div>
+
+</div>
+
+
 </template>
 <script>
+// import "./static/js/bootstrap.min.js";
 export default {
+//   head() {
+//     return {
+//       title: 'Moussa Diakite',
+//       meta: [
+//         { charset: 'utf-8' },
+//         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+//         { hid: 'description', name: 'description', content: 'Moussa Diakite Portfolio' }
+//       ],
+//       link: [
+//         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+//         { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css', integrity: "sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz", crossorigin: "anonymous" }
+//       ],
+//       script: [
+//         { src: 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js', integrity: "sha384-1q8jxq1l1Q8jv6", crossorigin: "anonymous" }
+//       ]
+//     }
+//   },
   data() {
     return {
       currentTime: ''
@@ -92,28 +137,38 @@ export default {
   },
   mounted() {
     if (process.client) {
-      // Mettre à jour l'heure toutes les secondes
+      // Update the time every second
       this.interval = setInterval(this.updateTime, 1000);
-      // Appelez updateTime immédiatement pour définir l'heure initiale
+      // Call updateTime immediately to set the initial time
       this.updateTime();
     }
   },
   beforeDestroy() {
     if (process.client) {
-      // Nettoyer l'intervalle lorsqu'un composant est détruit
+      // Clean up the interval when a component is destroyed
       clearInterval(this.interval);
     }
   },
   methods: {
+    isRouteActive(id) {
+      if (this.$route.path.includes(id)) {
+        return true
+      } else {
+        return false
+      }
+    },
+    log() {
+      console.log(this.categories)
+    },
     updateTime() {
       const date = new Date();
       const hours = this.padZero(date.getHours());
       const minutes = this.padZero(date.getMinutes());
       const seconds = this.padZero(date.getSeconds());
-      this.currentTime = `${hours} : ${minutes} : ${seconds}`;
+      this.currentTime = `${hours}:${minutes}:${seconds}`;
     },
     padZero(value) {
-      // Ajoute un zéro devant si la valeur est inférieure à 10
+      // Add a leading zero if the value is less than 10
       return value < 10 ? `0${value}` : value;
     }
   }
@@ -121,6 +176,11 @@ export default {
 </script>
 
 
+<style>
+
+/* @import url("~/static/css/bootstrap.min.css"); */
+
+</style>
 <style>
 @font-face {
     font-family: 'Auto Extra';
@@ -138,19 +198,27 @@ export default {
     src: url(../assets/fonts/AutonomousRegular.woff);
     /* font-weight: 500; */
 }
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.nuxt-link-active {
+    color: yellow;
+    /* styles here */
+}
+.nuxt-link-active {
+    color: yellow;
+  /* styles here */
+}
 body {
-    margin: 0;
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
 }
-html, body {
-    margin: 0;
-    padding: 0;
-    background:linear-gradient(90deg, #000000 0%, #021C1B 100%); 
-}
-#__nuxt {
-    display: flex;
-    height: 100vh;
-}
-
 
 .container {
     display: flex;
@@ -163,19 +231,31 @@ html, body {
     /* padding: 0 0 1rem 0; */
     font-family: 'Space Mono', monospace;
 }
+
 </style>
 
 <style>
 header {
-    position: fixed;
+    /* border-bottom: 1px white solid; */
+
+}
+aside {
+}
+header, aside {
+    /* position: fixed;
     top: 0;
     display: flex;
     z-index: 3;
     width: 75%;
     justify-content: space-between;
-    /* padding: 0 5rem; */
+    /* padding: 0 5rem;
     color: #C59335;
-    font-family: 'Auto Regular';
+    font-family: 'Auto Regular'; */
+    /* background-color: #ffffff11 !important; */
+    background-color: #000000ef !important;
+}
+main {
+    background:linear-gradient(90deg, #000000 0%, #021C1B 100%); 
 }
 .links {
     display: flex;
@@ -227,16 +307,16 @@ header {
 }
 .nav-link {
     text-decoration: none;
-    color: #fff;
+    color: #fff !important;
     font-family: 'Space Mono', monospace;
     font-weight: bold;
-    font-size: 1.5rem;
+    /* font-size: 1.5rem; */
     padding: 0.5rem;
-    transition: 4s;
 }
 .nav-link:hover {
     transition: width 2s;
     background:linear-gradient(90deg, #132b4100, #132B41 , #132b4100);
+    color: #C59335 !important;
 }
  /* SCREEN ASSETS */
 .arrow-tl {
