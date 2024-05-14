@@ -2,13 +2,6 @@
 <!-- <svg class="circle" width="458" height="458" viewBox="0 0 458 458" fill="none" xmlns="http://www.w3.org/2000/svg">
 <circle cx="229" cy="229" r="229" fill="#FFA401"/>
 </svg> -->
-<div class="atropos my-atropos">
-  <!-- scale container (required) -->
-  <div class="atropos-scale ">
-    <!-- rotate container (required) -->
-    <div class="atropos-rotate">
-      <!-- inner container (required) -->
-      <div class="atropos-inner">
         <div class="profil">
   <div class="infos">
       <h3>Nom:</h3>
@@ -40,49 +33,45 @@
     <p>Un développeur front curieux attentif avec une bonne capacité d’adaptation afin de réaliser les taches qui lui seront confiés</p>
   </div>
 </div>  
-      </div>
-    </div>
-  </div>
-</div>
 </template>
 
 <script scoped>
-import { gsap } from 'gsap';
-import Atropos from 'atropos';
-import 'atropos/css';
+// import { gsap } from 'gsap';
+// import Atropos from 'atropos';
+// import 'atropos/css';
 
-export default {
-  mounted() {
-    // Sélectionnez le cercle après qu'il a été monté dans le DOM
-    const circle = document.querySelector('.circle');
-    const profil = document.querySelector('.profil');
+// export default {
+//   mounted() {
+//     // Sélectionnez le cercle après qu'il a été monté dans le DOM
+//     const circle = document.querySelector('.circle');
+//     const profil = document.querySelector('.profil');
 
-    // Appliquer une animation à votre cercle avec GSAP
-    gsap.to(circle, {
-      scale: 1.1, // Déformer le cercle pour simuler un battement de cœur
-      repeat: -1, // Répéter l'animation indéfiniment
-      yoyo: true, // Inverser l'animation à chaque itération
-      duration: 0.8, // Durée d'un battement de cœur (en secondes)
-      ease: 'power2.inOut',
-    });
-    gsap.from(profil, {
-      x: -400,
-      opacity: 0,
-      duration: 2,
-      delay: 0,
-      ease: 'bounce.out'
-    });
-    const myAtropos = Atropos({
-  el: '.my-atropos',
-  rotateLock: true,
-  activeOffset: 40,
-  shadowScale: 1,
-  shadowOffset: 10,
-  rotateYMax: 30,
-  // rest of parameters
-});
-  },
-}
+//     // Appliquer une animation à votre cercle avec GSAP
+//     gsap.to(circle, {
+//       scale: 1.1, // Déformer le cercle pour simuler un battement de cœur
+//       repeat: -1, // Répéter l'animation indéfiniment
+//       yoyo: true, // Inverser l'animation à chaque itération
+//       duration: 0.8, // Durée d'un battement de cœur (en secondes)
+//       ease: 'power2.inOut',
+//     });
+//     gsap.from(profil, {
+//       x: -400,
+//       opacity: 0,
+//       duration: 2,
+//       delay: 0,
+//       ease: 'bounce.out'
+//     });
+//     const myAtropos = Atropos({
+//   el: '.my-atropos',
+//   rotateLock: true,
+//   activeOffset: 40,
+//   shadowScale: 1,
+//   shadowOffset: 10,
+//   rotateYMax: 30,
+//   // rest of parameters
+// });
+//   },
+// }
 
 </script>
 
