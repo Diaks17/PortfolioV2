@@ -26,7 +26,7 @@
   <!-- Courses -->
   <nuxt-link to="/projects/" class="nav-link"><div class="h-10 w-10 flex items-center justify-center rounded-lg cursor-pointer hover:text-gray-800 nav-link  hover:duration-300 hover:ease-linear">  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg>
    
-  </div></nuxt-link>
+  </div></nuxt-link> 
 
 
   <!-- Configuration -->
@@ -51,8 +51,13 @@
 <a href="https://www.linkedin.com/in/moussa-diakite-213618211/"><svg width="26" height="26" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M21.2745 0.105469C21.9693 0.105469 22.6357 0.361775 23.127 0.818004C23.6184 1.27423 23.8944 1.89301 23.8944 2.53822V19.5675C23.8944 20.2127 23.6184 20.8314 23.127 21.2877C22.6357 21.7439 21.9693 22.0002 21.2745 22.0002H2.93531C2.24048 22.0002 1.5741 21.7439 1.08278 21.2877C0.591452 20.8314 0.31543 20.2127 0.31543 19.5675V2.53822C0.31543 1.89301 0.591452 1.27423 1.08278 0.818004C1.5741 0.361775 2.24048 0.105469 2.93531 0.105469H21.2745ZM20.6195 18.9593V12.5125C20.6195 11.4608 20.1696 10.4522 19.3687 9.70854C18.5679 8.96489 17.4817 8.54711 16.3491 8.54711C15.2357 8.54711 13.9388 9.17962 13.3101 10.1284V8.77822H9.65531V18.9593H13.3101V12.9625C13.3101 12.0259 14.1222 11.2596 15.1309 11.2596C15.6173 11.2596 16.0837 11.439 16.4276 11.7584C16.7716 12.0778 16.9648 12.5109 16.9648 12.9625V18.9593H20.6195ZM5.398 6.86851C5.98167 6.86851 6.54142 6.65321 6.95413 6.26998C7.36685 5.88675 7.59871 5.36697 7.59871 4.825C7.59871 3.69377 6.61625 2.76933 5.398 2.76933C4.81087 2.76933 4.24778 2.98591 3.83261 3.37142C3.41744 3.75693 3.1842 4.2798 3.1842 4.825C3.1842 5.95623 4.17976 6.86851 5.398 6.86851ZM7.21882 18.9593V8.77822H3.59028V18.9593H7.21882Z" fill="#C59335"/>
 </svg>
+
 </a>
         </span>
+        <span class="date">
+                <p>{{ currentTime }}</p>
+                <p>HOUR MIN SEC</p>
+            </span>
         <div class="right-header">
             <span class="logo">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -66,25 +71,8 @@
 </svg>
 
             </span>
-            <span class="date">
-                <p>{{ currentTime }}</p>
-                <p>HOUR MIN SEC</p>
-            </span>
-        </div>
-    <!-- Informação -->
-    <div class="flex flex-shrink-0 items-center space-x-4 text-white">
-      
-      <!-- Texto -->
-      <div class="flex flex-col items-end ">
-        <!-- Nome -->
-        <div class="text-md font-medium ">Unknow Unknow</div>
-        <!-- Título -->
-        <div class="text-sm font-regular">Student</div>
-      </div>
-      
-      <!-- Foto -->
-      <div class="h-10 w-10 rounded-full cursor-pointer bg-gray-200 border-2 border-blue-400"></div>
-    </div>
+            
+        </div>    
   </header>
 
   <!-- Main -->
@@ -178,7 +166,6 @@ export default {
 
 <style>
 
-/* @import url("~/static/css/bootstrap.min.css"); */
 
 </style>
 <style>
@@ -237,22 +224,16 @@ body {
 <style>
 header {
     /* border-bottom: 1px white solid; */
+    background:linear-gradient(180deg, #021C1B 100%,#000 0%); 
 
 }
 aside {
+  background:linear-gradient(45deg, #000 0%, #021C1B 100%); 
 }
 header, aside {
-    /* position: fixed;
-    top: 0;
-    display: flex;
-    z-index: 3;
-    width: 75%;
-    justify-content: space-between;
-    /* padding: 0 5rem;
-    color: #C59335;
-    font-family: 'Auto Regular'; */
-    /* background-color: #ffffff11 !important; */
-    background-color: #000000ef !important;
+  border: #C59335 0.1px solid;
+  /* border-right: #C59335 1px solid; */
+  background-color: #174847 !important;
 }
 main {
     background:linear-gradient(90deg, #000000 0%, #021C1B 100%); 

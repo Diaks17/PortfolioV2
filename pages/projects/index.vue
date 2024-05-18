@@ -61,13 +61,14 @@ export default {
 
 .projets-menu {
   position: relative;
+  width: 100%;
   transition: top 0.3s ease;
   display: flex;
   flex-direction: column;
   height: 70%;
   margin: 0 auto;
   justify-content: space-around;
-  align-items: flex-start;
+  align-items: center;
   color: yellow;
 }
 
@@ -77,6 +78,8 @@ export default {
 
 .projets-link {
   display: flex;
+  width: 100%;
+  height: 100%;
   opacity: 0;
   justify-content: center;
   align-items: center;

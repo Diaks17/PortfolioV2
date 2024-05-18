@@ -1,11 +1,6 @@
 .project {
-    margin-left: 20%;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;    
-    width: 75%;
-    height: 88vh;
-    color: #fff;
+   width: 100%;
+   height: 100%;
 }
 .resume {
     display: flex;
@@ -13,6 +8,13 @@
     justify-content: space-between;
     /* align-items: center; */
     gap: 2rem;
+}
+.project-img {
+    /* width: 100%; */
+    height: 75%;
+    background-size: cover;
+    background-position: top;
+    background-image: url('/img/Home_Page_resa.jpg');
 }
 .project-link {
     width: 30%;
