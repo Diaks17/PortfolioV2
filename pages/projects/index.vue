@@ -35,7 +35,7 @@ export default {
               { name: "RESAWEB", route: "/projects/web/karma" },
               { name: "OVER-FIGHT", route: "/projects/web/overlord-fight" },
               { name: "SHOOTING", route: "/projects/web" },
-              // { name: "J'AIME ÇA", route: "/projects/web/jaimeca" },
+              { name: "PHOTOS", route: "/projects/photos/" },
               // { name: "J'AIME ÇA", route: "/projects/web/jaimeca" },
               // { name: "J'AIME ÇA", route: "/projects/web/jaimeca" },
               // { name: "J'AIME ÇA", route: "/projects/web/jaimeca" },

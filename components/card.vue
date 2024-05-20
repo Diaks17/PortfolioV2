@@ -89,23 +89,22 @@ export default {
   },
   methods: {
     async handleImageClick(event) {
-      // Vérifiez le nom de la route pour déterminer si vous devez extraire les données EXIF
-      if (this.$route.name === 'photos') { // Remplacez 'nom_de_votre_page' par le nom de votre page photo
-        console.log('Image clicked')
-        const file = event.target.src
-        console.log('Image file:', file)
-        try {
-          const exifData = await exifr.parse(file)
-          console.log('EXIF data:', exifData)
-          this.exifData = 'ISO: ' + exifData.ISO + '\n' +
-                          'Focal: ' + exifData.FNumber + '\n' +
-                          'Shutter speed: ' + exifData.ShutterSpeedValue;
-        } catch (error) {
-          console.log('Error reading EXIF data:', error)
-          alert('Error reading EXIF data: ' + error.message)
-        }
-      }
-    },
+  if (this.$route.name === 'photos') {
+    console.log('Image clicked');
+    const file = event.target.src;
+    console.log('Image file:', file);
+    try {
+      const exifData = await exifr.parse(file);
+      console.log('EXIF data:', exifData);
+      this.exifData = 'ISO: ' + exifData.ISO + '\n' +
+                      'Focal: ' + exifData.FNumber + '\n' +
+                      'Shutter speed: ' + exifData.ShutterSpeedValue;
+    } catch (error) {
+      console.log('Error reading EXIF data:', error);
+      alert('Error reading EXIF data: ' + error.message);
+    }
+  }
+},
 
     startAnimation(event) {
       const card = event.target.closest('.card');

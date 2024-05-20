@@ -11,7 +11,7 @@
 }
 .project-img {
     /* width: 100%; */
-    height: 75%;
+    height: 95%;
     background-size: cover;
     background-position: top;
     background-image: url('/img/Home_Page_resa.jpg');
@@ -19,21 +19,28 @@
 .project-link {
     width: 30%;
     text-decoration: none;
-    color: #fff;
     font-family: 'Space Mono', monospace;
     font-weight: bold;
     font-size: 1.5rem;
     padding: 0.5rem;
+    border: 1px solid #0d1b28;
     transition: 0.5s;
+    color: #000;
 }
 .project-link:hover {
     transition: width 2s;
     color: #C59335;
-    background:linear-gradient(90deg, #132b4100, #132B41 , #132b4100);
+    background: #0d1b28 100%;
 }
+.info {
+    height: 50%;
+}
+
 .project-images {
-    width: 90%;
+    /* width: 100%; */
+    width: 100%;
 }
 .project-img img{
-    width: 100%;
+    /* height: 90%; */
+    /* height: 90%; */
 }
