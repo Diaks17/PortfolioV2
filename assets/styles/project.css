@@ -6,15 +6,26 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    /* align-items: center; */
     gap: 2rem;
 }
 .project-img {
-    /* width: 100%; */
     height: 95%;
+    opacity: 0.5;
     background-size: cover;
     background-position: top;
-    background-image: url('/img/Home_Page_resa.jpg');
+    transition: all 0.3s;
+}
+.project-img:hover {
+    transition: all 0.3s;
+    height: 95%;
+    opacity: 1;
+    /* border: #C59335 solid; */
+    transform: scale(0.95);
+    background-size: cover;
+    /* background-position: top; */
+}
+.project-img img {
+
 }
 .project-link {
     width: 30%;
@@ -37,10 +48,7 @@
 }
 
 .project-images {
-    /* width: 100%; */
     width: 100%;
 }
 .project-img img{
-    /* height: 90%; */
-    /* height: 90%; */
 }
