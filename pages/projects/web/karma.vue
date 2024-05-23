@@ -1,30 +1,32 @@
 <template>
-
-<div class="project flex flex-col w-1/2 gap-5 p-2 mx-auto bg-white shadow-lg select-none sm:p-4 sm:h-64  sm:flex-row ">
-    <div class="project-img  h-52 sm:h-full sm:w-72">
-        <nuxt-link to="https://karma.moussa-diakite.fr/">
-            <img src="/img/Home_Page_resa.jpg" alt="" srcset="">
-        </nuxt-link>
-    </div> 
-    <div class="info flex flex-col flex-1 gap-5 sm:p-2">
-        <div class="flex flex-col flex-1 gap-3">
-            <div class="w-full h-14 text-4xl">
-                RESAWEB
-            </div>
-            <div class="w-full h-3">
-                <p>Il s’agit d’un projet ou l’on devait faire un site de réservation d’une gamme de produits, notre site
-                devait impérativement avoir un panier afin de réserver les article, c’est comme ça que est né mon site
-                Karma</p>
-            </div>
-        </div>
-        <div class="flex gap-3 mt-auto">
-            <div class="w-20 h-8">
-                <nuxt-link to="https://karma.diakite.butmmi.o2switch.site/index.php" class="project-link">Maquette</nuxt-link>
-            </div>
-        </div>
+    <div class="w-full h-full">
+      <ProjectComponent
+        imageSrc="/img/Home_Page_resa.jpg"
+        imageAlt="Image du projet ResaWeb"
+        imageLink="https://karma.moussa-diakite.fr/"
+        projectTitle="RESAWEB"
+        projectDescription="Il s’agit d’un projet où l’on devait faire un site de réservation d’une gamme de produits, notre site devait impérativement avoir un panier afin de réserver les articles, c’est comme ça qu’est né mon site Karma."
+        projectLink="https://karma.diakite.butmmi.o2switch.site/index.php"
+      />
     </div>
-</div>
-</template>
-<style>
-@import url("~/assets/styles/project.css");
-</style>
+  </template>
+  
+  <script>
+  import ProjectComponent from '~/components/ProjectComponent.vue';
+  
+  export default {
+    components: {
+      ProjectComponent
+    }
+  };
+  </script>
+  
+  <style>
+  html, body, #__nuxt, #app {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  </style>
+  

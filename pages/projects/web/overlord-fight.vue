@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
 
     <div class="project flex flex-col w-1/2 gap-5 p-2 mx-auto bg-white shadow-lg select-none sm:p-4 sm:h-64  sm:flex-row ">
         <div class="project-img h-52 sm:h-full sm:w-72">
@@ -17,17 +17,46 @@
                     Karma</p>
                 </div>
             </div>
-            <!-- <div class="flex gap-3 mt-auto">
+             <div class="flex gap-3 mt-auto">
                 <div class="w-20 h-8">
                     <nuxt-link to="https://overlord-fight.moussa-diakite.fr/" class="project-link">Site</nuxt-link>
                 </div>
                 <div class="w-20 h-8">
                     <nuxt-link to="https://www.figma.com/file/tFP4GyGdSLYUSryekLpYnm/overlord-fight?type=design&node-id=0%3A1&mode=design&t=TVkbKNSpMzugGMGf-1" class="project-link">Maquette</nuxt-link>
                 </div>
-            </div> -->
+            </div>
         </div>
-    </div>
     </template>
     <style>
     @import url("~/assets/styles/project.css");
-    </style>
+</style>
+</div> 
+-->
+
+    
+<template>
+    <div class="">
+      <ProjectComponent
+        imageSrc="/img/overlord.jpg"
+        imageAlt="Image du projet Overfight"
+        imageLink="https://overlord-fight.moussa-diakite.fr/"
+        projectTitle="Overfight"
+        projectDescription="Il s’agit d’un projet où l’on devait faire un site de réservation d’une gamme de produits, notre site devait impérativement avoir un panier afin de réserver les articles, c’est comme ça qu’est né mon site Karma."
+      />
+    </div>
+  </template>
+  <style scoped>
+  .project-img {
+    height: 100% !important;
+  }
+</style>
+  <script>
+  import ProjectComponent from '~/components/ProjectComponent.vue';
+  
+  export default {
+    components: {
+      ProjectComponent
+    }
+  };
+  </script>
+  
